@@ -1,0 +1,7432 @@
+[
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "colors",
+  "prompt": "a photo of a blue giraffe",
+  "spec": {
+   "include": [
+    {
+     "class": "giraffe",
+     "count": 1,
+     "color": "blue"
+    }
+   ]
+  },
+  "pid": 0
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a black hot dog and a green kite",
+  "spec": {
+   "include": [
+    {
+     "class": "hot dog",
+     "count": 1,
+     "color": "black"
+    },
+    {
+     "class": "kite",
+     "count": 1,
+     "color": "green"
+    }
+   ]
+  },
+  "pid": 1
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a pink laptop and a black bowl",
+  "spec": {
+   "include": [
+    {
+     "class": "laptop",
+     "count": 1,
+     "color": "pink"
+    },
+    {
+     "class": "bowl",
+     "count": 1,
+     "color": "black"
+    }
+   ]
+  },
+  "pid": 2
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a blue hair drier and a black tie",
+  "spec": {
+   "include": [
+    {
+     "class": "hair drier",
+     "count": 1,
+     "color": "blue"
+    },
+    {
+     "class": "tie",
+     "count": 1,
+     "color": "black"
+    }
+   ]
+  },
+  "pid": 3
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of an orange fork and a green computer keyboard",
+  "spec": {
+   "include": [
+    {
+     "class": "fork",
+     "count": 1,
+     "color": "orange"
+    },
+    {
+     "class": "computer keyboard",
+     "count": 1,
+     "color": "green"
+    }
+   ]
+  },
+  "pid": 4
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a black bed and a green sheep",
+  "spec": {
+   "include": [
+    {
+     "class": "bed",
+     "count": 1,
+     "color": "black"
+    },
+    {
+     "class": "sheep",
+     "count": 1,
+     "color": "green"
+    }
+   ]
+  },
+  "pid": 5
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "colors",
+  "prompt": "a photo of a pink truck",
+  "spec": {
+   "include": [
+    {
+     "class": "truck",
+     "count": 1,
+     "color": "pink"
+    }
+   ]
+  },
+  "pid": 6
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "counting",
+  "prompt": "a photo of three umbrellas",
+  "spec": {
+   "include": [
+    {
+     "class": "umbrella",
+     "count": 3
+    }
+   ],
+   "exclude": [
+    {
+     "class": "umbrella",
+     "count": 4
+    }
+   ]
+  },
+  "pid": 7
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of a tie left of a hot dog",
+  "spec": {
+   "include": [
+    {
+     "class": "hot dog",
+     "count": 1
+    },
+    {
+     "class": "tie",
+     "count": 1,
+     "position": [
+      "left of",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 8
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a blue suitcase and a black car",
+  "spec": {
+   "include": [
+    {
+     "class": "suitcase",
+     "count": 1,
+     "color": "blue"
+    },
+    {
+     "class": "car",
+     "count": 1,
+     "color": "black"
+    }
+   ]
+  },
+  "pid": 9
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a green teddy bear and a brown frisbee",
+  "spec": {
+   "include": [
+    {
+     "class": "teddy bear",
+     "count": 1,
+     "color": "green"
+    },
+    {
+     "class": "frisbee",
+     "count": 1,
+     "color": "brown"
+    }
+   ]
+  },
+  "pid": 10
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "counting",
+  "prompt": "a photo of four horses",
+  "spec": {
+   "include": [
+    {
+     "class": "horse",
+     "count": 4
+    }
+   ],
+   "exclude": [
+    {
+     "class": "horse",
+     "count": 5
+    }
+   ]
+  },
+  "pid": 11
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a pink sheep and a purple kite",
+  "spec": {
+   "include": [
+    {
+     "class": "sheep",
+     "count": 1,
+     "color": "pink"
+    },
+    {
+     "class": "kite",
+     "count": 1,
+     "color": "purple"
+    }
+   ]
+  },
+  "pid": 12
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of a boat right of a parking meter",
+  "spec": {
+   "include": [
+    {
+     "class": "parking meter",
+     "count": 1
+    },
+    {
+     "class": "boat",
+     "count": 1,
+     "position": [
+      "right of",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 13
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "colors",
+  "prompt": "a photo of a green skis",
+  "spec": {
+   "include": [
+    {
+     "class": "skis",
+     "count": 1,
+     "color": "green"
+    }
+   ]
+  },
+  "pid": 14
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a skateboard and a skis",
+  "spec": {
+   "include": [
+    {
+     "class": "skateboard",
+     "count": 1
+    },
+    {
+     "class": "skis",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 15
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of a parking meter below a laptop",
+  "spec": {
+   "include": [
+    {
+     "class": "laptop",
+     "count": 1
+    },
+    {
+     "class": "parking meter",
+     "count": 1,
+     "position": [
+      "below",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 16
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a tv remote and a suitcase",
+  "spec": {
+   "include": [
+    {
+     "class": "tv remote",
+     "count": 1
+    },
+    {
+     "class": "suitcase",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 17
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a black bus and a pink clock",
+  "spec": {
+   "include": [
+    {
+     "class": "bus",
+     "count": 1,
+     "color": "black"
+    },
+    {
+     "class": "clock",
+     "count": 1,
+     "color": "pink"
+    }
+   ]
+  },
+  "pid": 18
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a green traffic light and a red cat",
+  "spec": {
+   "include": [
+    {
+     "class": "traffic light",
+     "count": 1,
+     "color": "green"
+    },
+    {
+     "class": "cat",
+     "count": 1,
+     "color": "red"
+    }
+   ]
+  },
+  "pid": 19
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of a dog right of a handbag",
+  "spec": {
+   "include": [
+    {
+     "class": "handbag",
+     "count": 1
+    },
+    {
+     "class": "dog",
+     "count": 1,
+     "position": [
+      "right of",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 20
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a tv and a clock",
+  "spec": {
+   "include": [
+    {
+     "class": "tv",
+     "count": 1
+    },
+    {
+     "class": "clock",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 21
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of a motorcycle right of a scissors",
+  "spec": {
+   "include": [
+    {
+     "class": "scissors",
+     "count": 1
+    },
+    {
+     "class": "motorcycle",
+     "count": 1,
+     "position": [
+      "right of",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 22
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of a wine glass left of a person",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "wine glass",
+     "count": 1,
+     "position": [
+      "left of",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 23
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a truck and a bench",
+  "spec": {
+   "include": [
+    {
+     "class": "truck",
+     "count": 1
+    },
+    {
+     "class": "bench",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 24
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of a handbag below a backpack",
+  "spec": {
+   "include": [
+    {
+     "class": "backpack",
+     "count": 1
+    },
+    {
+     "class": "handbag",
+     "count": 1,
+     "position": [
+      "below",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 25
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of a couch right of a pizza",
+  "spec": {
+   "include": [
+    {
+     "class": "pizza",
+     "count": 1
+    },
+    {
+     "class": "couch",
+     "count": 1,
+     "position": [
+      "right of",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 26
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a bottle and a broccoli",
+  "spec": {
+   "include": [
+    {
+     "class": "bottle",
+     "count": 1
+    },
+    {
+     "class": "broccoli",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 27
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "counting",
+  "prompt": "a photo of four potted plants",
+  "spec": {
+   "include": [
+    {
+     "class": "potted plant",
+     "count": 4
+    }
+   ],
+   "exclude": [
+    {
+     "class": "potted plant",
+     "count": 5
+    }
+   ]
+  },
+  "pid": 28
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a teddy bear and a bed",
+  "spec": {
+   "include": [
+    {
+     "class": "teddy bear",
+     "count": 1
+    },
+    {
+     "class": "bed",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 29
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of a train above a cake",
+  "spec": {
+   "include": [
+    {
+     "class": "cake",
+     "count": 1
+    },
+    {
+     "class": "train",
+     "count": 1,
+     "position": [
+      "above",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 30
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of a sports ball below an elephant",
+  "spec": {
+   "include": [
+    {
+     "class": "elephant",
+     "count": 1
+    },
+    {
+     "class": "sports ball",
+     "count": 1,
+     "position": [
+      "below",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 31
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "colors",
+  "prompt": "a photo of a purple tv",
+  "spec": {
+   "include": [
+    {
+     "class": "tv",
+     "count": 1,
+     "color": "purple"
+    }
+   ]
+  },
+  "pid": 32
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of a parking meter above a train",
+  "spec": {
+   "include": [
+    {
+     "class": "train",
+     "count": 1
+    },
+    {
+     "class": "parking meter",
+     "count": 1,
+     "position": [
+      "above",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 33
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a cat and a wine glass",
+  "spec": {
+   "include": [
+    {
+     "class": "cat",
+     "count": 1
+    },
+    {
+     "class": "wine glass",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 34
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a refrigerator and a clock",
+  "spec": {
+   "include": [
+    {
+     "class": "refrigerator",
+     "count": 1
+    },
+    {
+     "class": "clock",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 35
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a frisbee and a person",
+  "spec": {
+   "include": [
+    {
+     "class": "frisbee",
+     "count": 1
+    },
+    {
+     "class": "person",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 36
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a sandwich and a microwave",
+  "spec": {
+   "include": [
+    {
+     "class": "sandwich",
+     "count": 1
+    },
+    {
+     "class": "microwave",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 37
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "colors",
+  "prompt": "a photo of a green book",
+  "spec": {
+   "include": [
+    {
+     "class": "book",
+     "count": 1,
+     "color": "green"
+    }
+   ]
+  },
+  "pid": 38
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of a computer keyboard right of a frisbee",
+  "spec": {
+   "include": [
+    {
+     "class": "frisbee",
+     "count": 1
+    },
+    {
+     "class": "computer keyboard",
+     "count": 1,
+     "position": [
+      "right of",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 39
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "colors",
+  "prompt": "a photo of a blue bed",
+  "spec": {
+   "include": [
+    {
+     "class": "bed",
+     "count": 1,
+     "color": "blue"
+    }
+   ]
+  },
+  "pid": 40
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a black backpack and a red bed",
+  "spec": {
+   "include": [
+    {
+     "class": "backpack",
+     "count": 1,
+     "color": "black"
+    },
+    {
+     "class": "bed",
+     "count": 1,
+     "color": "red"
+    }
+   ]
+  },
+  "pid": 41
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "counting",
+  "prompt": "a photo of four sandwichs",
+  "spec": {
+   "include": [
+    {
+     "class": "sandwich",
+     "count": 4
+    }
+   ],
+   "exclude": [
+    {
+     "class": "sandwich",
+     "count": 5
+    }
+   ]
+  },
+  "pid": 42
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a wine glass and a skateboard",
+  "spec": {
+   "include": [
+    {
+     "class": "wine glass",
+     "count": 1
+    },
+    {
+     "class": "skateboard",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 43
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "colors",
+  "prompt": "a photo of a white banana",
+  "spec": {
+   "include": [
+    {
+     "class": "banana",
+     "count": 1,
+     "color": "white"
+    }
+   ]
+  },
+  "pid": 44
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of an orange boat and a pink horse",
+  "spec": {
+   "include": [
+    {
+     "class": "boat",
+     "count": 1,
+     "color": "orange"
+    },
+    {
+     "class": "horse",
+     "count": 1,
+     "color": "pink"
+    }
+   ]
+  },
+  "pid": 45
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of a cup left of a backpack",
+  "spec": {
+   "include": [
+    {
+     "class": "backpack",
+     "count": 1
+    },
+    {
+     "class": "cup",
+     "count": 1,
+     "position": [
+      "left of",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 46
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a green kite and a pink computer keyboard",
+  "spec": {
+   "include": [
+    {
+     "class": "kite",
+     "count": 1,
+     "color": "green"
+    },
+    {
+     "class": "computer keyboard",
+     "count": 1,
+     "color": "pink"
+    }
+   ]
+  },
+  "pid": 47
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a backpack and a dining table",
+  "spec": {
+   "include": [
+    {
+     "class": "backpack",
+     "count": 1
+    },
+    {
+     "class": "dining table",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 48
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "colors",
+  "prompt": "a photo of a white cat",
+  "spec": {
+   "include": [
+    {
+     "class": "cat",
+     "count": 1,
+     "color": "white"
+    }
+   ]
+  },
+  "pid": 49
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of an orange and a vase",
+  "spec": {
+   "include": [
+    {
+     "class": "orange",
+     "count": 1
+    },
+    {
+     "class": "vase",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 50
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of a skis below a bear",
+  "spec": {
+   "include": [
+    {
+     "class": "bear",
+     "count": 1
+    },
+    {
+     "class": "skis",
+     "count": 1,
+     "position": [
+      "below",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 51
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a purple bench and a pink dog",
+  "spec": {
+   "include": [
+    {
+     "class": "bench",
+     "count": 1,
+     "color": "purple"
+    },
+    {
+     "class": "dog",
+     "count": 1,
+     "color": "pink"
+    }
+   ]
+  },
+  "pid": 52
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "counting",
+  "prompt": "a photo of four forks",
+  "spec": {
+   "include": [
+    {
+     "class": "fork",
+     "count": 4
+    }
+   ],
+   "exclude": [
+    {
+     "class": "fork",
+     "count": 5
+    }
+   ]
+  },
+  "pid": 53
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of a sports ball below a tie",
+  "spec": {
+   "include": [
+    {
+     "class": "tie",
+     "count": 1
+    },
+    {
+     "class": "sports ball",
+     "count": 1,
+     "position": [
+      "below",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 54
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a yellow oven and a white backpack",
+  "spec": {
+   "include": [
+    {
+     "class": "oven",
+     "count": 1,
+     "color": "yellow"
+    },
+    {
+     "class": "backpack",
+     "count": 1,
+     "color": "white"
+    }
+   ]
+  },
+  "pid": 55
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a red frisbee and an orange sports ball",
+  "spec": {
+   "include": [
+    {
+     "class": "frisbee",
+     "count": 1,
+     "color": "red"
+    },
+    {
+     "class": "sports ball",
+     "count": 1,
+     "color": "orange"
+    }
+   ]
+  },
+  "pid": 56
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a baseball glove and a banana",
+  "spec": {
+   "include": [
+    {
+     "class": "baseball glove",
+     "count": 1
+    },
+    {
+     "class": "banana",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 57
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "counting",
+  "prompt": "a photo of four toilets",
+  "spec": {
+   "include": [
+    {
+     "class": "toilet",
+     "count": 4
+    }
+   ],
+   "exclude": [
+    {
+     "class": "toilet",
+     "count": 5
+    }
+   ]
+  },
+  "pid": 58
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a brown banana and a purple computer mouse",
+  "spec": {
+   "include": [
+    {
+     "class": "banana",
+     "count": 1,
+     "color": "brown"
+    },
+    {
+     "class": "computer mouse",
+     "count": 1,
+     "color": "purple"
+    }
+   ]
+  },
+  "pid": 59
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a boat and a computer mouse",
+  "spec": {
+   "include": [
+    {
+     "class": "boat",
+     "count": 1
+    },
+    {
+     "class": "computer mouse",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 60
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a giraffe and a chair",
+  "spec": {
+   "include": [
+    {
+     "class": "giraffe",
+     "count": 1
+    },
+    {
+     "class": "chair",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 61
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of a person left of a sheep",
+  "spec": {
+   "include": [
+    {
+     "class": "sheep",
+     "count": 1
+    },
+    {
+     "class": "person",
+     "count": 1,
+     "position": [
+      "left of",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 62
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "counting",
+  "prompt": "a photo of four fire hydrants",
+  "spec": {
+   "include": [
+    {
+     "class": "fire hydrant",
+     "count": 4
+    }
+   ],
+   "exclude": [
+    {
+     "class": "fire hydrant",
+     "count": 5
+    }
+   ]
+  },
+  "pid": 63
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of a frisbee below a wine glass",
+  "spec": {
+   "include": [
+    {
+     "class": "wine glass",
+     "count": 1
+    },
+    {
+     "class": "frisbee",
+     "count": 1,
+     "position": [
+      "below",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 64
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "counting",
+  "prompt": "a photo of three clocks",
+  "spec": {
+   "include": [
+    {
+     "class": "clock",
+     "count": 3
+    }
+   ],
+   "exclude": [
+    {
+     "class": "clock",
+     "count": 4
+    }
+   ]
+  },
+  "pid": 65
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a purple snowboard and a blue bottle",
+  "spec": {
+   "include": [
+    {
+     "class": "snowboard",
+     "count": 1,
+     "color": "purple"
+    },
+    {
+     "class": "bottle",
+     "count": 1,
+     "color": "blue"
+    }
+   ]
+  },
+  "pid": 66
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "counting",
+  "prompt": "a photo of two spoons",
+  "spec": {
+   "include": [
+    {
+     "class": "spoon",
+     "count": 2
+    }
+   ],
+   "exclude": [
+    {
+     "class": "spoon",
+     "count": 3
+    }
+   ]
+  },
+  "pid": 67
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of a wine glass below an umbrella",
+  "spec": {
+   "include": [
+    {
+     "class": "umbrella",
+     "count": 1
+    },
+    {
+     "class": "wine glass",
+     "count": 1,
+     "position": [
+      "below",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 68
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of a train above an elephant",
+  "spec": {
+   "include": [
+    {
+     "class": "elephant",
+     "count": 1
+    },
+    {
+     "class": "train",
+     "count": 1,
+     "position": [
+      "above",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 69
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "colors",
+  "prompt": "a photo of a green train",
+  "spec": {
+   "include": [
+    {
+     "class": "train",
+     "count": 1,
+     "color": "green"
+    }
+   ]
+  },
+  "pid": 70
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a banana and a bicycle",
+  "spec": {
+   "include": [
+    {
+     "class": "banana",
+     "count": 1
+    },
+    {
+     "class": "bicycle",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 71
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "colors",
+  "prompt": "a photo of a purple snowboard",
+  "spec": {
+   "include": [
+    {
+     "class": "snowboard",
+     "count": 1,
+     "color": "purple"
+    }
+   ]
+  },
+  "pid": 72
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "counting",
+  "prompt": "a photo of four persons",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 4
+    }
+   ],
+   "exclude": [
+    {
+     "class": "person",
+     "count": 5
+    }
+   ]
+  },
+  "pid": 73
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a yellow chair and an orange umbrella",
+  "spec": {
+   "include": [
+    {
+     "class": "chair",
+     "count": 1,
+     "color": "yellow"
+    },
+    {
+     "class": "umbrella",
+     "count": 1,
+     "color": "orange"
+    }
+   ]
+  },
+  "pid": 74
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of a hot dog below a laptop",
+  "spec": {
+   "include": [
+    {
+     "class": "laptop",
+     "count": 1
+    },
+    {
+     "class": "hot dog",
+     "count": 1,
+     "position": [
+      "below",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 75
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a brown suitcase and a black bus",
+  "spec": {
+   "include": [
+    {
+     "class": "suitcase",
+     "count": 1,
+     "color": "brown"
+    },
+    {
+     "class": "bus",
+     "count": 1,
+     "color": "black"
+    }
+   ]
+  },
+  "pid": 76
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "counting",
+  "prompt": "a photo of two hot dogs",
+  "spec": {
+   "include": [
+    {
+     "class": "hot dog",
+     "count": 2
+    }
+   ],
+   "exclude": [
+    {
+     "class": "hot dog",
+     "count": 3
+    }
+   ]
+  },
+  "pid": 77
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a backpack and a bicycle",
+  "spec": {
+   "include": [
+    {
+     "class": "backpack",
+     "count": 1
+    },
+    {
+     "class": "bicycle",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 78
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a computer keyboard and a baseball glove",
+  "spec": {
+   "include": [
+    {
+     "class": "computer keyboard",
+     "count": 1
+    },
+    {
+     "class": "baseball glove",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 79
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "colors",
+  "prompt": "a photo of a red toothbrush",
+  "spec": {
+   "include": [
+    {
+     "class": "toothbrush",
+     "count": 1,
+     "color": "red"
+    }
+   ]
+  },
+  "pid": 80
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "counting",
+  "prompt": "a photo of two baseball bats",
+  "spec": {
+   "include": [
+    {
+     "class": "baseball bat",
+     "count": 2
+    }
+   ],
+   "exclude": [
+    {
+     "class": "baseball bat",
+     "count": 3
+    }
+   ]
+  },
+  "pid": 81
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "counting",
+  "prompt": "a photo of three chairs",
+  "spec": {
+   "include": [
+    {
+     "class": "chair",
+     "count": 3
+    }
+   ],
+   "exclude": [
+    {
+     "class": "chair",
+     "count": 4
+    }
+   ]
+  },
+  "pid": 82
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a red fire hydrant and an orange frisbee",
+  "spec": {
+   "include": [
+    {
+     "class": "fire hydrant",
+     "count": 1,
+     "color": "red"
+    },
+    {
+     "class": "frisbee",
+     "count": 1,
+     "color": "orange"
+    }
+   ]
+  },
+  "pid": 83
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a bed and a handbag",
+  "spec": {
+   "include": [
+    {
+     "class": "bed",
+     "count": 1
+    },
+    {
+     "class": "handbag",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 84
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "colors",
+  "prompt": "a photo of a white hot dog",
+  "spec": {
+   "include": [
+    {
+     "class": "hot dog",
+     "count": 1,
+     "color": "white"
+    }
+   ]
+  },
+  "pid": 85
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a pink pizza and a black cell phone",
+  "spec": {
+   "include": [
+    {
+     "class": "pizza",
+     "count": 1,
+     "color": "pink"
+    },
+    {
+     "class": "cell phone",
+     "count": 1,
+     "color": "black"
+    }
+   ]
+  },
+  "pid": 86
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "colors",
+  "prompt": "a photo of a blue car",
+  "spec": {
+   "include": [
+    {
+     "class": "car",
+     "count": 1,
+     "color": "blue"
+    }
+   ]
+  },
+  "pid": 87
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a pink skis and a yellow cake",
+  "spec": {
+   "include": [
+    {
+     "class": "skis",
+     "count": 1,
+     "color": "pink"
+    },
+    {
+     "class": "cake",
+     "count": 1,
+     "color": "yellow"
+    }
+   ]
+  },
+  "pid": 88
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a blue baseball bat and a yellow oven",
+  "spec": {
+   "include": [
+    {
+     "class": "baseball bat",
+     "count": 1,
+     "color": "blue"
+    },
+    {
+     "class": "oven",
+     "count": 1,
+     "color": "yellow"
+    }
+   ]
+  },
+  "pid": 89
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "counting",
+  "prompt": "a photo of three cats",
+  "spec": {
+   "include": [
+    {
+     "class": "cat",
+     "count": 3
+    }
+   ],
+   "exclude": [
+    {
+     "class": "cat",
+     "count": 4
+    }
+   ]
+  },
+  "pid": 90
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a potted plant and a bench",
+  "spec": {
+   "include": [
+    {
+     "class": "potted plant",
+     "count": 1
+    },
+    {
+     "class": "bench",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 91
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "colors",
+  "prompt": "a photo of a pink refrigerator",
+  "spec": {
+   "include": [
+    {
+     "class": "refrigerator",
+     "count": 1,
+     "color": "pink"
+    }
+   ]
+  },
+  "pid": 92
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a zebra and a suitcase",
+  "spec": {
+   "include": [
+    {
+     "class": "zebra",
+     "count": 1
+    },
+    {
+     "class": "suitcase",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 93
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a suitcase and a refrigerator",
+  "spec": {
+   "include": [
+    {
+     "class": "suitcase",
+     "count": 1
+    },
+    {
+     "class": "refrigerator",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 94
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a black bed and an orange spoon",
+  "spec": {
+   "include": [
+    {
+     "class": "bed",
+     "count": 1,
+     "color": "black"
+    },
+    {
+     "class": "spoon",
+     "count": 1,
+     "color": "orange"
+    }
+   ]
+  },
+  "pid": 95
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "colors",
+  "prompt": "a photo of a purple computer keyboard",
+  "spec": {
+   "include": [
+    {
+     "class": "computer keyboard",
+     "count": 1,
+     "color": "purple"
+    }
+   ]
+  },
+  "pid": 96
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of an umbrella below a dining table",
+  "spec": {
+   "include": [
+    {
+     "class": "dining table",
+     "count": 1
+    },
+    {
+     "class": "umbrella",
+     "count": 1,
+     "position": [
+      "below",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 97
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a blue sink and a white pizza",
+  "spec": {
+   "include": [
+    {
+     "class": "sink",
+     "count": 1,
+     "color": "blue"
+    },
+    {
+     "class": "pizza",
+     "count": 1,
+     "color": "white"
+    }
+   ]
+  },
+  "pid": 98
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of a knife left of a stop sign",
+  "spec": {
+   "include": [
+    {
+     "class": "stop sign",
+     "count": 1
+    },
+    {
+     "class": "knife",
+     "count": 1,
+     "position": [
+      "left of",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 99
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of a toaster right of an airplane",
+  "spec": {
+   "include": [
+    {
+     "class": "airplane",
+     "count": 1
+    },
+    {
+     "class": "toaster",
+     "count": 1,
+     "position": [
+      "right of",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 100
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a blue elephant and a pink fire hydrant",
+  "spec": {
+   "include": [
+    {
+     "class": "elephant",
+     "count": 1,
+     "color": "blue"
+    },
+    {
+     "class": "fire hydrant",
+     "count": 1,
+     "color": "pink"
+    }
+   ]
+  },
+  "pid": 101
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a microwave and a cup",
+  "spec": {
+   "include": [
+    {
+     "class": "microwave",
+     "count": 1
+    },
+    {
+     "class": "cup",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 102
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a yellow knife and a brown tv",
+  "spec": {
+   "include": [
+    {
+     "class": "knife",
+     "count": 1,
+     "color": "yellow"
+    },
+    {
+     "class": "tv",
+     "count": 1,
+     "color": "brown"
+    }
+   ]
+  },
+  "pid": 103
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of an orange and a couch",
+  "spec": {
+   "include": [
+    {
+     "class": "orange",
+     "count": 1
+    },
+    {
+     "class": "couch",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 104
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a pink bus and a blue airplane",
+  "spec": {
+   "include": [
+    {
+     "class": "bus",
+     "count": 1,
+     "color": "pink"
+    },
+    {
+     "class": "airplane",
+     "count": 1,
+     "color": "blue"
+    }
+   ]
+  },
+  "pid": 105
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a handbag and a bus",
+  "spec": {
+   "include": [
+    {
+     "class": "handbag",
+     "count": 1
+    },
+    {
+     "class": "bus",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 106
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a yellow handbag and an orange fire hydrant",
+  "spec": {
+   "include": [
+    {
+     "class": "handbag",
+     "count": 1,
+     "color": "yellow"
+    },
+    {
+     "class": "fire hydrant",
+     "count": 1,
+     "color": "orange"
+    }
+   ]
+  },
+  "pid": 107
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a scissors and a teddy bear",
+  "spec": {
+   "include": [
+    {
+     "class": "scissors",
+     "count": 1
+    },
+    {
+     "class": "teddy bear",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 108
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a toilet and an umbrella",
+  "spec": {
+   "include": [
+    {
+     "class": "toilet",
+     "count": 1
+    },
+    {
+     "class": "umbrella",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 109
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a blue bowl and a red orange",
+  "spec": {
+   "include": [
+    {
+     "class": "bowl",
+     "count": 1,
+     "color": "blue"
+    },
+    {
+     "class": "orange",
+     "count": 1,
+     "color": "red"
+    }
+   ]
+  },
+  "pid": 110
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "colors",
+  "prompt": "a photo of a brown oven",
+  "spec": {
+   "include": [
+    {
+     "class": "oven",
+     "count": 1,
+     "color": "brown"
+    }
+   ]
+  },
+  "pid": 111
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of a banana right of a cell phone",
+  "spec": {
+   "include": [
+    {
+     "class": "cell phone",
+     "count": 1
+    },
+    {
+     "class": "banana",
+     "count": 1,
+     "position": [
+      "right of",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 112
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "two_object",
+  "prompt": "a photo of a motorcycle and a tennis racket",
+  "spec": {
+   "include": [
+    {
+     "class": "motorcycle",
+     "count": 1
+    },
+    {
+     "class": "tennis racket",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 113
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "colors",
+  "prompt": "a photo of a green knife",
+  "spec": {
+   "include": [
+    {
+     "class": "knife",
+     "count": 1,
+     "color": "green"
+    }
+   ]
+  },
+  "pid": 114
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "color_attr",
+  "prompt": "a photo of a green truck and a purple baseball glove",
+  "spec": {
+   "include": [
+    {
+     "class": "truck",
+     "count": 1,
+     "color": "green"
+    },
+    {
+     "class": "baseball glove",
+     "count": 1,
+     "color": "purple"
+    }
+   ]
+  },
+  "pid": 115
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "colors",
+  "prompt": "a photo of a black computer keyboard",
+  "spec": {
+   "include": [
+    {
+     "class": "computer keyboard",
+     "count": 1,
+     "color": "black"
+    }
+   ]
+  },
+  "pid": 116
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "counting",
+  "prompt": "a photo of two cakes",
+  "spec": {
+   "include": [
+    {
+     "class": "cake",
+     "count": 2
+    }
+   ],
+   "exclude": [
+    {
+     "class": "cake",
+     "count": 3
+    }
+   ]
+  },
+  "pid": 117
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "counting",
+  "prompt": "a photo of four refrigerators",
+  "spec": {
+   "include": [
+    {
+     "class": "refrigerator",
+     "count": 4
+    }
+   ],
+   "exclude": [
+    {
+     "class": "refrigerator",
+     "count": 5
+    }
+   ]
+  },
+  "pid": 118
+ },
+ {
+  "split": "train",
+  "source": "struct",
+  "tag": "position",
+  "prompt": "a photo of an apple below a laptop",
+  "spec": {
+   "include": [
+    {
+     "class": "laptop",
+     "count": 1
+    },
+    {
+     "class": "apple",
+     "count": 1,
+     "position": [
+      "below",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 119
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A dog chewing a stick laying on the floor.",
+  "spec": {
+   "include": [
+    {
+     "class": "dog",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 120
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "Several pairs of scissors with black handles lay on a counter.",
+  "spec": {
+   "include": [
+    {
+     "class": "scissors",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 121
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A woman staying dry from the rain and holding an umbrella.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "umbrella",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 122
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A building with a clock on the front of it.",
+  "spec": {
+   "include": [
+    {
+     "class": "clock",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 123
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "Two blue buses are seen parked next to each other.",
+  "spec": {
+   "include": [
+    {
+     "class": "bus",
+     "count": 2,
+     "color": "blue"
+    }
+   ],
+   "exclude": [
+    {
+     "class": "bus",
+     "count": 3
+    }
+   ]
+  },
+  "pid": 124
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "The man in the orange out fit was kicking the ball",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "orange",
+     "count": 1
+    },
+    {
+     "class": "sports ball",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 125
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A couple of creepy statues sitting on a bench in a park at night.",
+  "spec": {
+   "include": [
+    {
+     "class": "bench",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 126
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A beautiful woman holding a tennis racquet into the air.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 127
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A couple of giraffe playing around in a field of grass.",
+  "spec": {
+   "include": [
+    {
+     "class": "giraffe",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 128
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "a bird on the outside of a door with clear windows",
+  "spec": {
+   "include": [
+    {
+     "class": "bird",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 129
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "a female baseball player is swinging her bat",
+  "spec": null,
+  "pid": 130
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "Men playing a game of baseball at a stadium.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 2
+    }
+   ]
+  },
+  "pid": 131
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "a couple of animals are in the back of a truck",
+  "spec": {
+   "include": [
+    {
+     "class": "truck",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 132
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A baseball game is in action at the plate.",
+  "spec": null,
+  "pid": 133
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A counter with carrots, onions, peppers and other assorted vegetables on it.",
+  "spec": {
+   "include": [
+    {
+     "class": "carrot",
+     "count": 2
+    }
+   ]
+  },
+  "pid": 134
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A black brown cat with large whiskers looking at the camera.",
+  "spec": {
+   "include": [
+    {
+     "class": "cat",
+     "count": 1,
+     "color": "brown"
+    }
+   ]
+  },
+  "pid": 135
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A man riding on the back of a motorcycle next to another man.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "motorcycle",
+     "count": 1
+    },
+    {
+     "class": "person",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 136
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A baseball player swinging a bat near home plate.",
+  "spec": null,
+  "pid": 137
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "a guy and his dog sitting on a surf board",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "dog",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 138
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A group of four carrots on top of a wooden cutting board.",
+  "spec": {
+   "include": [
+    {
+     "class": "carrot",
+     "count": 4
+    }
+   ],
+   "exclude": [
+    {
+     "class": "carrot",
+     "count": 5
+    }
+   ]
+  },
+  "pid": 139
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A cook book for making donuts with donuts and coffee pictures on it's cover.",
+  "spec": {
+   "include": [
+    {
+     "class": "book",
+     "count": 1
+    },
+    {
+     "class": "donut",
+     "count": 2
+    },
+    {
+     "class": "donut",
+     "count": 2
+    }
+   ]
+  },
+  "pid": 140
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A white toilet sitting underneath a window next to a tub.",
+  "spec": {
+   "include": [
+    {
+     "class": "toilet",
+     "count": 1,
+     "color": "white"
+    }
+   ]
+  },
+  "pid": 141
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "Cat underneath park bench with black crow perched on top.",
+  "spec": {
+   "include": [
+    {
+     "class": "bench",
+     "count": 1
+    },
+    {
+     "class": "cat",
+     "count": 1,
+     "position": [
+      "below",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 142
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "Woman stirring boiling pan of food on back burner.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 143
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A woman holding a purple umbrella in her hand.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "umbrella",
+     "count": 1,
+     "color": "purple"
+    }
+   ]
+  },
+  "pid": 144
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A black cat resting atop blankets on a bed",
+  "spec": {
+   "include": [
+    {
+     "class": "cat",
+     "count": 1,
+     "color": "black"
+    },
+    {
+     "class": "bed",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 145
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A catcher catches a pitch at a baseball game.",
+  "spec": null,
+  "pid": 146
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A young man sitting on top of a wooden bench.",
+  "spec": {
+   "include": [
+    {
+     "class": "bench",
+     "count": 1
+    },
+    {
+     "class": "person",
+     "count": 1,
+     "position": [
+      "above",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 147
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A black dog sleeping on top of a bed.",
+  "spec": {
+   "include": [
+    {
+     "class": "bed",
+     "count": 1
+    },
+    {
+     "class": "dog",
+     "count": 1,
+     "color": "black",
+     "position": [
+      "above",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 148
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "Two skiers with their skis skiing on the slope.",
+  "spec": {
+   "include": [
+    {
+     "class": "skis",
+     "count": 2
+    }
+   ],
+   "exclude": [
+    {
+     "class": "skis",
+     "count": 3
+    }
+   ]
+  },
+  "pid": 149
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "Those are not usual signs that you see on the street.",
+  "spec": null,
+  "pid": 150
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A black cat sitting on top of a pot for a plant.",
+  "spec": {
+   "include": [
+    {
+     "class": "potted plant",
+     "count": 1
+    },
+    {
+     "class": "cat",
+     "count": 1,
+     "color": "black",
+     "position": [
+      "above",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 151
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "a very large watch tower towers over the tree's",
+  "spec": null,
+  "pid": 152
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A cake fashioned to look like a train next to tiled wall.",
+  "spec": {
+   "include": [
+    {
+     "class": "cake",
+     "count": 1
+    },
+    {
+     "class": "train",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 153
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A person flying through the air while riding a snowboard.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "snowboard",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 154
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A man walking across a parking lot in the rain with a red umbrella.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "umbrella",
+     "count": 1,
+     "color": "red"
+    }
+   ]
+  },
+  "pid": 155
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A pile of tomatoes, carrots, squash, lettuce and spinach.",
+  "spec": {
+   "include": [
+    {
+     "class": "carrot",
+     "count": 2
+    }
+   ]
+  },
+  "pid": 156
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "a boy is at a skate park riding his board",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 157
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A group of people kiteboarding over a large body of water.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 2
+    }
+   ]
+  },
+  "pid": 158
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "a large pizza is on a white plate",
+  "spec": {
+   "include": [
+    {
+     "class": "pizza",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 159
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A person holding a baseball bat during a baseball game.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "baseball bat",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 160
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A horse drawn carriage being ridden through a park.",
+  "spec": {
+   "include": [
+    {
+     "class": "horse",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 161
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A person wearing an orange back pack standing in front of park benches.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "orange",
+     "count": 1
+    },
+    {
+     "class": "bench",
+     "count": 2
+    }
+   ]
+  },
+  "pid": 162
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "an image of a girl with a laptop outside",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "laptop",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 163
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A float in a parade on a sunny day.",
+  "spec": null,
+  "pid": 164
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A yellow and green fire hydrant sitting on a sidewalk.",
+  "spec": {
+   "include": [
+    {
+     "class": "fire hydrant",
+     "count": 1,
+     "color": "green"
+    }
+   ]
+  },
+  "pid": 165
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "a few sheep are outside in a field with a dog",
+  "spec": {
+   "include": [
+    {
+     "class": "sheep",
+     "count": 1
+    },
+    {
+     "class": "dog",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 166
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A green and light blue bus traveling down a highway.",
+  "spec": {
+   "include": [
+    {
+     "class": "bus",
+     "count": 1,
+     "color": "blue"
+    }
+   ]
+  },
+  "pid": 167
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A white plate that has a sandwich cut in half",
+  "spec": {
+   "include": [
+    {
+     "class": "sandwich",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 168
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "Cake on white plates and a bottle of milk.",
+  "spec": {
+   "include": [
+    {
+     "class": "cake",
+     "count": 1
+    },
+    {
+     "class": "bottle",
+     "count": 1,
+     "color": "white"
+    }
+   ]
+  },
+  "pid": 169
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A group of people with luggage walking towards a white Era airplane at an airport.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 2
+    },
+    {
+     "class": "airplane",
+     "count": 1,
+     "color": "white"
+    }
+   ]
+  },
+  "pid": 170
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A woman sitting at a desk using a laptop.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "laptop",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 171
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A man and woman are playing Wii sitting on a couch.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "couch",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 172
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A cat wearing a holiday hat reclines on an blanket while being petted.",
+  "spec": {
+   "include": [
+    {
+     "class": "cat",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 173
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A couch in a living room next to a table with a lamp.",
+  "spec": {
+   "include": [
+    {
+     "class": "couch",
+     "count": 1
+    },
+    {
+     "class": "dining table",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 174
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A blurry image of some bison laying on the grass.",
+  "spec": null,
+  "pid": 175
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A person riding on a surfboard with skyline in background.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "surfboard",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 176
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A street sign hanging off the side of a metal pole.",
+  "spec": null,
+  "pid": 177
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A bus on a street with cars and bicyclists.",
+  "spec": {
+   "include": [
+    {
+     "class": "bus",
+     "count": 1
+    },
+    {
+     "class": "car",
+     "count": 2
+    }
+   ]
+  },
+  "pid": 178
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "a woma putting a pizza into an oven",
+  "spec": {
+   "include": [
+    {
+     "class": "pizza",
+     "count": 1
+    },
+    {
+     "class": "oven",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 179
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "Several boats at a dock near the water.",
+  "spec": {
+   "include": [
+    {
+     "class": "boat",
+     "count": 2
+    }
+   ]
+  },
+  "pid": 180
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "a close up of a bowl of food on a table",
+  "spec": {
+   "include": [
+    {
+     "class": "bowl",
+     "count": 1
+    },
+    {
+     "class": "dining table",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 181
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A clock tower rises above the Port of San Francisco building.",
+  "spec": {
+   "include": [
+    {
+     "class": "clock",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 182
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "Pizza laying on a plate on prepared dining room table.",
+  "spec": {
+   "include": [
+    {
+     "class": "pizza",
+     "count": 1
+    },
+    {
+     "class": "dining table",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 183
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "The public toilet is clean and ready to be used.",
+  "spec": {
+   "include": [
+    {
+     "class": "toilet",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 184
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A couple of men laying on top of surfboards on top of a wave in the ocean.",
+  "spec": {
+   "include": [
+    {
+     "class": "surfboard",
+     "count": 2
+    },
+    {
+     "class": "person",
+     "count": 2,
+     "position": [
+      "above",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 185
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "An advertisement is seen on the side of a very tall building.",
+  "spec": null,
+  "pid": 186
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A herd of cattle grazing on a lush green field.",
+  "spec": null,
+  "pid": 187
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A brown cow standing in a field next to a tree.",
+  "spec": {
+   "include": [
+    {
+     "class": "cow",
+     "count": 1,
+     "color": "brown"
+    }
+   ]
+  },
+  "pid": 188
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "An old train station sign points to northbound trains.",
+  "spec": {
+   "include": [
+    {
+     "class": "train",
+     "count": 1
+    },
+    {
+     "class": "train",
+     "count": 2
+    }
+   ]
+  },
+  "pid": 189
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "People in line being served food by a woman behind the counter.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 2
+    },
+    {
+     "class": "person",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 190
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "Man, woman, and two dogs are sitting in a small boat in the river.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "dog",
+     "count": 2
+    },
+    {
+     "class": "boat",
+     "count": 1
+    }
+   ],
+   "exclude": [
+    {
+     "class": "dog",
+     "count": 3
+    }
+   ]
+  },
+  "pid": 191
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A woman standing in front of a TV screen.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "tv",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 192
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A white toilet with a wooden seat on black tile floor.",
+  "spec": {
+   "include": [
+    {
+     "class": "toilet",
+     "count": 1,
+     "color": "white"
+    }
+   ]
+  },
+  "pid": 193
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "a man playing a game of tennis at the court",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 194
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "The platform and tracks at a railroad intersection",
+  "spec": null,
+  "pid": 195
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "this is two men in a soccer match",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 2
+    }
+   ],
+   "exclude": [
+    {
+     "class": "person",
+     "count": 3
+    }
+   ]
+  },
+  "pid": 196
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A baseball player winding up to swing the bat.",
+  "spec": null,
+  "pid": 197
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A women stands next to a yellow motorcycle.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 2
+    },
+    {
+     "class": "motorcycle",
+     "count": 1,
+     "color": "yellow"
+    }
+   ]
+  },
+  "pid": 198
+ },
+ {
+  "split": "train",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A hawk flying towards a tree covered in leaves.",
+  "spec": null,
+  "pid": 199
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "color_attr",
+  "prompt": "a photo of a blue tie and a pink dining table",
+  "spec": {
+   "include": [
+    {
+     "class": "tie",
+     "count": 1,
+     "color": "blue"
+    },
+    {
+     "class": "dining table",
+     "count": 1,
+     "color": "pink"
+    }
+   ]
+  },
+  "pid": 200
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "color_attr",
+  "prompt": "a photo of an orange traffic light and a white toilet",
+  "spec": {
+   "include": [
+    {
+     "class": "traffic light",
+     "count": 1,
+     "color": "orange"
+    },
+    {
+     "class": "toilet",
+     "count": 1,
+     "color": "white"
+    }
+   ]
+  },
+  "pid": 201
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "color_attr",
+  "prompt": "a photo of a purple computer keyboard and a blue scissors",
+  "spec": {
+   "include": [
+    {
+     "class": "computer keyboard",
+     "count": 1,
+     "color": "purple"
+    },
+    {
+     "class": "scissors",
+     "count": 1,
+     "color": "blue"
+    }
+   ]
+  },
+  "pid": 202
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "color_attr",
+  "prompt": "a photo of a purple parking meter and a red laptop",
+  "spec": {
+   "include": [
+    {
+     "class": "parking meter",
+     "count": 1,
+     "color": "purple"
+    },
+    {
+     "class": "laptop",
+     "count": 1,
+     "color": "red"
+    }
+   ]
+  },
+  "pid": 203
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "color_attr",
+  "prompt": "a photo of a pink handbag and a black scissors",
+  "spec": {
+   "include": [
+    {
+     "class": "handbag",
+     "count": 1,
+     "color": "pink"
+    },
+    {
+     "class": "scissors",
+     "count": 1,
+     "color": "black"
+    }
+   ]
+  },
+  "pid": 204
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "color_attr",
+  "prompt": "a photo of an orange handbag and a green carrot",
+  "spec": {
+   "include": [
+    {
+     "class": "handbag",
+     "count": 1,
+     "color": "orange"
+    },
+    {
+     "class": "carrot",
+     "count": 1,
+     "color": "green"
+    }
+   ]
+  },
+  "pid": 205
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "color_attr",
+  "prompt": "a photo of a yellow suitcase and a brown bus",
+  "spec": {
+   "include": [
+    {
+     "class": "suitcase",
+     "count": 1,
+     "color": "yellow"
+    },
+    {
+     "class": "bus",
+     "count": 1,
+     "color": "brown"
+    }
+   ]
+  },
+  "pid": 206
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "color_attr",
+  "prompt": "a photo of a yellow pizza and a green oven",
+  "spec": {
+   "include": [
+    {
+     "class": "pizza",
+     "count": 1,
+     "color": "yellow"
+    },
+    {
+     "class": "oven",
+     "count": 1,
+     "color": "green"
+    }
+   ]
+  },
+  "pid": 207
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "color_attr",
+  "prompt": "a photo of a white pizza and a green umbrella",
+  "spec": {
+   "include": [
+    {
+     "class": "pizza",
+     "count": 1,
+     "color": "white"
+    },
+    {
+     "class": "umbrella",
+     "count": 1,
+     "color": "green"
+    }
+   ]
+  },
+  "pid": 208
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "color_attr",
+  "prompt": "a photo of a green cup and a yellow bowl",
+  "spec": {
+   "include": [
+    {
+     "class": "cup",
+     "count": 1,
+     "color": "green"
+    },
+    {
+     "class": "bowl",
+     "count": 1,
+     "color": "yellow"
+    }
+   ]
+  },
+  "pid": 209
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "color_attr",
+  "prompt": "a photo of a blue toilet and a white suitcase",
+  "spec": {
+   "include": [
+    {
+     "class": "toilet",
+     "count": 1,
+     "color": "blue"
+    },
+    {
+     "class": "suitcase",
+     "count": 1,
+     "color": "white"
+    }
+   ]
+  },
+  "pid": 210
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "color_attr",
+  "prompt": "a photo of a green suitcase and a blue boat",
+  "spec": {
+   "include": [
+    {
+     "class": "suitcase",
+     "count": 1,
+     "color": "green"
+    },
+    {
+     "class": "boat",
+     "count": 1,
+     "color": "blue"
+    }
+   ]
+  },
+  "pid": 211
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "color_attr",
+  "prompt": "a photo of a purple tennis racket and a black sink",
+  "spec": {
+   "include": [
+    {
+     "class": "tennis racket",
+     "count": 1,
+     "color": "purple"
+    },
+    {
+     "class": "sink",
+     "count": 1,
+     "color": "black"
+    }
+   ]
+  },
+  "pid": 212
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "color_attr",
+  "prompt": "a photo of an orange giraffe and a white baseball glove",
+  "spec": {
+   "include": [
+    {
+     "class": "giraffe",
+     "count": 1,
+     "color": "orange"
+    },
+    {
+     "class": "baseball glove",
+     "count": 1,
+     "color": "white"
+    }
+   ]
+  },
+  "pid": 213
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "color_attr",
+  "prompt": "a photo of a blue laptop and a brown bear",
+  "spec": {
+   "include": [
+    {
+     "class": "laptop",
+     "count": 1,
+     "color": "blue"
+    },
+    {
+     "class": "bear",
+     "count": 1,
+     "color": "brown"
+    }
+   ]
+  },
+  "pid": 214
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "color_attr",
+  "prompt": "a photo of a purple sheep and a pink banana",
+  "spec": {
+   "include": [
+    {
+     "class": "sheep",
+     "count": 1,
+     "color": "purple"
+    },
+    {
+     "class": "banana",
+     "count": 1,
+     "color": "pink"
+    }
+   ]
+  },
+  "pid": 215
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "color_attr",
+  "prompt": "a photo of a red orange and a purple broccoli",
+  "spec": {
+   "include": [
+    {
+     "class": "orange",
+     "count": 1,
+     "color": "red"
+    },
+    {
+     "class": "broccoli",
+     "count": 1,
+     "color": "purple"
+    }
+   ]
+  },
+  "pid": 216
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "color_attr",
+  "prompt": "a photo of a white dining table and a red car",
+  "spec": {
+   "include": [
+    {
+     "class": "dining table",
+     "count": 1,
+     "color": "white"
+    },
+    {
+     "class": "car",
+     "count": 1,
+     "color": "red"
+    }
+   ]
+  },
+  "pid": 217
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "color_attr",
+  "prompt": "a photo of a purple backpack and a white umbrella",
+  "spec": {
+   "include": [
+    {
+     "class": "backpack",
+     "count": 1,
+     "color": "purple"
+    },
+    {
+     "class": "umbrella",
+     "count": 1,
+     "color": "white"
+    }
+   ]
+  },
+  "pid": 218
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "color_attr",
+  "prompt": "a photo of a pink tv remote and a blue airplane",
+  "spec": {
+   "include": [
+    {
+     "class": "tv remote",
+     "count": 1,
+     "color": "pink"
+    },
+    {
+     "class": "airplane",
+     "count": 1,
+     "color": "blue"
+    }
+   ]
+  },
+  "pid": 219
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "colors",
+  "prompt": "a photo of a red scissors",
+  "spec": {
+   "include": [
+    {
+     "class": "scissors",
+     "count": 1,
+     "color": "red"
+    }
+   ]
+  },
+  "pid": 220
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "colors",
+  "prompt": "a photo of a blue book",
+  "spec": {
+   "include": [
+    {
+     "class": "book",
+     "count": 1,
+     "color": "blue"
+    }
+   ]
+  },
+  "pid": 221
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "colors",
+  "prompt": "a photo of a blue clock",
+  "spec": {
+   "include": [
+    {
+     "class": "clock",
+     "count": 1,
+     "color": "blue"
+    }
+   ]
+  },
+  "pid": 222
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "colors",
+  "prompt": "a photo of an orange orange",
+  "spec": {
+   "include": [
+    {
+     "class": "orange",
+     "count": 1,
+     "color": "orange"
+    }
+   ]
+  },
+  "pid": 223
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "colors",
+  "prompt": "a photo of a purple carrot",
+  "spec": {
+   "include": [
+    {
+     "class": "carrot",
+     "count": 1,
+     "color": "purple"
+    }
+   ]
+  },
+  "pid": 224
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "colors",
+  "prompt": "a photo of a purple elephant",
+  "spec": {
+   "include": [
+    {
+     "class": "elephant",
+     "count": 1,
+     "color": "purple"
+    }
+   ]
+  },
+  "pid": 225
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "colors",
+  "prompt": "a photo of a red cake",
+  "spec": {
+   "include": [
+    {
+     "class": "cake",
+     "count": 1,
+     "color": "red"
+    }
+   ]
+  },
+  "pid": 226
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "colors",
+  "prompt": "a photo of a purple suitcase",
+  "spec": {
+   "include": [
+    {
+     "class": "suitcase",
+     "count": 1,
+     "color": "purple"
+    }
+   ]
+  },
+  "pid": 227
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "colors",
+  "prompt": "a photo of an orange toaster",
+  "spec": {
+   "include": [
+    {
+     "class": "toaster",
+     "count": 1,
+     "color": "orange"
+    }
+   ]
+  },
+  "pid": 228
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "colors",
+  "prompt": "a photo of a purple backpack",
+  "spec": {
+   "include": [
+    {
+     "class": "backpack",
+     "count": 1,
+     "color": "purple"
+    }
+   ]
+  },
+  "pid": 229
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "colors",
+  "prompt": "a photo of a brown orange",
+  "spec": {
+   "include": [
+    {
+     "class": "orange",
+     "count": 1,
+     "color": "brown"
+    }
+   ]
+  },
+  "pid": 230
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "colors",
+  "prompt": "a photo of a blue dining table",
+  "spec": {
+   "include": [
+    {
+     "class": "dining table",
+     "count": 1,
+     "color": "blue"
+    }
+   ]
+  },
+  "pid": 231
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "colors",
+  "prompt": "a photo of a red giraffe",
+  "spec": {
+   "include": [
+    {
+     "class": "giraffe",
+     "count": 1,
+     "color": "red"
+    }
+   ]
+  },
+  "pid": 232
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "colors",
+  "prompt": "a photo of a black tv remote",
+  "spec": {
+   "include": [
+    {
+     "class": "tv remote",
+     "count": 1,
+     "color": "black"
+    }
+   ]
+  },
+  "pid": 233
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "colors",
+  "prompt": "a photo of a black dining table",
+  "spec": {
+   "include": [
+    {
+     "class": "dining table",
+     "count": 1,
+     "color": "black"
+    }
+   ]
+  },
+  "pid": 234
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "colors",
+  "prompt": "a photo of a blue carrot",
+  "spec": {
+   "include": [
+    {
+     "class": "carrot",
+     "count": 1,
+     "color": "blue"
+    }
+   ]
+  },
+  "pid": 235
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "colors",
+  "prompt": "a photo of a black vase",
+  "spec": {
+   "include": [
+    {
+     "class": "vase",
+     "count": 1,
+     "color": "black"
+    }
+   ]
+  },
+  "pid": 236
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "colors",
+  "prompt": "a photo of a brown computer keyboard",
+  "spec": {
+   "include": [
+    {
+     "class": "computer keyboard",
+     "count": 1,
+     "color": "brown"
+    }
+   ]
+  },
+  "pid": 237
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "colors",
+  "prompt": "a photo of a black skis",
+  "spec": {
+   "include": [
+    {
+     "class": "skis",
+     "count": 1,
+     "color": "black"
+    }
+   ]
+  },
+  "pid": 238
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "colors",
+  "prompt": "a photo of a green clock",
+  "spec": {
+   "include": [
+    {
+     "class": "clock",
+     "count": 1,
+     "color": "green"
+    }
+   ]
+  },
+  "pid": 239
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "counting",
+  "prompt": "a photo of four traffic lights",
+  "spec": {
+   "include": [
+    {
+     "class": "traffic light",
+     "count": 4
+    }
+   ],
+   "exclude": [
+    {
+     "class": "traffic light",
+     "count": 5
+    }
+   ]
+  },
+  "pid": 240
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "counting",
+  "prompt": "a photo of four skateboards",
+  "spec": {
+   "include": [
+    {
+     "class": "skateboard",
+     "count": 4
+    }
+   ],
+   "exclude": [
+    {
+     "class": "skateboard",
+     "count": 5
+    }
+   ]
+  },
+  "pid": 241
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "counting",
+  "prompt": "a photo of four baseball gloves",
+  "spec": {
+   "include": [
+    {
+     "class": "baseball glove",
+     "count": 4
+    }
+   ],
+   "exclude": [
+    {
+     "class": "baseball glove",
+     "count": 5
+    }
+   ]
+  },
+  "pid": 242
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "counting",
+  "prompt": "a photo of four sinks",
+  "spec": {
+   "include": [
+    {
+     "class": "sink",
+     "count": 4
+    }
+   ],
+   "exclude": [
+    {
+     "class": "sink",
+     "count": 5
+    }
+   ]
+  },
+  "pid": 243
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "counting",
+  "prompt": "a photo of four microwaves",
+  "spec": {
+   "include": [
+    {
+     "class": "microwave",
+     "count": 4
+    }
+   ],
+   "exclude": [
+    {
+     "class": "microwave",
+     "count": 5
+    }
+   ]
+  },
+  "pid": 244
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "counting",
+  "prompt": "a photo of two backpacks",
+  "spec": {
+   "include": [
+    {
+     "class": "backpack",
+     "count": 2
+    }
+   ],
+   "exclude": [
+    {
+     "class": "backpack",
+     "count": 3
+    }
+   ]
+  },
+  "pid": 245
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "counting",
+  "prompt": "a photo of four bowls",
+  "spec": {
+   "include": [
+    {
+     "class": "bowl",
+     "count": 4
+    }
+   ],
+   "exclude": [
+    {
+     "class": "bowl",
+     "count": 5
+    }
+   ]
+  },
+  "pid": 246
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "counting",
+  "prompt": "a photo of four broccolis",
+  "spec": {
+   "include": [
+    {
+     "class": "broccoli",
+     "count": 4
+    }
+   ],
+   "exclude": [
+    {
+     "class": "broccoli",
+     "count": 5
+    }
+   ]
+  },
+  "pid": 247
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "counting",
+  "prompt": "a photo of two clocks",
+  "spec": {
+   "include": [
+    {
+     "class": "clock",
+     "count": 2
+    }
+   ],
+   "exclude": [
+    {
+     "class": "clock",
+     "count": 3
+    }
+   ]
+  },
+  "pid": 248
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "counting",
+  "prompt": "a photo of three suitcases",
+  "spec": {
+   "include": [
+    {
+     "class": "suitcase",
+     "count": 3
+    }
+   ],
+   "exclude": [
+    {
+     "class": "suitcase",
+     "count": 4
+    }
+   ]
+  },
+  "pid": 249
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "counting",
+  "prompt": "a photo of four chairs",
+  "spec": {
+   "include": [
+    {
+     "class": "chair",
+     "count": 4
+    }
+   ],
+   "exclude": [
+    {
+     "class": "chair",
+     "count": 5
+    }
+   ]
+  },
+  "pid": 250
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "counting",
+  "prompt": "a photo of four apples",
+  "spec": {
+   "include": [
+    {
+     "class": "apple",
+     "count": 4
+    }
+   ],
+   "exclude": [
+    {
+     "class": "apple",
+     "count": 5
+    }
+   ]
+  },
+  "pid": 251
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "counting",
+  "prompt": "a photo of four donuts",
+  "spec": {
+   "include": [
+    {
+     "class": "donut",
+     "count": 4
+    }
+   ],
+   "exclude": [
+    {
+     "class": "donut",
+     "count": 5
+    }
+   ]
+  },
+  "pid": 252
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "counting",
+  "prompt": "a photo of two toothbrushs",
+  "spec": {
+   "include": [
+    {
+     "class": "toothbrush",
+     "count": 2
+    }
+   ],
+   "exclude": [
+    {
+     "class": "toothbrush",
+     "count": 3
+    }
+   ]
+  },
+  "pid": 253
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "counting",
+  "prompt": "a photo of two snowboards",
+  "spec": {
+   "include": [
+    {
+     "class": "snowboard",
+     "count": 2
+    }
+   ],
+   "exclude": [
+    {
+     "class": "snowboard",
+     "count": 3
+    }
+   ]
+  },
+  "pid": 254
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "counting",
+  "prompt": "a photo of three hot dogs",
+  "spec": {
+   "include": [
+    {
+     "class": "hot dog",
+     "count": 3
+    }
+   ],
+   "exclude": [
+    {
+     "class": "hot dog",
+     "count": 4
+    }
+   ]
+  },
+  "pid": 255
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "counting",
+  "prompt": "a photo of three kites",
+  "spec": {
+   "include": [
+    {
+     "class": "kite",
+     "count": 3
+    }
+   ],
+   "exclude": [
+    {
+     "class": "kite",
+     "count": 4
+    }
+   ]
+  },
+  "pid": 256
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "counting",
+  "prompt": "a photo of three laptops",
+  "spec": {
+   "include": [
+    {
+     "class": "laptop",
+     "count": 3
+    }
+   ],
+   "exclude": [
+    {
+     "class": "laptop",
+     "count": 4
+    }
+   ]
+  },
+  "pid": 257
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "counting",
+  "prompt": "a photo of three pizzas",
+  "spec": {
+   "include": [
+    {
+     "class": "pizza",
+     "count": 3
+    }
+   ],
+   "exclude": [
+    {
+     "class": "pizza",
+     "count": 4
+    }
+   ]
+  },
+  "pid": 258
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "counting",
+  "prompt": "a photo of three persons",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 3
+    }
+   ],
+   "exclude": [
+    {
+     "class": "person",
+     "count": 4
+    }
+   ]
+  },
+  "pid": 259
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "position",
+  "prompt": "a photo of a cow below an airplane",
+  "spec": {
+   "include": [
+    {
+     "class": "airplane",
+     "count": 1
+    },
+    {
+     "class": "cow",
+     "count": 1,
+     "position": [
+      "below",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 260
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "position",
+  "prompt": "a photo of a tv below a cow",
+  "spec": {
+   "include": [
+    {
+     "class": "cow",
+     "count": 1
+    },
+    {
+     "class": "tv",
+     "count": 1,
+     "position": [
+      "below",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 261
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "position",
+  "prompt": "a photo of a tv remote below a cow",
+  "spec": {
+   "include": [
+    {
+     "class": "cow",
+     "count": 1
+    },
+    {
+     "class": "tv remote",
+     "count": 1,
+     "position": [
+      "below",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 262
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "position",
+  "prompt": "a photo of a truck left of a refrigerator",
+  "spec": {
+   "include": [
+    {
+     "class": "refrigerator",
+     "count": 1
+    },
+    {
+     "class": "truck",
+     "count": 1,
+     "position": [
+      "left of",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 263
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "position",
+  "prompt": "a photo of a hair drier left of a toilet",
+  "spec": {
+   "include": [
+    {
+     "class": "toilet",
+     "count": 1
+    },
+    {
+     "class": "hair drier",
+     "count": 1,
+     "position": [
+      "left of",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 264
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "position",
+  "prompt": "a photo of a knife right of a suitcase",
+  "spec": {
+   "include": [
+    {
+     "class": "suitcase",
+     "count": 1
+    },
+    {
+     "class": "knife",
+     "count": 1,
+     "position": [
+      "right of",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 265
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "position",
+  "prompt": "a photo of a backpack below a cake",
+  "spec": {
+   "include": [
+    {
+     "class": "cake",
+     "count": 1
+    },
+    {
+     "class": "backpack",
+     "count": 1,
+     "position": [
+      "below",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 266
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "position",
+  "prompt": "a photo of a dog above a cow",
+  "spec": {
+   "include": [
+    {
+     "class": "cow",
+     "count": 1
+    },
+    {
+     "class": "dog",
+     "count": 1,
+     "position": [
+      "above",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 267
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "position",
+  "prompt": "a photo of a hot dog right of a skateboard",
+  "spec": {
+   "include": [
+    {
+     "class": "skateboard",
+     "count": 1
+    },
+    {
+     "class": "hot dog",
+     "count": 1,
+     "position": [
+      "right of",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 268
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "position",
+  "prompt": "a photo of a cup left of an umbrella",
+  "spec": {
+   "include": [
+    {
+     "class": "umbrella",
+     "count": 1
+    },
+    {
+     "class": "cup",
+     "count": 1,
+     "position": [
+      "left of",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 269
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "position",
+  "prompt": "a photo of a stop sign above a parking meter",
+  "spec": {
+   "include": [
+    {
+     "class": "parking meter",
+     "count": 1
+    },
+    {
+     "class": "stop sign",
+     "count": 1,
+     "position": [
+      "above",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 270
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "position",
+  "prompt": "a photo of a cow right of a laptop",
+  "spec": {
+   "include": [
+    {
+     "class": "laptop",
+     "count": 1
+    },
+    {
+     "class": "cow",
+     "count": 1,
+     "position": [
+      "right of",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 271
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "position",
+  "prompt": "a photo of a baseball glove below an umbrella",
+  "spec": {
+   "include": [
+    {
+     "class": "umbrella",
+     "count": 1
+    },
+    {
+     "class": "baseball glove",
+     "count": 1,
+     "position": [
+      "below",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 272
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "position",
+  "prompt": "a photo of a suitcase above a skis",
+  "spec": {
+   "include": [
+    {
+     "class": "skis",
+     "count": 1
+    },
+    {
+     "class": "suitcase",
+     "count": 1,
+     "position": [
+      "above",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 273
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "position",
+  "prompt": "a photo of a train right of a dining table",
+  "spec": {
+   "include": [
+    {
+     "class": "dining table",
+     "count": 1
+    },
+    {
+     "class": "train",
+     "count": 1,
+     "position": [
+      "right of",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 274
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "position",
+  "prompt": "a photo of a baseball glove right of a bear",
+  "spec": {
+   "include": [
+    {
+     "class": "bear",
+     "count": 1
+    },
+    {
+     "class": "baseball glove",
+     "count": 1,
+     "position": [
+      "right of",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 275
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "position",
+  "prompt": "a photo of a refrigerator above a baseball bat",
+  "spec": {
+   "include": [
+    {
+     "class": "baseball bat",
+     "count": 1
+    },
+    {
+     "class": "refrigerator",
+     "count": 1,
+     "position": [
+      "above",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 276
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "position",
+  "prompt": "a photo of a stop sign above a chair",
+  "spec": {
+   "include": [
+    {
+     "class": "chair",
+     "count": 1
+    },
+    {
+     "class": "stop sign",
+     "count": 1,
+     "position": [
+      "above",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 277
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "position",
+  "prompt": "a photo of a computer keyboard above a snowboard",
+  "spec": {
+   "include": [
+    {
+     "class": "snowboard",
+     "count": 1
+    },
+    {
+     "class": "computer keyboard",
+     "count": 1,
+     "position": [
+      "above",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 278
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "position",
+  "prompt": "a photo of a tv above a baseball bat",
+  "spec": {
+   "include": [
+    {
+     "class": "baseball bat",
+     "count": 1
+    },
+    {
+     "class": "tv",
+     "count": 1,
+     "position": [
+      "above",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 279
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "single_object",
+  "prompt": "a photo of a person",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 280
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "single_object",
+  "prompt": "a photo of a handbag",
+  "spec": {
+   "include": [
+    {
+     "class": "handbag",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 281
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "single_object",
+  "prompt": "a photo of a knife",
+  "spec": {
+   "include": [
+    {
+     "class": "knife",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 282
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "single_object",
+  "prompt": "a photo of a computer mouse",
+  "spec": {
+   "include": [
+    {
+     "class": "computer mouse",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 283
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "single_object",
+  "prompt": "a photo of a broccoli",
+  "spec": {
+   "include": [
+    {
+     "class": "broccoli",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 284
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "single_object",
+  "prompt": "a photo of a computer keyboard",
+  "spec": {
+   "include": [
+    {
+     "class": "computer keyboard",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 285
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "single_object",
+  "prompt": "a photo of a toaster",
+  "spec": {
+   "include": [
+    {
+     "class": "toaster",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 286
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "single_object",
+  "prompt": "a photo of a hot dog",
+  "spec": {
+   "include": [
+    {
+     "class": "hot dog",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 287
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "single_object",
+  "prompt": "a photo of a carrot",
+  "spec": {
+   "include": [
+    {
+     "class": "carrot",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 288
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "single_object",
+  "prompt": "a photo of a train",
+  "spec": {
+   "include": [
+    {
+     "class": "train",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 289
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "single_object",
+  "prompt": "a photo of a giraffe",
+  "spec": {
+   "include": [
+    {
+     "class": "giraffe",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 290
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "single_object",
+  "prompt": "a photo of a refrigerator",
+  "spec": {
+   "include": [
+    {
+     "class": "refrigerator",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 291
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "single_object",
+  "prompt": "a photo of a potted plant",
+  "spec": {
+   "include": [
+    {
+     "class": "potted plant",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 292
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "single_object",
+  "prompt": "a photo of a skateboard",
+  "spec": {
+   "include": [
+    {
+     "class": "skateboard",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 293
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "single_object",
+  "prompt": "a photo of a traffic light",
+  "spec": {
+   "include": [
+    {
+     "class": "traffic light",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 294
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "single_object",
+  "prompt": "a photo of a bus",
+  "spec": {
+   "include": [
+    {
+     "class": "bus",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 295
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "single_object",
+  "prompt": "a photo of a microwave",
+  "spec": {
+   "include": [
+    {
+     "class": "microwave",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 296
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "single_object",
+  "prompt": "a photo of a sheep",
+  "spec": {
+   "include": [
+    {
+     "class": "sheep",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 297
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "single_object",
+  "prompt": "a photo of a bottle",
+  "spec": {
+   "include": [
+    {
+     "class": "bottle",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 298
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "single_object",
+  "prompt": "a photo of an airplane",
+  "spec": {
+   "include": [
+    {
+     "class": "airplane",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 299
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "two_object",
+  "prompt": "a photo of a person and an apple",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "apple",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 300
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "two_object",
+  "prompt": "a photo of a person and a stop sign",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "stop sign",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 301
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "two_object",
+  "prompt": "a photo of a tv and a carrot",
+  "spec": {
+   "include": [
+    {
+     "class": "tv",
+     "count": 1
+    },
+    {
+     "class": "carrot",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 302
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "two_object",
+  "prompt": "a photo of a fire hydrant and a train",
+  "spec": {
+   "include": [
+    {
+     "class": "fire hydrant",
+     "count": 1
+    },
+    {
+     "class": "train",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 303
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "two_object",
+  "prompt": "a photo of a bench and a snowboard",
+  "spec": {
+   "include": [
+    {
+     "class": "bench",
+     "count": 1
+    },
+    {
+     "class": "snowboard",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 304
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "two_object",
+  "prompt": "a photo of a laptop and a carrot",
+  "spec": {
+   "include": [
+    {
+     "class": "laptop",
+     "count": 1
+    },
+    {
+     "class": "carrot",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 305
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "two_object",
+  "prompt": "a photo of a tv and a bicycle",
+  "spec": {
+   "include": [
+    {
+     "class": "tv",
+     "count": 1
+    },
+    {
+     "class": "bicycle",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 306
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "two_object",
+  "prompt": "a photo of a bowl and a pizza",
+  "spec": {
+   "include": [
+    {
+     "class": "bowl",
+     "count": 1
+    },
+    {
+     "class": "pizza",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 307
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "two_object",
+  "prompt": "a photo of a vase and a spoon",
+  "spec": {
+   "include": [
+    {
+     "class": "vase",
+     "count": 1
+    },
+    {
+     "class": "spoon",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 308
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "two_object",
+  "prompt": "a photo of a bus and a baseball glove",
+  "spec": {
+   "include": [
+    {
+     "class": "bus",
+     "count": 1
+    },
+    {
+     "class": "baseball glove",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 309
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "two_object",
+  "prompt": "a photo of a frisbee and an apple",
+  "spec": {
+   "include": [
+    {
+     "class": "frisbee",
+     "count": 1
+    },
+    {
+     "class": "apple",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 310
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "two_object",
+  "prompt": "a photo of a computer keyboard and a microwave",
+  "spec": {
+   "include": [
+    {
+     "class": "computer keyboard",
+     "count": 1
+    },
+    {
+     "class": "microwave",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 311
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "two_object",
+  "prompt": "a photo of a bowl and a skis",
+  "spec": {
+   "include": [
+    {
+     "class": "bowl",
+     "count": 1
+    },
+    {
+     "class": "skis",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 312
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "two_object",
+  "prompt": "a photo of a handbag and a refrigerator",
+  "spec": {
+   "include": [
+    {
+     "class": "handbag",
+     "count": 1
+    },
+    {
+     "class": "refrigerator",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 313
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "two_object",
+  "prompt": "a photo of a traffic light and a backpack",
+  "spec": {
+   "include": [
+    {
+     "class": "traffic light",
+     "count": 1
+    },
+    {
+     "class": "backpack",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 314
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "two_object",
+  "prompt": "a photo of a fork and a baseball glove",
+  "spec": {
+   "include": [
+    {
+     "class": "fork",
+     "count": 1
+    },
+    {
+     "class": "baseball glove",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 315
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "two_object",
+  "prompt": "a photo of a person and a sink",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "sink",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 316
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "two_object",
+  "prompt": "a photo of a baseball bat and a bear",
+  "spec": {
+   "include": [
+    {
+     "class": "baseball bat",
+     "count": 1
+    },
+    {
+     "class": "bear",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 317
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "two_object",
+  "prompt": "a photo of a pizza and a book",
+  "spec": {
+   "include": [
+    {
+     "class": "pizza",
+     "count": 1
+    },
+    {
+     "class": "book",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 318
+ },
+ {
+  "split": "test",
+  "source": "geneval",
+  "tag": "two_object",
+  "prompt": "a photo of a cake and a zebra",
+  "spec": {
+   "include": [
+    {
+     "class": "cake",
+     "count": 1
+    },
+    {
+     "class": "zebra",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 319
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A desk with both a laptop computer and a desktop computer.",
+  "spec": {
+   "include": [
+    {
+     "class": "laptop",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 320
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A group of people are taking surfing lessons.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 2
+    }
+   ]
+  },
+  "pid": 321
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A cat eating a bird it has caught.",
+  "spec": {
+   "include": [
+    {
+     "class": "cat",
+     "count": 1
+    },
+    {
+     "class": "bird",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 322
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "a man skiing along a rail on the snowy hill",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 323
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A woman sitting down with a large cell phone holder on her pants.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "cell phone",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 324
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A table topped with a bowl of granola and two apples.",
+  "spec": {
+   "include": [
+    {
+     "class": "dining table",
+     "count": 1
+    },
+    {
+     "class": "bowl",
+     "count": 1
+    },
+    {
+     "class": "apple",
+     "count": 2
+    }
+   ],
+   "exclude": [
+    {
+     "class": "apple",
+     "count": 3
+    }
+   ]
+  },
+  "pid": 325
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "People are walking and riding motorcycles on the street",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 2
+    },
+    {
+     "class": "motorcycle",
+     "count": 2
+    }
+   ]
+  },
+  "pid": 326
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A man in a jean jacket riding a motorcycle on a road.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "motorcycle",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 327
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A female horse rider mounted near a body of water and mountains.",
+  "spec": {
+   "include": [
+    {
+     "class": "horse",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 328
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "a close up of a person wearing a bow tie",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "tie",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 329
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A close up of a black and white cat in the grass.",
+  "spec": {
+   "include": [
+    {
+     "class": "cat",
+     "count": 1,
+     "color": "white"
+    }
+   ]
+  },
+  "pid": 330
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A group of families with lots of children in a park.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 2
+    }
+   ]
+  },
+  "pid": 331
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "Two yellow fruits hanging on branches full of leaves.",
+  "spec": null,
+  "pid": 332
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A young man taking a swing at a tennis ball.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "sports ball",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 333
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A bike is perched on a concrete girder on the road.",
+  "spec": {
+   "include": [
+    {
+     "class": "bicycle",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 334
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A city traffic signal and street at night.",
+  "spec": null,
+  "pid": 335
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A cluster of black and white sheep hang out by a fence.",
+  "spec": {
+   "include": [
+    {
+     "class": "sheep",
+     "count": 1,
+     "color": "white"
+    }
+   ]
+  },
+  "pid": 336
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A road sign that indicates route sixty six.",
+  "spec": null,
+  "pid": 337
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "Cows lounge in a field with a mountain backdrop.",
+  "spec": {
+   "include": [
+    {
+     "class": "cow",
+     "count": 2
+    }
+   ]
+  },
+  "pid": 338
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A group of people are sitting outside an outdoor market.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 2
+    }
+   ]
+  },
+  "pid": 339
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A clock sits above green bushes under a blue sky.",
+  "spec": {
+   "include": [
+    {
+     "class": "clock",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 340
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A train speeding along the railroad tracks during the day.",
+  "spec": {
+   "include": [
+    {
+     "class": "train",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 341
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A small wheeled airplane on an open runway.",
+  "spec": {
+   "include": [
+    {
+     "class": "airplane",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 342
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A man riding a motorcycle down a city street.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "motorcycle",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 343
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A man sitting on a train at a table using a laptop.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "train",
+     "count": 1
+    },
+    {
+     "class": "dining table",
+     "count": 1
+    },
+    {
+     "class": "laptop",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 344
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A young woman standing in the kitchen pours from a large measuring cup.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "cup",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 345
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A plate of finger foods next to a blue and raspberry topped cake.",
+  "spec": {
+   "include": [
+    {
+     "class": "cake",
+     "count": 1,
+     "color": "blue"
+    }
+   ]
+  },
+  "pid": 346
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A laptop with a stationary mouse attached to it.",
+  "spec": {
+   "include": [
+    {
+     "class": "laptop",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 347
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "Small pizza sits on a plate on a restaurant table.",
+  "spec": {
+   "include": [
+    {
+     "class": "pizza",
+     "count": 1
+    },
+    {
+     "class": "dining table",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 348
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A sidewalk next to the outdoor sitting area of a restaurant.",
+  "spec": null,
+  "pid": 349
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "Two women playing with a Frisbee in a field.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 2
+    },
+    {
+     "class": "frisbee",
+     "count": 1
+    }
+   ],
+   "exclude": [
+    {
+     "class": "person",
+     "count": 3
+    }
+   ]
+  },
+  "pid": 350
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A young boy laying in bed with a pacifier in his mouth",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "bed",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 351
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A boy in birthday hat holding a tennis racket.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "tennis racket",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 352
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A white refrigerator freezer covered in magnets and pictures.",
+  "spec": {
+   "include": [
+    {
+     "class": "refrigerator",
+     "count": 1,
+     "color": "white"
+    }
+   ]
+  },
+  "pid": 353
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A white plate topped with broccoli and a dumpling.",
+  "spec": {
+   "include": [
+    {
+     "class": "broccoli",
+     "count": 1,
+     "color": "white"
+    }
+   ]
+  },
+  "pid": 354
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A woman bending over in a living room to pet her dog.",
+  "spec": {
+   "include": [
+    {
+     "class": "dog",
+     "count": 1
+    },
+    {
+     "class": "person",
+     "count": 1,
+     "position": [
+      "above",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 355
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A group of people standing and sitting on top of a field.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 2
+    }
+   ]
+  },
+  "pid": 356
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "An elaborate church with tiled floors and stained glass.",
+  "spec": null,
+  "pid": 357
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A cat sprawled out over the top of a laptop computer keyboard.",
+  "spec": {
+   "include": [
+    {
+     "class": "laptop",
+     "count": 1
+    },
+    {
+     "class": "cat",
+     "count": 1,
+     "position": [
+      "above",
+      0
+     ]
+    },
+    {
+     "class": "computer keyboard",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 358
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A cat standing next to a white toilet near a bath tub.",
+  "spec": {
+   "include": [
+    {
+     "class": "cat",
+     "count": 1
+    },
+    {
+     "class": "toilet",
+     "count": 1,
+     "color": "white"
+    }
+   ]
+  },
+  "pid": 359
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A woman holding a plate of cake covered in frosting.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "cake",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 360
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A bird is trying to find food in the water.",
+  "spec": {
+   "include": [
+    {
+     "class": "bird",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 361
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "a room that has some furniture and a table in it",
+  "spec": {
+   "include": [
+    {
+     "class": "dining table",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 362
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A child sitting down in front of a bowl.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "bowl",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 363
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "Two pizzas sitting in pie pans on top of a stove.",
+  "spec": {
+   "include": [
+    {
+     "class": "pizza",
+     "count": 2
+    }
+   ],
+   "exclude": [
+    {
+     "class": "pizza",
+     "count": 3
+    }
+   ]
+  },
+  "pid": 364
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A beautiful woman standing on the side of a rad next to a street.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 365
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "Pictures of different types of prepared food containing beans.",
+  "spec": null,
+  "pid": 366
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A batter prepares to hit a baseball that has just been thrown.",
+  "spec": null,
+  "pid": 367
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "The banana is laying next to an almost empty bowl.",
+  "spec": {
+   "include": [
+    {
+     "class": "banana",
+     "count": 1
+    },
+    {
+     "class": "bowl",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 368
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "a bed room with a neatly made bed",
+  "spec": {
+   "include": [
+    {
+     "class": "bed",
+     "count": 1
+    },
+    {
+     "class": "bed",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 369
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A cat outside a window looking at a Buddha statue.",
+  "spec": {
+   "include": [
+    {
+     "class": "cat",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 370
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A view of a stoplight by a street.",
+  "spec": null,
+  "pid": 371
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "Three bears standing in a field outside.",
+  "spec": {
+   "include": [
+    {
+     "class": "bear",
+     "count": 3
+    }
+   ],
+   "exclude": [
+    {
+     "class": "bear",
+     "count": 4
+    }
+   ]
+  },
+  "pid": 372
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "a man with a tennis racket gets ready to swing his racket",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "tennis racket",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 373
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A hand is reaching out to the top if a toilet.",
+  "spec": {
+   "include": [
+    {
+     "class": "toilet",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 374
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "An elderly person in a kitchen cooking food.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 375
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "Your guess is as good as mine as to what these objects are.",
+  "spec": null,
+  "pid": 376
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A man in a wetsuit surfing a wave on a surf board.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 377
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A pizza sitting on top of a pan in the oven.",
+  "spec": {
+   "include": [
+    {
+     "class": "oven",
+     "count": 1
+    },
+    {
+     "class": "pizza",
+     "count": 1,
+     "position": [
+      "above",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 378
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "a boat filled with people going down a river",
+  "spec": {
+   "include": [
+    {
+     "class": "boat",
+     "count": 1
+    },
+    {
+     "class": "person",
+     "count": 2
+    }
+   ]
+  },
+  "pid": 379
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A white bus is driving down the street",
+  "spec": {
+   "include": [
+    {
+     "class": "bus",
+     "count": 1,
+     "color": "white"
+    }
+   ]
+  },
+  "pid": 380
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A group of people sitting down at a dining room table next to dishes.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 2
+    },
+    {
+     "class": "dining table",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 381
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A man doing a trick on a skateboard over some steps.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "skateboard",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 382
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "two cups filled with veggies and nuts",
+  "spec": {
+   "include": [
+    {
+     "class": "cup",
+     "count": 2
+    }
+   ],
+   "exclude": [
+    {
+     "class": "cup",
+     "count": 3
+    }
+   ]
+  },
+  "pid": 383
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "Several people standing in a green field together while flying kites.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 2
+    },
+    {
+     "class": "kite",
+     "count": 2
+    }
+   ]
+  },
+  "pid": 384
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A woman and a dog sitting on the ground.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "dog",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 385
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "Two giraffes are standing together outside near a wall.",
+  "spec": {
+   "include": [
+    {
+     "class": "giraffe",
+     "count": 2
+    }
+   ],
+   "exclude": [
+    {
+     "class": "giraffe",
+     "count": 3
+    }
+   ]
+  },
+  "pid": 386
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A table topped with plates, bowls and containers of food.",
+  "spec": {
+   "include": [
+    {
+     "class": "dining table",
+     "count": 1
+    },
+    {
+     "class": "bowl",
+     "count": 2
+    }
+   ]
+  },
+  "pid": 387
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A man standing in the snow while talking on a cell phone.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "cell phone",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 388
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A black and white photograph of a stuffed teddy bear wearing a shirt that reads \"handle with care\" and a small stuffed sheep.",
+  "spec": {
+   "include": [
+    {
+     "class": "teddy bear",
+     "count": 1
+    },
+    {
+     "class": "sheep",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 389
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A person is eating at a table with plates, a fork, knife, spoon, cup, and cell phone on it.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "dining table",
+     "count": 1
+    },
+    {
+     "class": "fork",
+     "count": 1
+    },
+    {
+     "class": "knife",
+     "count": 1
+    },
+    {
+     "class": "spoon",
+     "count": 1
+    },
+    {
+     "class": "cup",
+     "count": 1
+    },
+    {
+     "class": "cell phone",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 390
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A smart phone sitting on top sitting on top of a wooden table.",
+  "spec": {
+   "include": [
+    {
+     "class": "dining table",
+     "count": 1
+    },
+    {
+     "class": "cell phone",
+     "count": 1,
+     "position": [
+      "above",
+      0
+     ]
+    }
+   ]
+  },
+  "pid": 391
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "An adult standing behind a little girl while holding an umbrella.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "umbrella",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 392
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A man in a suit smiling at the camera",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 393
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A toilet that is decorated like a pink stuffed animal",
+  "spec": {
+   "include": [
+    {
+     "class": "toilet",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 394
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A man reaching into a freezer while standing next to a woman in a park.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    },
+    {
+     "class": "person",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 395
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A group of women standing around a cake cutting slices.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 2
+    },
+    {
+     "class": "cake",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 396
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A bird is perched on a large rock near the shore.",
+  "spec": {
+   "include": [
+    {
+     "class": "bird",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 397
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A girl taking a swing at a baseball during a game.",
+  "spec": {
+   "include": [
+    {
+     "class": "person",
+     "count": 1
+    }
+   ]
+  },
+  "pid": 398
+ },
+ {
+  "split": "test",
+  "source": "coco",
+  "tag": "coco",
+  "prompt": "A white fire hydrant sitting on a sidewalk.",
+  "spec": {
+   "include": [
+    {
+     "class": "fire hydrant",
+     "count": 1,
+     "color": "white"
+    }
+   ]
+  },
+  "pid": 399
+ }
+]

@@ -1,0 +1,201 @@
+pid,source,tag,judge_clip,judge_struct,judge_reasons,vis_flags,vis_ok
+200,geneval,color_attr,31.765625,False,"expected 1 dining table, found 0","colour_cast,periodic_artifact",False
+201,geneval,color_attr,30.375,False,"expected 1 orange traffic light, saw colours {'brown': 1}",,True
+202,geneval,color_attr,35.5,True,,colour_cast,True
+203,geneval,color_attr,34.9375,True,,,True
+204,geneval,color_attr,33.71875,True,,,True
+205,geneval,color_attr,33.09375,False,"expected 1 carrot, found 0",colour_cast,True
+206,geneval,color_attr,32.6875,True,,,True
+207,geneval,color_attr,29.25,False,"expected 1 yellow pizza, saw colours {'green': 1}; expected 1 green oven, saw colours {'brown': 1}",colour_cast,True
+208,geneval,color_attr,28.609375,False,"expected 1 white pizza, saw colours {'green': 1}",,True
+209,geneval,color_attr,33.65625,True,,colour_cast,True
+210,geneval,color_attr,30.828125,False,"expected 1 suitcase, found 0",,True
+211,geneval,color_attr,29.90625,True,,,True
+212,geneval,color_attr,39.4375,False,"expected 1 black sink, saw colours {'purple': 1}",,True
+213,geneval,color_attr,27.640625,False,"expected 1 giraffe, found 0; expected 1 baseball glove, found 0",,True
+214,geneval,color_attr,31.328125,True,,,True
+215,geneval,color_attr,33.75,False,"expected 1 sheep, found 0",,True
+216,geneval,color_attr,33.1875,False,"expected 1 red orange, saw colours {'orange': 1}",colour_cast,True
+217,geneval,color_attr,30.203125,True,,,True
+218,geneval,color_attr,32.96875,True,,colour_cast,True
+219,geneval,color_attr,35.6875,True,,colour_cast,True
+220,geneval,colors,30.515625,True,,colour_cast,True
+221,geneval,colors,29.09375,True,,"colour_cast,periodic_artifact",False
+222,geneval,colors,25.703125,True,,colour_cast,True
+223,geneval,colors,28.390625,True,,colour_cast,True
+224,geneval,colors,31.90625,False,"expected 1 carrot, found 0","too_dark,colour_cast",True
+225,geneval,colors,31.15625,True,,,True
+226,geneval,colors,32.0,True,,,True
+227,geneval,colors,34.0,True,,colour_cast,True
+228,geneval,colors,31.078125,True,,colour_cast,True
+229,geneval,colors,33.90625,True,,,True
+230,geneval,colors,25.421875,False,"expected 1 brown orange, saw colours {'orange': 1}",colour_cast,True
+231,geneval,colors,29.15625,True,,,True
+232,geneval,colors,25.6875,True,,,True
+233,geneval,colors,27.171875,True,,,True
+234,geneval,colors,27.125,True,,,True
+235,geneval,colors,30.375,True,,colour_cast,True
+236,geneval,colors,35.4375,True,,blurry,False
+237,geneval,colors,29.859375,True,,,True
+238,geneval,colors,23.703125,False,"expected 1 black skis, saw colours {'red': 1}",,True
+239,geneval,colors,28.3125,True,,colour_cast,True
+240,geneval,counting,24.5625,True,,,True
+241,geneval,counting,26.4375,True,,,True
+242,geneval,counting,27.21875,False,"expected 4 baseball glove, found 2",,True
+243,geneval,counting,23.65625,False,"expected 4 sink, found 2",,True
+244,geneval,counting,28.765625,False,"expected 4 microwave, found 2",,True
+245,geneval,counting,24.515625,False,"expected 2 backpack, found 0",,True
+246,geneval,counting,23.09375,True,,,True
+247,geneval,counting,27.953125,False,"expected 4 broccoli, found 3",,True
+248,geneval,counting,26.46875,True,,,True
+249,geneval,counting,26.03125,True,,,True
+250,geneval,counting,24.09375,True,,,True
+251,geneval,counting,28.15625,True,,blurry,False
+252,geneval,counting,27.59375,True,,,True
+253,geneval,counting,21.796875,True,,"too_bright,colour_cast",True
+254,geneval,counting,26.296875,True,,,True
+255,geneval,counting,29.15625,True,,"colour_cast,periodic_artifact",False
+256,geneval,counting,26.296875,True,,,True
+257,geneval,counting,27.09375,True,,,True
+258,geneval,counting,23.75,False,"expected fewer than 4 pizza, found 4",,True
+259,geneval,counting,18.5625,True,,,True
+260,geneval,position,31.15625,True,,,True
+261,geneval,position,26.125,True,,,True
+262,geneval,position,30.828125,True,,,True
+263,geneval,position,29.4375,True,,,True
+264,geneval,position,28.46875,True,,,True
+265,geneval,position,34.875,True,,,True
+266,geneval,position,31.765625,True,,,True
+267,geneval,position,30.4375,True,,,True
+268,geneval,position,31.25,True,,,True
+269,geneval,position,27.6875,False,"expected cup left of umbrella, found below",colour_cast,True
+270,geneval,position,26.421875,True,,,True
+271,geneval,position,29.828125,False,"expected cow right of laptop, found overlapping",,True
+272,geneval,position,33.0,True,,,True
+273,geneval,position,31.515625,False,"expected 1 skis, found 0; no skis to be above",,True
+274,geneval,position,30.8125,True,,,True
+275,geneval,position,31.5625,False,"expected baseball glove right of bear, found overlapping",,True
+276,geneval,position,33.34375,True,,,True
+277,geneval,position,31.671875,True,,,True
+278,geneval,position,39.34375,True,,,True
+279,geneval,position,30.828125,True,,,True
+280,geneval,single_object,23.328125,True,,,True
+281,geneval,single_object,22.484375,True,,,True
+282,geneval,single_object,25.96875,True,,too_dark,True
+283,geneval,single_object,29.390625,True,,,True
+284,geneval,single_object,28.09375,True,,,True
+285,geneval,single_object,24.546875,True,,"colour_cast,periodic_artifact",False
+286,geneval,single_object,27.953125,True,,,True
+287,geneval,single_object,27.640625,True,,colour_cast,True
+288,geneval,single_object,27.09375,True,,,True
+289,geneval,single_object,24.53125,True,,,True
+290,geneval,single_object,23.9375,True,,,True
+291,geneval,single_object,24.671875,True,,,True
+292,geneval,single_object,27.8125,True,,,True
+293,geneval,single_object,29.203125,True,,periodic_artifact,False
+294,geneval,single_object,23.46875,True,,,True
+295,geneval,single_object,24.234375,True,,,True
+296,geneval,single_object,25.53125,True,,,True
+297,geneval,single_object,24.5625,True,,,True
+298,geneval,single_object,24.59375,True,,,True
+299,geneval,single_object,20.671875,True,,,True
+300,geneval,two_object,24.578125,True,,"blurry,colour_cast",False
+301,geneval,two_object,24.25,True,,,True
+302,geneval,two_object,27.15625,True,,,True
+303,geneval,two_object,32.78125,True,,,True
+304,geneval,two_object,30.859375,True,,,True
+305,geneval,two_object,28.46875,True,,,True
+306,geneval,two_object,32.09375,True,,,True
+307,geneval,two_object,24.609375,True,,,True
+308,geneval,two_object,30.5625,True,,,True
+309,geneval,two_object,29.34375,True,,,True
+310,geneval,two_object,30.5625,True,,colour_cast,True
+311,geneval,two_object,32.3125,True,,,True
+312,geneval,two_object,26.171875,False,"expected 1 skis, found 0",,True
+313,geneval,two_object,30.078125,True,,,True
+314,geneval,two_object,27.25,True,,,True
+315,geneval,two_object,27.6875,True,,,True
+316,geneval,two_object,23.84375,True,,,True
+317,geneval,two_object,29.5625,True,,,True
+318,geneval,two_object,27.046875,True,,,True
+319,geneval,two_object,31.5625,True,,,True
+320,coco,coco,23.0625,True,,,True
+321,coco,coco,24.484375,True,,,True
+322,coco,coco,30.34375,True,,,True
+323,coco,coco,25.0,True,,colour_cast,True
+324,coco,coco,24.8125,True,,,True
+325,coco,coco,27.90625,True,,,True
+326,coco,coco,25.3125,True,,,True
+327,coco,coco,25.390625,True,,,True
+328,coco,coco,30.890625,True,,,True
+329,coco,coco,26.375,True,,,True
+330,coco,coco,31.34375,False,"expected 1 white cat, saw colours {'black': 1}",,True
+331,coco,coco,26.34375,True,,,True
+332,coco,coco,26.421875,,,colour_cast,True
+333,coco,coco,24.6875,True,,,True
+334,coco,coco,28.125,True,,,True
+335,coco,coco,26.59375,,,,True
+336,coco,coco,28.421875,False,"expected 1 white sheep, saw colours {'black': 1}",,True
+337,coco,coco,23.078125,,,,True
+338,coco,coco,26.953125,True,,,True
+339,coco,coco,23.71875,True,,,True
+340,coco,coco,29.375,True,,,True
+341,coco,coco,23.5,True,,,True
+342,coco,coco,20.3125,True,,,True
+343,coco,coco,26.046875,True,,,True
+344,coco,coco,28.46875,True,,,True
+345,coco,coco,28.828125,False,"expected 1 cup, found 0",,True
+346,coco,coco,35.53125,False,"expected 1 blue cake, saw colours {'purple': 1}",,True
+347,coco,coco,25.296875,True,,,True
+348,coco,coco,24.640625,True,,,True
+349,coco,coco,24.734375,,,,True
+350,coco,coco,36.21875,True,,,True
+351,coco,coco,29.875,True,,periodic_artifact,False
+352,coco,coco,33.4375,True,,,True
+353,coco,coco,30.515625,True,,,True
+354,coco,coco,30.46875,False,"expected 1 white broccoli, saw colours {'green': 1}",,True
+355,coco,coco,29.046875,False,"expected person above dog, found overlapping",,True
+356,coco,coco,26.90625,True,,,True
+357,coco,coco,28.59375,,,noisy,False
+358,coco,coco,25.734375,False,"expected cat above laptop, found overlapping",,True
+359,coco,coco,25.921875,False,"expected 1 white toilet, saw colours {'brown': 1}",,True
+360,coco,coco,23.84375,True,,,True
+361,coco,coco,23.875,True,,,True
+362,coco,coco,20.0625,True,,,True
+363,coco,coco,31.4375,True,,,True
+364,coco,coco,26.65625,True,,,True
+365,coco,coco,24.84375,True,,periodic_artifact,False
+366,coco,coco,26.734375,,,,True
+367,coco,coco,23.875,,,,True
+368,coco,coco,25.640625,True,,"colour_cast,periodic_artifact",False
+369,coco,coco,21.6875,False,"expected 1 bed, found 0",,True
+370,coco,coco,30.59375,True,,,True
+371,coco,coco,23.625,,,,True
+372,coco,coco,31.109375,True,,periodic_artifact,False
+373,coco,coco,23.015625,True,,,True
+374,coco,coco,25.421875,True,,,True
+375,coco,coco,29.828125,True,,,True
+376,coco,coco,13.6328125,,,,True
+377,coco,coco,27.734375,True,,,True
+378,coco,coco,24.96875,False,"expected pizza above oven, found overlapping",,True
+379,coco,coco,25.265625,True,,noisy,False
+380,coco,coco,20.359375,True,,,True
+381,coco,coco,24.859375,True,,too_dark,True
+382,coco,coco,27.078125,True,,,True
+383,coco,coco,30.34375,False,"expected 2 cup, found 0",,True
+384,coco,coco,32.6875,True,,colour_cast,True
+385,coco,coco,25.828125,True,,,True
+386,coco,coco,30.328125,True,,,True
+387,coco,coco,24.5,True,,,True
+388,coco,coco,32.5,True,,,True
+389,coco,coco,35.875,False,"expected 1 sheep, found 0",,True
+390,coco,coco,24.359375,False,"expected 1 person, found 0; expected 1 cell phone, found 0",,True
+391,coco,coco,22.875,False,"expected cell phone above dining table, found overlapping",,True
+392,coco,coco,26.390625,True,,colour_cast,True
+393,coco,coco,22.203125,True,,,True
+394,coco,coco,36.28125,True,,,True
+395,coco,coco,34.75,True,,,True
+396,coco,coco,27.78125,True,,,True
+397,coco,coco,28.484375,True,,noisy,False
+398,coco,coco,25.25,True,,,True
+399,coco,coco,29.953125,True,,,True

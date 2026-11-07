@@ -1,0 +1,8 @@
+,color_attr,colors,counting,position,single_object,two_object
+"fixed R0 (2 step, 768px)",0.35,0.9,0.25,0.55,1.0,0.9
+"fixed R1 (2 step, 1024px)",0.55,0.85,0.6,0.8,1.0,0.75
+"fixed R2 (2 step, 1024px)",0.6,0.85,0.6,0.65,1.0,0.95
+cascade from R0,0.5,0.9,0.55,0.7,1.0,0.95
+router only,0.45,0.9,0.6,0.7,1.0,0.9
+router + cascade,0.55,0.9,0.55,0.7,1.0,0.95
+"ORIGINAL teacher (20 steps, 1024px)",0.5,0.85,0.7,0.8,1.0,0.95

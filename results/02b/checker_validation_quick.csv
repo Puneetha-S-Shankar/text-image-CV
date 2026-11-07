@@ -1,0 +1,7 @@
+kind,gate,judge,n
+count false,1.0,0.926,27
+count true,0.593,0.37,27
+position false,1.0,1.0,41
+position true,0.878,0.951,41
+presence false,0.98,0.96,100
+presence true,0.971,0.983,175
