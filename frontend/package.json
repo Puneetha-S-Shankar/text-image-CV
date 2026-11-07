@@ -1,0 +1,40 @@
+{
+  "name": "p3-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k -n mock,web -c magenta,cyan \"npm:mock\" \"npm:dev:web\"",
+    "dev:web": "next dev",
+    "mock": "node mock/server.mjs",
+    "build": "next build",
+    "postbuild": "node scripts/fix-static-export.mjs out",
+    "preview": "next build && node mock/server.mjs --static out --port 8080",
+    "typecheck": "next typegen && tsc --noEmit",
+    "lint": "eslint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "verify": "npm run typecheck && npm run lint && npm run format:check && npm run build"
+  },
+  "dependencies": {
+    "next": "16.4.5",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "concurrently": "^10.0.6",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.5",
+    "prettier": "^3.9.10",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "description": "Mobile web app for P3: resource-efficient text-to-image (static Next.js export served by the T4 backend).",
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}
