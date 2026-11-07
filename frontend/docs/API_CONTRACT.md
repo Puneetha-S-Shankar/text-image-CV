@@ -77,6 +77,7 @@ the check), including in `fast` mode.
 {
   "id": "a1b2c3d4",
   "image": "data:image/webp;base64,UklGR...",
+  "initial_image": "data:image/webp;base64,UklGR...",
   "width": 1024,
   "height": 1024,
   "prompt": "two dogs and one cat sitting on a sofa",
@@ -122,6 +123,7 @@ the check), including in `fast` mode.
 | -------------------------- | -------------------- | ------------------------------------------------------------------------------------------------ |
 | `id`                       | string               | Unique per picture (use as React key / file name)                                                |
 | `image`                    | string (data URL)    | Put straight into `<img src>`. Real backend: `data:image/webp;base64,...` (~30–80 KB). Mock: SVG |
+| `initial_image`            | string (data URL)    | First generated attempt, before retries and final polish; shown beside `image` on Compare        |
 | `width`, `height`          | number               | Final picture size                                                                               |
 | `prompt`, `mode`           | string               | Echo of the request (prompt trimmed)                                                             |
 | `passed`                   | boolean              | Final picture passed every check. `false` = best effort within the mode's budget                 |

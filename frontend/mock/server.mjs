@@ -383,6 +383,13 @@ async function generate(req, res) {
   sendJson(res, 200, {
     id: randomUUID().slice(0, 8),
     image: placeholderImage(clean, last.seed, last.level, last.resolution, last.passed),
+    initial_image: placeholderImage(
+      clean,
+      attempts[0].seed,
+      attempts[0].level,
+      attempts[0].resolution,
+      attempts[0].passed,
+    ),
     width: last.resolution,
     height: last.resolution,
     prompt: clean,

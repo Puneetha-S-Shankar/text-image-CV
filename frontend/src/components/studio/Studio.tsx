@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { ApiError, generate } from "@/lib/api";
 import { DEFAULT_MODE, MODES } from "@/lib/config";
 import type { Mode } from "@/lib/types";
+import { saveLiveComparison } from "@/lib/liveComparison";
 import { useHealth } from "@/hooks/useHealth";
 import { PromptInspiration } from "@/components/PromptInspiration";
 import { HistoryStrip } from "./HistoryStrip";
@@ -21,6 +22,7 @@ export function Studio() {
   const [mode, setMode] = useState<Mode>(DEFAULT_MODE);
   const [state, setState] = useState<StudioState>({ kind: "idle" });
   const [history, setHistory] = useState<HistoryItem[]>([]);
+  const [comparisonSaveFailed, setComparisonSaveFailed] = useState(false);
   const abortRef = useRef<AbortController | null>(null);
   const generationInFlightRef = useRef(false);
 
@@ -34,10 +36,16 @@ export function Studio() {
     const controller = new AbortController();
     abortRef.current = controller;
     const startedAt = performance.now();
+    setComparisonSaveFailed(false);
     setState({ kind: "generating", startedAt, prompt: p, mode: runMode });
 
     try {
       const result = await generate({ prompt: p, mode: runMode }, controller.signal);
+      try {
+        saveLiveComparison(result);
+      } catch {
+        setComparisonSaveFailed(true);
+      }
       const item: HistoryItem = { result, clientTotalS: (performance.now() - startedAt) / 1000 };
       setState({ kind: "done", ...item });
       setHistory((h) => [item, ...h].slice(0, 12));
@@ -111,11 +119,18 @@ export function Studio() {
           </section>
 
           {state.kind === "done" ? (
-            <ResultDetails
-              result={state.result}
-              clientTotalS={state.clientTotalS}
-              onAgain={() => run(state.result.prompt, state.result.mode)}
-            />
+            <>
+              {comparisonSaveFailed && (
+                <p role="status" className="rounded-xl bg-warn/10 px-3 py-2 text-xs text-warn">
+                  Your image was created, but this browser could not save it for the Compare page.
+                </p>
+              )}
+              <ResultDetails
+                result={state.result}
+                clientTotalS={state.clientTotalS}
+                onAgain={() => run(state.result.prompt, state.result.mode)}
+              />
+            </>
           ) : (
             <aside className="rounded-[28px] border border-ink-700 bg-ink-900/90 p-5 shadow-card sm:p-6">
               <p className="text-[10px] font-semibold tracking-[0.2em] text-accent-1 uppercase">

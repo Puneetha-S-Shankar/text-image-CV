@@ -337,11 +337,14 @@ class Engine:
         start, conf = self.start_level(mode, prompt, spec)
         base_seed = int(seed) if seed is not None else random.randrange(2**31)
         attempts, gen_s, check_s = [], 0.0, 0.0
+        initial_image = None
         level = start
         while True:
             s = level_seed(base_seed, level)
             tg = time.perf_counter()
             image = self.draw(level, [prompt], [s])[0]
+            if initial_image is None:
+                initial_image = image.copy()
             if self.device.startswith("cuda"):
                 torch.cuda.synchronize()
             g_time = time.perf_counter() - tg
@@ -358,15 +361,20 @@ class Engine:
                 break
             level += 1
 
+        if initial_image is None:
+            raise RuntimeError("The cascade did not produce an initial image.")
+
         tp = time.perf_counter()
         polished, pinfo = pcv.safe_enhance(np.asarray(image), prompt)
         polish_s = time.perf_counter() - tp
         te = time.perf_counter()
         data, pk = pcv.pack_for_mobile(polished, max_side=1024)
+        initial_data, _ = pcv.pack_for_mobile(np.asarray(initial_image), max_side=1024)
         encode_s = time.perf_counter() - te
         h, w = np.asarray(polished).shape[:2]
         return {
             "image": "data:image/webp;base64," + base64.b64encode(data).decode("ascii"),
+            "initial_image": "data:image/webp;base64," + base64.b64encode(initial_data).decode("ascii"),
             "width": int(w),
             "height": int(h),
             "prompt": prompt,

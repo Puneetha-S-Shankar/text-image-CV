@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { COMPARE_PAIRS } from "@/data/compare";
 import { CASCADE_RESULTS, MEASURED_HOW, SETUPS, baseline, headline } from "@/data/results";
+import { LiveComparison } from "@/components/compare/LiveComparison";
 import { MODES } from "@/lib/config";
 import type { Mode } from "@/lib/types";
 
@@ -120,28 +121,7 @@ export default function ComparePage() {
         </ol>
       </section>
 
-      <section className="grid gap-4 rounded-[28px] border border-ink-700 bg-ink-900 p-4 shadow-card-soft sm:p-5">
-        <div>
-          <p className="text-[10px] font-semibold tracking-[0.16em] text-accent-1 uppercase">
-            Cascade comparison
-          </p>
-          <h2 className="mt-1 text-lg font-semibold text-espresso">Before and after refinement</h2>
-        </div>
-        <div className="rounded-2xl border border-dashed border-ink-700 bg-ink-950/70 px-4 py-6 text-center">
-          <span
-            aria-hidden="true"
-            className="mx-auto grid h-10 w-10 place-items-center rounded-full bg-ink-800 text-accent-1"
-          >
-            ✦
-          </span>
-          <h3 className="mt-3 text-sm font-semibold text-espresso">Real image pairs coming soon</h3>
-          <p className="mx-auto mt-1 max-w-lg text-xs leading-5 text-mist">
-            The current API returns the final image and attempt checks, not a separate image for
-            every attempt. We’ll show a true initial-and-refined pair when actual comparison images
-            are available.
-          </p>
-        </div>
-      </section>
+      <LiveComparison />
 
       {COMPARE_PAIRS.length > 0 && (
         <section className="grid gap-4 rounded-[28px] border border-ink-700 bg-ink-900 p-4 shadow-card-soft sm:p-5">

@@ -54,6 +54,8 @@ export interface GenerateResponse {
   id: string;
   /** Data URL, ready for <img src>. The real backend sends "data:image/webp;base64,...". */
   image: string;
+  /** First generated attempt before retries and polish; used for the live comparison view. */
+  initial_image: string;
   width: number;
   height: number;
   prompt: string;
