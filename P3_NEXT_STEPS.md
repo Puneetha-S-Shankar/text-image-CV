@@ -17,10 +17,11 @@
 | 2. Classical CV (visual check, safe polish, upscaling, packing) | 02a | No | ✅ done (QUICK) |
 | 3. Semantic check + router labels from experiments | 02b | Yes | ✅ done (QUICK). Router did **not** help |
 | 4. Quality-gated cascade | 02b | Yes | ✅ done (QUICK): 3.4× faster than the original, near-same quality |
-| 5a. Low-memory check of the retry system | 03a | Yes | 🟡 built + tested offline, **run next** |
-| 5b. Backend test on a T4 + deploy to the Space | 03b | Yes | 🟡 built + tested offline, run after 03a |
+| 5a. Low-memory check of the retry system | 03a | Yes | ✅ done (Kaggle T4): low memory costs no accuracy (Balanced 76.7% → 78.3%), safe to deploy |
+| 5b. Backend test on a T4 | 03b | Yes | ✅ done (Kaggle T4): contract 9/9, errors 6/6, Balanced 3.4 s avg |
+| 5d. Deploy to the HF Space (Docker, T4 small) | `space/` | Yes | ⏳ waiting for billing on the HF account |
 | 5c. Phone app (frontend) | `frontend/` | No | 🟡 starter done, friend continues |
-| 6. Final evaluation + paperwork + demo | all | Yes | ⬜ |
+| 6. Final evaluation + paperwork + demo | all | Yes | 🟡 eval file, README, architecture diagram, design doc, limitations/ethics/failure cases ✅; demo ⬜ |
 
 ---
 

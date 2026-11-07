@@ -240,6 +240,8 @@ Size = GPU-resident weights. For M1–M3, another **1.18 GB** (the word table) s
 
 ### 4.3 Chosen settings for the app
 
+> **Superseded:** the deployed app runs **M3 for every mode** with the cascade (Fast = R0 only, Balanced = cascade from R0, Quality = cascade from R1), measured in notebooks 03a/03b. See `docs/DESIGN.md` sections 10–11. The table below is the earlier plan.
+
 | Mode | Setup | Time | Peak GPU | Quality |
 |---|---|---|---|---|
 | **Fast** | S8 (768px, 2 steps) | 0.78 s | 8.0 GB | CLIP 26.25, FID 85.6 |

@@ -50,3 +50,60 @@ Both use the same 200 held-out test prompts: 120 official GenEval prompts and 80
 - **Weak spot:** counting, at 55% for ours vs 70% for the original.
 
 "GenEval-style" means our own detector-based checks on the official GenEval prompts. It is not the official GenEval benchmark.
+
+## The deployed system: low-memory model + quality-gated cascade (notebooks 03a and 03b)
+
+The app runs the **M3 low-memory model** with the cascade. Notebook 03a re-ran 02b's 200 held-out test prompts on M3 with the **same seeds, gate and independent judge**, so the comparison with 02b's float16 results is like for like. Notebook 03b then ran the **actual server** (`space/app.py`) on a T4 and measured every app mode through its API.
+
+### Same strategies, float16 vs the low-memory model (GenEval-style accuracy on the 120 GenEval prompts; CLIP on all 200)
+
+| Strategy | Float16: accuracy | Float16: CLIP-L | Float16: avg time | **Low-memory M3: accuracy** | **M3: CLIP-L** | **M3: avg time** |
+|---|---|---|---|---|---|---|
+| Fixed R0 (768px) | 65.8% | 27.57 | 0.74 s | 60.8% | 27.43 | 0.98 s |
+| Fixed R2 (1024px) | 77.5% | 27.94 | 1.26 s | 75.8% | 27.79 | 1.86 s |
+| **Cascade from R0 (app: Balanced)** | 76.7% | 28.02 | 2.00 s | **78.3%** | 27.77 | 2.98 s |
+| **Cascade from R1 (app: Quality)** | 78.3% | 27.98 | 2.10 s | **80.0%** | 27.75 | 3.09 s |
+| Router + cascade (not used) | 77.5% | 27.99 | 1.82 s | 75.0% | 27.93 | 2.59 s |
+| Original teacher, 20 steps (float16 only) | 80.0% | 28.05 | 6.84 s | | | |
+
+Times include the quality check after every try (fixed rows: generation only, as in 02b).
+
+- **Low memory costs no accuracy.** Balanced mode scores 78.3% on M3 vs 76.7% on float16 (+1.7 points; one prompt = 0.8 points, so this is within noise).
+- **It costs some speed.** 4-bit weights are dequantized on the fly on a T4: +0.24 s per 768px picture and +0.6–0.7 s per 1024px picture.
+- **Timing caveat:** float16 was timed on a Colab T4 (02b) and M3 on a Kaggle T4 (03a/03b). Treat speed differences between them as approximate. Accuracy comparisons are exact (same prompts, seeds and judge).
+
+### The app as deployed (server on a T4, measured through its API by 03b; accuracy from 03a)
+
+| App mode | Strategy | GenEval-style accuracy | CLIP-L | Server time: avg / p90 / worst | Tries (avg) | Picture sent |
+|---|---|---|---|---|---|---|
+| Fast | fixed R0 | 60.8% | 27.43 | 1.48 / 1.62 / 1.69 s | 1.0 | 18 KB WebP |
+| **Balanced (default)** | cascade from R0 | **78.3%** | 27.77 | **3.42** / 5.15 / 5.24 s | 2.1 | 30 KB WebP |
+| Quality | cascade from R1 | **80.0%** | 27.75 | 3.11 / 4.14 / 4.20 s | 1.5 | 34 KB WebP |
+| Original teacher | 20 steps | 80.0% | 28.05 | 6.84 s (generation only) | 1 | |
+
+Server time covers everything the user waits for except the phone's network: drawing, checking after every try, polish, and WebP encoding. 20 held-out prompts per mode.
+
+| Resource (deployed app) | Value | Source |
+|---|---|---|
+| GPU memory, generator + gate loaded | **2.91 GB** | 03a |
+| GPU memory, peak during a full 1024px request | **3.45 GB** | 03a |
+| GPU memory of the running server (incl. PyTorch's cache) | 4.13 GB | 03b (nvidia-smi) |
+| Original teacher alone, peak | 8.79 GB | 01 |
+| API contract test (9 requests, 3 modes) | 9/9 match | 03b |
+| Error handling (6 bad requests) | 6/6 correct codes | 03b |
+| 6 simultaneous requests | 6/6 succeeded; the last waited 19.1 s (one GPU, queued) | 03b |
+
+**Headline (system level):** Balanced mode gives **78.3% vs 80.0%** GenEval-style accuracy against the original, **2.3× faster** (2.98 s incl. checks vs 6.84 s), using **2.9–3.5 GB instead of 8.79 GB** of GPU memory. Quality mode matches the original's 80.0% on these 120 prompts in 3.1 s.
+
+## Classical computer vision (notebook 02a, CPU)
+
+Tested on held-out COCO photos with damage added on purpose (`notebooks/P3_02a_classical_cv_results.ipynb`):
+
+- **Detection:** 90–100% for too dark, too bright, noise, blank and grid glitches. Mild colour casts are caught only 15% of the time.
+- **Accept-or-revert fixes help:** SSIM on darkened photos 0.41 → 0.79; checkerboard artefacts 0.74 → 0.97. An independent no-reference score (BRISQUE) improves 45.5 → 18.5, better in 84% of kept fixes.
+- **Blur can't be fixed** by classical means, so it is escalated to a higher level (100%).
+- **False alarms:** 15% on clean photos, but the re-check leaves 90% of those untouched.
+- **Mobile packing:** smallest WebP with SSIM ≥ 0.95: 37 KB vs 954 KB PNG (26× smaller).
+- **In the cascade** (02b), polish doesn't raise CLIP (26.20 → 26.18). It is a safety net, not a quality boost.
+
+More detail: `README.md`, `docs/DESIGN.md`, and `docs/LIMITATIONS_AND_ETHICS.md` (including failure cases).
