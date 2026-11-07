@@ -1,0 +1,22 @@
+# Claude Code local files (session settings, lock files)
+.claude/
+
+# Hand-off archives (the frontend lives in frontend/ already)
+*.zip
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Secrets: never commit these
+.env
+*.pem
+
+# frontend/ has its own .gitignore (node_modules, .next, out, ...)
