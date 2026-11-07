@@ -87,7 +87,6 @@ frontend/
 │   │   ├── globals.css        ← design tokens (colours, animations) + Tailwind
 │   │   ├── page.tsx           ← "/" Create (the main screen)
 │   │   ├── compare/           ← "/compare" original vs ours
-│   │   ├── how-it-works/      ← "/how-it-works" the pipeline + measured results
 │   │   ├── not-found.tsx      ← 404 page
 │   │   ├── manifest.ts        ← "Add to Home Screen" app manifest
 │   │   └── icon.png, apple-icon.png, favicon.ico
@@ -123,12 +122,12 @@ frontend/
 
 **Done (working, tested against the mock):**
 
-- all three pages, mobile-first dark theme, brand gradient
+- Create and Compare pages, mobile-first theme
 - prompt → picture flow with a live timer, Fast/Balanced/Quality, cancel
 - results: time on GPU vs total, level used, tries, pass/best-effort, checks, retry timeline
 - save / share / copy prompt / again; history strip
 - server status (connecting / loading / ready / offline) and every error case
-- installable on phones (manifest + icons); real measured results on "How it works"
+- installable on phones (manifest + icons); measured model comparisons
 
 **Yours to make great (suggested):**
 

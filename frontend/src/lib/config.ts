@@ -6,12 +6,12 @@ import type { Mode } from "./types";
 export const APP = {
   /** Placeholder product name: the team picks the final one. */
   name: "P3 Studio",
-  tagline: "Text to image in about a second, on one small GPU.",
+  tagline: "A thoughtful studio for text-to-image creation.",
   description:
     "Resource-efficient text-to-image for phones: an optimized SANA-Sprint model on a single T4 GPU, with a quality check that retries only when a picture fails.",
   /** Shown in the footer. */
   team: "Team T58",
-  themeColor: "#07070c",
+  themeColor: "#f5f1eb",
 } as const;
 
 /** Must match the backend's limit (docs/API_CONTRACT.md). */
@@ -19,31 +19,26 @@ export const PROMPT_MAX_CHARS = 400;
 
 export interface ModeInfo {
   label: string;
-  /** One short line under the mode switch. */
+  /** Describes the generation tradeoff without promising a specific duration. */
   blurb: string;
-  /** Rough expected wait. Placeholders until notebook 03a measures the real numbers. */
-  expected: string;
 }
 
 /**
- * The three modes. The backend decides what each one really does. These texts only describe it.
- * TODO(after 03a): update `expected` with the measured numbers (03a section 9, "live_avg_s").
+ * The three modes. The backend decides the implementation details; these descriptions explain the
+ * current API contract without promising generation times.
  */
 export const MODES: Record<Mode, ModeInfo> = {
   fast: {
     label: "Fast",
-    blurb: "Cheapest level only, no retries.",
-    expected: "~1 s",
+    blurb: "One 768px attempt; quality checked, with no retry.",
   },
   balanced: {
     label: "Balanced",
-    blurb: "Starts cheap; if the check fails, it retries at the next level with a new seed.",
-    expected: "~1.5–3 s",
+    blurb: "Starts at 768px; retries when checks fail, within a 6 s generation budget.",
   },
   quality: {
     label: "Quality",
-    blurb: "Starts at full size; if the check fails, it tries again with a new seed.",
-    expected: "~2–5 s",
+    blurb: "Starts at 1024px; retries with fresh samples within a 9 s generation budget.",
   },
 };
 
@@ -58,3 +53,26 @@ export const EXAMPLE_PROMPTS = [
   "an astronaut riding a horse on the moon, cinematic",
   "a bowl of ramen with a soft-boiled egg, top-down photo",
 ];
+
+export const PROMPT_INSPIRATION = [
+  {
+    category: "Architecture",
+    prompt: "A sunlit modern courtyard with olive trees and limestone walls",
+  },
+  {
+    category: "Nature",
+    prompt: "A misty pine forest surrounding an alpine lake at dawn",
+  },
+  {
+    category: "Fantasy",
+    prompt: "A tiny observatory floating above a quiet sea of clouds",
+  },
+  {
+    category: "Product photography",
+    prompt: "An amber glass perfume bottle on travertine in soft studio light",
+  },
+  {
+    category: "Illustration",
+    prompt: "A hand-painted botanical illustration of wildflowers and moths",
+  },
+] as const;

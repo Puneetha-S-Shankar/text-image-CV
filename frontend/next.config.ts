@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
   // Required: emit a static site into `out/`.
   output: "export",
 
-  // `/how-it-works` becomes `out/how-it-works/index.html`. Any static file server, including the
+  // Each route becomes a static HTML file under `out/`. Any static file server, including the
   // backend's, can then serve every page without special rewrite rules.
   trailingSlash: true,
 

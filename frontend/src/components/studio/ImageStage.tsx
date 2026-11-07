@@ -16,21 +16,28 @@ interface Props {
 /** The big square: examples when idle, a live timer while drawing, the picture, or an error. */
 export function ImageStage({ state, onPickExample, onRetry }: Props) {
   return (
-    <div className="relative mt-5 aspect-square w-full overflow-hidden rounded-3xl glass">
+    <div className="relative aspect-square min-h-[23rem] w-full overflow-hidden rounded-[28px] border border-ink-700 bg-ink-800 shadow-preview sm:rounded-[32px]">
       {state.kind === "idle" && <EmptyState onPick={onPickExample} />}
       {state.kind === "generating" && (
         <Generating startedAt={state.startedAt} prompt={state.prompt} mode={state.mode} />
       )}
       {state.kind === "done" && (
-        // Plain <img>: the picture is a data URL from our API, so next/image adds nothing here.
-        <img
-          key={state.result.id}
-          src={state.result.image}
-          alt={state.result.prompt}
-          width={state.result.width}
-          height={state.result.height}
-          className="h-full w-full animate-fade-up object-cover"
-        />
+        <>
+          {/* Plain <img>: the picture is a data URL from our API, so next/image adds nothing here. */}
+          <img
+            key={state.result.id}
+            src={state.result.image}
+            alt={state.result.prompt}
+            width={state.result.width}
+            height={state.result.height}
+            className="h-full w-full animate-fade-up bg-ink-800 object-contain"
+          />
+          {state.result.mock && (
+            <span className="absolute top-3 left-3 rounded-full border border-ink-700 bg-ink-900/95 px-3 py-1.5 text-[10px] font-semibold tracking-[0.12em] text-accent-1 uppercase shadow-card-soft">
+              Mock preview
+            </span>
+          )}
+        </>
       )}
       {state.kind === "error" && <ErrorView error={state.error} onRetry={onRetry} />}
     </div>
@@ -39,22 +46,28 @@ export function ImageStage({ state, onPickExample, onRetry }: Props) {
 
 function EmptyState({ onPick }: { onPick: (prompt: string) => void }) {
   return (
-    <div className="flex h-full flex-col justify-end gap-3 p-4">
-      <div className="flex flex-1 flex-col items-center justify-center gap-3 text-center text-mist">
-        <span className="grid h-14 w-14 animate-float place-items-center rounded-2xl bg-brand shadow-xl shadow-fuchsia-500/20">
-          <SparkIcon className="h-7 w-7 text-white" />
+    <div className="flex h-full flex-col justify-between gap-4 bg-ink-950 p-4 sm:p-7">
+      <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
+        <span className="grid h-16 w-16 place-items-center rounded-[22px] border border-ink-700 bg-ink-900 text-accent-1 shadow-card-soft">
+          <SparkIcon className="h-7 w-7" />
         </span>
-        <p className="max-w-[16rem] text-sm">
-          Type a prompt below, or try one of these. Counts, colours and positions get checked.
-        </p>
+        <div className="space-y-2">
+          <p className="text-lg font-semibold tracking-tight text-espresso sm:text-xl">
+            A blank canvas, full of possibility.
+          </p>
+          <p className="mx-auto max-w-[19rem] text-sm leading-6 text-mist">
+            Describe a scene below. We’ll create it in the cloud and check the result against your
+            prompt.
+          </p>
+        </div>
       </div>
-      <div className="flex flex-wrap gap-2">
-        {EXAMPLE_PROMPTS.slice(0, 4).map((p) => (
+      <div className="flex flex-wrap justify-center gap-2">
+        {EXAMPLE_PROMPTS.slice(0, 3).map((p) => (
           <button
             key={p}
             type="button"
             onClick={() => onPick(p)}
-            className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-left text-xs text-white/85 transition hover:border-white/25 hover:bg-white/10"
+            className="min-h-10 rounded-full border border-ink-700 bg-ink-900/90 px-3 py-2 text-left text-xs text-espresso transition hover:border-accent-1/40 hover:bg-ink-900"
           >
             {p}
           </button>
@@ -74,16 +87,32 @@ function Generating({
   mode: Mode;
 }) {
   return (
-    <div className="flex h-full shimmer flex-col items-center justify-center gap-4 p-6 text-center">
-      <span className="grid h-14 w-14 animate-spin place-items-center rounded-2xl bg-brand [animation-duration:2.4s]">
-        <SparkIcon className="h-7 w-7 text-white" />
-      </span>
-      <LiveTimer startedAt={startedAt} />
-      <p className="text-sm text-mist">Drawing and checking your picture…</p>
-      <p className="line-clamp-2 max-w-xs text-xs text-white/60">&ldquo;{prompt}&rdquo;</p>
-      <p className="text-xs text-mist/80">
-        {MODES[mode].label} mode · usually {MODES[mode].expected}
-      </p>
+    <div
+      role="status"
+      aria-live="polite"
+      className="relative flex h-full flex-col justify-between overflow-hidden bg-ink-800 p-4 sm:p-7"
+    >
+      <div className="relative z-10 flex items-center justify-between gap-2 text-[10px] font-medium tracking-[0.16em] text-mist uppercase">
+        <span className="rounded-full border border-ink-700 bg-ink-900 px-3 py-2 text-accent-1">
+          {MODES[mode].label} mode
+        </span>
+        <span className="text-right tracking-normal normal-case">Live status</span>
+      </div>
+
+      <div className="relative z-10 flex flex-1 flex-col items-center justify-center gap-4 text-center">
+        <span className="relative grid h-16 w-16 place-items-center rounded-[22px] border border-ink-700 bg-ink-900 text-accent-1 shadow-card-soft">
+          <span className="absolute inset-0 animate-ping rounded-[22px] border border-accent-2/50" />
+          <SparkIcon className="relative h-7 w-7" />
+        </span>
+        <div>
+          <p className="text-[11px] font-semibold tracking-[0.2em] text-accent-1 uppercase">
+            Creating your image
+          </p>
+          <LiveTimer startedAt={startedAt} />
+        </div>
+        <p className="max-w-sm text-sm leading-6 text-espresso">Generating on the GPU server…</p>
+        <p className="line-clamp-2 max-w-md text-xs leading-5 text-mist">&ldquo;{prompt}&rdquo;</p>
+      </div>
     </div>
   );
 }
@@ -101,7 +130,7 @@ function LiveTimer({ startedAt }: { startedAt: number }) {
     return () => cancelAnimationFrame(raf);
   }, [startedAt]);
   return (
-    <span className="font-mono text-4xl font-semibold text-white tabular-nums">
+    <span className="mt-1 block font-mono text-4xl font-semibold tracking-tight text-espresso tabular-nums">
       {elapsed.toFixed(1)}
       <span className="text-xl text-mist"> s</span>
     </span>
@@ -113,19 +142,24 @@ const RETRYABLE = new Set(["NETWORK", "TIMEOUT", "BAD_RESPONSE", "INTERNAL", "WA
 function ErrorView({ error, onRetry }: { error: ApiError; onRetry: () => void }) {
   const canRetry = RETRYABLE.has(error.code);
   return (
-    <div className="flex h-full flex-col items-center justify-center gap-3 p-6 text-center">
-      <span className="rounded-full bg-bad/15 px-3 py-1 font-mono text-xs text-bad">
+    <div
+      role="alert"
+      className="flex h-full flex-col items-center justify-center gap-4 bg-ink-900 p-6 text-center"
+    >
+      <span className="rounded-full border border-bad/30 bg-bad/10 px-3 py-1 font-mono text-[11px] font-medium text-bad">
         {error.code}
       </span>
-      <p className="max-w-xs text-base text-white">{error.message}</p>
-      {error.retryAfterS != null && (
-        <p className="text-xs text-mist">Suggested wait: about {error.retryAfterS} s.</p>
-      )}
+      <div className="space-y-2">
+        <p className="max-w-xs text-base font-medium text-espresso">{error.message}</p>
+        {error.retryAfterS != null && (
+          <p className="text-xs text-mist">Suggested wait: about {error.retryAfterS} s.</p>
+        )}
+      </div>
       {canRetry ? (
         <button
           type="button"
           onClick={onRetry}
-          className="mt-1 inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2 text-sm hover:bg-white/15"
+          className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-brand px-4 py-2.5 text-sm font-semibold text-ink-900 shadow-action transition hover:brightness-105"
         >
           <RefreshIcon className="h-4 w-4" /> Try again
         </button>

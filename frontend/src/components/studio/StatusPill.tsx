@@ -13,13 +13,13 @@ export function StatusPill({ health }: { health: HealthState }) {
   return (
     <span
       role="status"
-      className="inline-flex shrink-0 items-center gap-2 rounded-full glass px-3 py-1 text-xs text-mist"
+      className="inline-flex shrink-0 items-center gap-2 rounded-full border border-ink-700 bg-ink-900 px-3 py-1.5 text-xs text-mist shadow-sm"
     >
       <span
-        className={`h-2 w-2 rounded-full ${s.dot} ${health.status !== "ready" ? "animate-pulse-dot" : ""}`}
+        className={`h-2.5 w-2.5 rounded-full ${s.dot} ${health.status !== "ready" ? "animate-pulse-dot" : ""}`}
       />
       {s.text}
-      {detail && <span className="text-white/80">· {detail}</span>}
+      {detail && <span className="text-espresso">· {detail}</span>}
     </span>
   );
 }
@@ -28,14 +28,14 @@ export function StatusPill({ health }: { health: HealthState }) {
 export function ServerBanner({ health }: { health: HealthState }) {
   if (health.status === "loading") {
     return (
-      <p className="mt-3 rounded-xl border border-warn/30 bg-warn/10 px-3 py-2 text-sm text-warn">
+      <p className="rounded-2xl border border-warn/25 bg-warn/10 px-3 py-2 text-sm leading-6 text-warn">
         The server just woke up and is loading the model. This takes a moment the first time.
       </p>
     );
   }
   if (health.status === "offline") {
     return (
-      <p className="mt-3 rounded-xl border border-bad/30 bg-bad/10 px-3 py-2 text-sm text-bad">
+      <p className="rounded-2xl border border-bad/25 bg-bad/10 px-3 py-2 text-sm leading-6 text-bad">
         Can&apos;t reach the server right now. It may be switched off. We&apos;ll keep trying.
       </p>
     );

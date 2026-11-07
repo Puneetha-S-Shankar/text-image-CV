@@ -15,7 +15,7 @@ export function ModeSwitch({ value, onChange, disabled }: Props) {
       <div
         role="radiogroup"
         aria-label="Generation mode"
-        className="grid grid-cols-3 gap-1 rounded-2xl glass p-1"
+        className="grid grid-cols-3 gap-1.5 rounded-[22px] border border-ink-700 bg-ink-900 p-1.5"
       >
         {modes.map((m) => {
           const active = m === value;
@@ -27,19 +27,19 @@ export function ModeSwitch({ value, onChange, disabled }: Props) {
               aria-checked={active}
               disabled={disabled}
               onClick={() => onChange(m)}
-              className={`rounded-xl px-3 py-2 text-sm font-medium transition disabled:opacity-50 ${
+              className={`min-h-11 rounded-2xl border px-2 py-2.5 text-left transition disabled:cursor-not-allowed disabled:opacity-50 ${
                 active
-                  ? "bg-brand text-white shadow-lg shadow-fuchsia-500/20"
-                  : "text-mist hover:text-white"
+                  ? "border-transparent bg-ink-800 text-espresso shadow-sm"
+                  : "border-transparent bg-transparent text-mist hover:border-ink-700 hover:bg-ink-950 hover:text-espresso"
               }`}
             >
-              {MODES[m].label}
+              <span className="block text-center text-sm font-semibold">{MODES[m].label}</span>
             </button>
           );
         })}
       </div>
-      <p className="mt-1.5 px-1 text-xs text-mist">
-        {MODES[value].blurb} <span className="text-white/70">{MODES[value].expected}</span>
+      <p className="mt-2 px-1 text-xs leading-5 text-mist" aria-live="polite">
+        {MODES[value].blurb}
       </p>
     </div>
   );
