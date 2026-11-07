@@ -1,0 +1,601 @@
+pid,split,source,tag,rung,rung_idx,seed,vis_flags,vis_ok,vis_ms,gate_clip,gate_struct,gate_ms,gate_reasons,judge_clip,judge_struct,judge_reasons
+200,test,geneval,color_attr,R0,0,200,"colour_cast,periodic_artifact",False,,38.03125,True,417.25146999988283,picture looks periodic artifact,34.875,True,
+201,test,geneval,color_attr,R0,0,201,,True,,35.4375,True,632.0752750000338,,29.6875,False,"expected 1 white toilet, saw colours {'brown': 1}"
+202,test,geneval,color_attr,R0,0,202,colour_cast,True,,36.40625,True,571.0362880001867,,33.34375,True,
+203,test,geneval,color_attr,R0,0,203,,True,,33.75,True,569.1745420001553,,25.875,False,"expected 1 parking meter, found 0"
+204,test,geneval,color_attr,R0,0,204,,True,,34.65625,True,494.01452600000084,,29.9375,False,"expected 1 scissors, found 0"
+205,test,geneval,color_attr,R0,0,205,colour_cast,True,,38.78125,False,335.63141900003757,"expected 1 carrot, found 0",33.1875,False,"expected 1 carrot, found 0"
+206,test,geneval,color_attr,R0,0,206,,True,,33.71875,True,599.1491219999716,,31.765625,False,"expected 1 brown bus, saw colours {'yellow': 1}"
+207,test,geneval,color_attr,R0,0,207,,True,,35.09375,False,671.6816589998871,"expected 1 green oven, saw colours {'yellow': 1}",29.21875,False,"expected 1 green oven, saw colours {'yellow': 1}"
+208,test,geneval,color_attr,R0,0,208,,True,,37.46875,True,481.24195700006567,,29.265625,True,
+209,test,geneval,color_attr,R0,0,209,"blurry,colour_cast,periodic_artifact",False,,37.875,True,610.3708860000552,picture looks blurry; picture looks periodic artifact,33.71875,True,
+210,test,geneval,color_attr,R0,0,210,,True,,35.0625,False,403.0260500001077,"expected 1 white suitcase, saw colours {'blue': 1}",30.65625,False,"expected 1 suitcase, found 0"
+211,test,geneval,color_attr,R0,0,211,,True,,32.71875,False,522.5399509999988,"expected 1 blue boat, saw colours {'white': 1}",30.296875,False,"expected 1 blue boat, saw colours {'green': 1}"
+212,test,geneval,color_attr,R0,0,212,,True,,36.84375,False,639.0497610000239,"expected 1 black sink, saw colours {'purple': 1}",38.1875,False,"expected 1 black sink, saw colours {'purple': 1}"
+213,test,geneval,color_attr,R0,0,213,,True,,36.03125,False,657.3222199999691,"expected 1 orange giraffe, saw colours {'yellow': 1}",26.734375,False,"expected 1 baseball glove, found 0"
+214,test,geneval,color_attr,R0,0,214,,True,,38.25,False,575.785746000065,"expected 1 brown bear, saw colours {'blue': 1}",27.0,False,"expected 1 brown bear, saw colours {'blue': 1}"
+215,test,geneval,color_attr,R0,0,215,colour_cast,True,,36.5625,False,641.9368970000505,"expected 1 pink banana, saw colours {'yellow': 1}",29.78125,False,"expected 1 sheep, found 0; expected 1 pink banana, saw colours {'yellow': 1}"
+216,test,geneval,color_attr,R0,0,216,,True,,39.0,True,616.1031330000242,,29.0,False,"expected 1 red orange, saw colours {'orange': 1}"
+217,test,geneval,color_attr,R0,0,217,,True,,30.4375,False,430.86518600011914,"expected 1 dining table, found 0",22.546875,False,"expected 1 dining table, found 0"
+218,test,geneval,color_attr,R0,0,218,,True,,38.15625,False,462.13542899999993,"expected 1 white umbrella, saw colours {'purple': 1}",32.71875,False,"expected 1 white umbrella, saw colours {'purple': 1}"
+219,test,geneval,color_attr,R0,0,219,colour_cast,True,,40.34375,False,553.3611450000535,"expected 1 blue airplane, saw colours {'pink': 1}",39.90625,False,"expected 1 blue airplane, saw colours {'pink': 1}"
+220,test,geneval,colors,R0,0,220,blurry,False,,32.875,True,335.32656200009114,picture looks blurry,30.734375,True,
+221,test,geneval,colors,R0,0,221,periodic_artifact,False,,32.875,False,321.4423000001716,"picture looks periodic artifact; expected 1 book, found 0",27.515625,True,
+222,test,geneval,colors,R0,0,222,colour_cast,True,,30.90625,True,434.4626120000612,,26.6875,True,
+223,test,geneval,colors,R0,0,223,colour_cast,True,,33.5,True,310.4524880000099,,28.875,True,
+224,test,geneval,colors,R0,0,224,blurry,False,,37.9375,True,459.8193510000783,picture looks blurry,33.09375,True,
+225,test,geneval,colors,R0,0,225,,True,,35.8125,True,432.47096899995086,,33.0,True,
+226,test,geneval,colors,R0,0,226,,True,,32.90625,True,437.6037209999595,,29.515625,True,
+227,test,geneval,colors,R0,0,227,colour_cast,True,,37.65625,True,302.92660399982196,,33.09375,True,
+228,test,geneval,colors,R0,0,228,colour_cast,True,,33.25,False,277.5964639999984,"expected 1 toaster, found 0",32.375,True,
+229,test,geneval,colors,R0,0,229,,True,,36.59375,True,293.62406399991414,,32.03125,True,
+230,test,geneval,colors,R0,0,230,colour_cast,True,,33.75,False,319.7620830001142,"expected 1 brown orange, saw colours {'orange': 1}",26.59375,False,"expected 1 brown orange, saw colours {'orange': 1}"
+231,test,geneval,colors,R0,0,231,,True,,34.09375,True,401.21574899990264,,29.046875,True,
+232,test,geneval,colors,R0,0,232,,True,,34.5,True,346.6020280000066,,33.34375,True,
+233,test,geneval,colors,R0,0,233,blurry,False,,32.46875,True,332.08489899993765,picture looks blurry,25.046875,True,
+234,test,geneval,colors,R0,0,234,,True,,30.5,True,370.99032500009343,,22.96875,True,
+235,test,geneval,colors,R0,0,235,colour_cast,True,,29.296875,False,304.8510520000036,"weak match with the prompt (CLIP 29.3 < 30.0); expected 1 blue carrot, saw colours {'brown': 1}",26.0,False,"expected 1 blue carrot, saw colours {'brown': 1}"
+236,test,geneval,colors,R0,0,236,,True,,31.765625,True,434.66161199989983,,27.3125,True,
+237,test,geneval,colors,R0,0,237,colour_cast,True,,36.21875,True,347.08105499998965,,31.4375,True,
+238,test,geneval,colors,R0,0,238,,True,,30.375,False,474.09919500000797,"expected 1 black skis, saw colours {'purple': 1}",22.125,False,"expected 1 black skis, saw colours {'blue': 1}"
+239,test,geneval,colors,R0,0,239,,True,,29.640625,True,320.1294929999676,weak match with the prompt (CLIP 29.6 < 30.0),25.390625,True,
+240,test,geneval,counting,R0,0,240,,True,,30.953125,False,339.5140379998338,"expected 4 traffic light, found 3",24.3125,False,"expected 4 traffic light, found 2"
+241,test,geneval,counting,R0,0,241,,True,,33.4375,False,335.51066099994387,"expected 4 skateboard, found 3",29.609375,False,"expected 4 skateboard, found 3"
+242,test,geneval,counting,R0,0,242,,True,,35.1875,False,291.5818470000886,"expected 4 baseball glove, found 2",29.546875,False,"expected 4 baseball glove, found 2"
+243,test,geneval,counting,R0,0,243,,True,,30.828125,False,354.1142100000343,"expected 4 sink, found 2",26.8125,False,"expected 4 sink, found 2"
+244,test,geneval,counting,R0,0,244,,True,,33.875,False,289.6717189998981,"expected 4 microwave, found 3",27.5625,False,"expected 4 microwave, found 3"
+245,test,geneval,counting,R0,0,245,,True,,30.546875,True,324.3408690000251,,24.546875,False,"expected 2 backpack, found 0"
+246,test,geneval,counting,R0,0,246,,True,,29.859375,False,338.24029300012626,"weak match with the prompt (CLIP 29.9 < 30.0); expected 4 bowl, found 2",23.828125,False,"expected 4 bowl, found 2"
+247,test,geneval,counting,R0,0,247,,True,,32.28125,False,318.5325849999572,"expected 4 broccoli, found 2",26.6875,False,"expected 4 broccoli, found 0"
+248,test,geneval,counting,R0,0,248,,True,,28.765625,True,325.4814360000182,weak match with the prompt (CLIP 28.8 < 30.0),22.25,False,"expected 2 clock, found 0"
+249,test,geneval,counting,R0,0,249,,True,,30.8125,False,299.99823399998604,"expected 3 suitcase, found 2",23.34375,False,"expected 3 suitcase, found 2"
+250,test,geneval,counting,R0,0,250,,True,,29.90625,False,285.73452000000543,"weak match with the prompt (CLIP 29.9 < 30.0); expected 4 chair, found 3",21.53125,False,"expected 4 chair, found 3"
+251,test,geneval,counting,R0,0,251,blurry,False,,31.4375,True,318.3845459998338,picture looks blurry,27.3125,True,
+252,test,geneval,counting,R0,0,252,,True,,30.984375,False,279.6462280000469,"expected 4 donut, found 2",23.3125,False,"expected 4 donut, found 2"
+253,test,geneval,counting,R0,0,253,"too_bright,low_contrast",True,,27.5625,True,292.8760009999678,weak match with the prompt (CLIP 27.6 < 30.0),23.25,True,
+254,test,geneval,counting,R0,0,254,,True,,34.40625,False,276.2241619998349,"expected 2 snowboard, found 1",24.8125,True,
+255,test,geneval,counting,R0,0,255,,True,,33.90625,True,278.8668850000704,,28.484375,True,
+256,test,geneval,counting,R0,0,256,,True,,31.0625,False,318.0675759999758,"expected 3 kite, found 2",26.515625,False,"expected 3 kite, found 2"
+257,test,geneval,counting,R0,0,257,blurry,False,,31.859375,False,321.83127700000114,"picture looks blurry; expected 3 laptop, found 2",24.4375,False,"expected 3 laptop, found 2"
+258,test,geneval,counting,R0,0,258,,True,,27.953125,False,292.4302330000046,"weak match with the prompt (CLIP 28.0 < 30.0); expected 3 pizza, found 2",21.296875,False,"expected 3 pizza, found 1"
+259,test,geneval,counting,R0,0,259,,True,,24.5625,False,302.9034569999567,"weak match with the prompt (CLIP 24.6 < 30.0); expected 3 person, found 2",18.15625,False,"expected 3 person, found 2"
+260,test,geneval,position,R0,0,260,,True,,37.0,True,301.1472219998268,,30.078125,True,
+261,test,geneval,position,R0,0,261,,True,,36.375,True,272.65314500004934,,27.125,True,
+262,test,geneval,position,R0,0,262,blurry,False,,37.5,True,280.75951599998916,picture looks blurry,31.953125,True,
+263,test,geneval,position,R0,0,263,,True,,30.078125,False,321.6657739999391,"expected truck left of refrigerator, found overlapping",29.59375,True,
+264,test,geneval,position,R0,0,264,,True,,30.78125,False,272.6845110000795,"expected 1 hair drier, found 0",26.53125,True,
+265,test,geneval,position,R0,0,265,too_dark,True,,37.3125,False,287.69583799999054,"expected 1 knife, found 0",34.65625,False,"expected knife right of suitcase, found overlapping"
+266,test,geneval,position,R0,0,266,,True,,33.8125,False,309.83692499989957,"expected 1 backpack, found 0",30.5,False,"expected 1 backpack, found 0"
+267,test,geneval,position,R0,0,267,,True,,36.875,True,291.54416400001537,,32.03125,True,
+268,test,geneval,position,R0,0,268,colour_cast,True,,37.8125,False,281.1596819999522,"expected hot dog right of skateboard, found above",30.03125,False,"expected hot dog right of skateboard, found above"
+269,test,geneval,position,R0,0,269,,True,,32.59375,False,275.84043699994254,"expected cup left of umbrella, found below",29.546875,False,"expected cup left of umbrella, found below"
+270,test,geneval,position,R0,0,270,,True,,32.53125,False,271.66422699997383,"expected 1 parking meter, found 0; no parking meter to be above",25.359375,False,"expected 1 parking meter, found 0; no parking meter to be above"
+271,test,geneval,position,R0,0,271,,True,,35.71875,False,287.7106100002038,"expected cow right of laptop, found overlapping",28.90625,False,"expected cow right of laptop, found overlapping"
+272,test,geneval,position,R0,0,272,,True,,30.828125,True,284.07793600013065,,26.65625,False,"expected 1 baseball glove, found 0"
+273,test,geneval,position,R0,0,273,,True,,36.125,False,282.2472850000395,"expected suitcase above skis, found left of",28.609375,False,"expected 1 skis, found 0; no skis to be above"
+274,test,geneval,position,R0,0,274,,True,,32.40625,True,385.77215800000886,,29.125,True,
+275,test,geneval,position,R0,0,275,,True,,37.375,False,300.8281550000902,"expected 1 bear, found 0; no bear to be right of",34.59375,False,"expected baseball glove right of bear, found below"
+276,test,geneval,position,R0,0,276,blurry,False,,32.09375,False,266.19861499989383,"picture looks blurry; expected 1 baseball bat, found 0; no baseball bat to be above",30.03125,False,"expected 1 baseball bat, found 0; no baseball bat to be above"
+277,test,geneval,position,R0,0,277,,True,,34.6875,True,282.82384099998126,,31.28125,True,
+278,test,geneval,position,R0,0,278,,True,,38.34375,True,283.3184700000402,,36.59375,True,
+279,test,geneval,position,R0,0,279,,True,,33.625,False,294.81318399984957,"expected 1 baseball bat, found 0; no baseball bat to be above",26.734375,False,"expected 1 baseball bat, found 0; no baseball bat to be above"
+280,test,geneval,single_object,R0,0,280,,True,,27.25,True,271.11650799997733,weak match with the prompt (CLIP 27.2 < 30.0),22.578125,True,
+281,test,geneval,single_object,R0,0,281,,True,,30.125,True,271.52823200003695,,25.65625,True,
+282,test,geneval,single_object,R0,0,282,too_dark,True,,30.5625,True,296.8856019999748,,26.828125,True,
+283,test,geneval,single_object,R0,0,283,blurry,False,,31.8125,True,297.3234659998525,picture looks blurry,27.828125,True,
+284,test,geneval,single_object,R0,0,284,,True,,31.671875,True,293.6614800000825,,24.796875,True,
+285,test,geneval,single_object,R0,0,285,,True,,31.984375,True,271.5859590000491,,27.8125,True,
+286,test,geneval,single_object,R0,0,286,colour_cast,True,,33.65625,True,295.1649849999285,,25.8125,True,
+287,test,geneval,single_object,R0,0,287,colour_cast,True,,32.15625,True,278.2787040000585,,27.8125,True,
+288,test,geneval,single_object,R0,0,288,,True,,33.1875,True,291.3295169998946,,28.828125,True,
+289,test,geneval,single_object,R0,0,289,,True,,29.765625,True,296.6584690000218,weak match with the prompt (CLIP 29.8 < 30.0),23.296875,True,
+290,test,geneval,single_object,R0,0,290,,True,,31.640625,True,275.3192850000232,,26.21875,True,
+291,test,geneval,single_object,R0,0,291,,True,,30.078125,True,331.9207100000767,,25.46875,True,
+292,test,geneval,single_object,R0,0,292,,True,,31.03125,True,284.51985599986074,,29.328125,True,
+293,test,geneval,single_object,R0,0,293,,True,,31.109375,True,288.6339039998802,,27.375,True,
+294,test,geneval,single_object,R0,0,294,,True,,31.296875,True,291.1372300000039,,26.21875,True,
+295,test,geneval,single_object,R0,0,295,,True,,29.8125,True,320.1707289999831,weak match with the prompt (CLIP 29.8 < 30.0),22.5,True,
+296,test,geneval,single_object,R0,0,296,,True,,30.4375,True,293.2780129999628,,26.828125,True,
+297,test,geneval,single_object,R0,0,297,,True,,32.53125,True,269.3176420000327,,27.09375,True,
+298,test,geneval,single_object,R0,0,298,blurry,False,,30.171875,True,316.00961399999505,picture looks blurry,27.90625,True,
+299,test,geneval,single_object,R0,0,299,,True,,26.703125,True,300.4071259999819,weak match with the prompt (CLIP 26.7 < 30.0),21.140625,True,
+300,test,geneval,two_object,R0,0,300,,True,,33.25,True,278.87684699999227,,25.34375,True,
+301,test,geneval,two_object,R0,0,301,,True,,31.984375,True,326.98334900010195,,26.375,True,
+302,test,geneval,two_object,R0,0,302,,True,,40.125,True,274.1574070000752,,30.765625,True,
+303,test,geneval,two_object,R0,0,303,,True,,35.75,True,293.0682119999801,,35.0,True,
+304,test,geneval,two_object,R0,0,304,,True,,35.34375,True,264.85393699999804,,31.609375,True,
+305,test,geneval,two_object,R0,0,305,,True,,35.3125,True,278.4596569999849,,28.8125,True,
+306,test,geneval,two_object,R0,0,306,,True,,30.34375,True,334.83430399996905,,26.90625,True,
+307,test,geneval,two_object,R0,0,307,,True,,32.375,True,304.85764600007315,,28.46875,True,
+308,test,geneval,two_object,R0,0,308,too_bright,True,,30.125,True,278.8789700000507,,29.734375,True,
+309,test,geneval,two_object,R0,0,309,,True,,39.125,True,294.7507020001012,,31.296875,True,
+310,test,geneval,two_object,R0,0,310,"blurry,colour_cast",False,,31.6875,False,303.06470899995475,"picture looks blurry; expected 1 frisbee, found 0",22.828125,False,"expected 1 frisbee, found 0"
+311,test,geneval,two_object,R0,0,311,,True,,34.9375,True,288.86031499996534,,32.875,True,
+312,test,geneval,two_object,R0,0,312,,True,,33.1875,True,330.6669589999274,,28.078125,True,
+313,test,geneval,two_object,R0,0,313,,True,,34.09375,True,292.7655710000181,,32.125,True,
+314,test,geneval,two_object,R0,0,314,,True,,32.8125,True,304.5506569999361,,29.984375,True,
+315,test,geneval,two_object,R0,0,315,,True,,35.96875,True,293.824382999901,,26.640625,True,
+316,test,geneval,two_object,R0,0,316,,True,,31.671875,True,338.58121999992363,,22.703125,True,
+317,test,geneval,two_object,R0,0,317,,True,,33.3125,True,336.35427300009724,,29.171875,True,
+318,test,geneval,two_object,R0,0,318,,True,,29.078125,False,275.8533349999652,"weak match with the prompt (CLIP 29.1 < 30.0); expected 1 book, found 0",25.171875,True,
+319,test,geneval,two_object,R0,0,319,,True,,35.875,True,317.79606899999635,,30.125,True,
+320,test,coco,coco,R0,0,320,,True,,27.203125,True,399.39004300003944,weak match with the prompt (CLIP 27.2 < 30.0),23.25,True,
+321,test,coco,coco,R0,0,321,,True,,30.15625,True,374.2244820000451,,23.484375,True,
+322,test,coco,coco,R0,0,322,,True,,35.0,True,305.4505950001385,,30.609375,True,
+323,test,coco,coco,R0,0,323,,True,,31.46875,True,318.0668059999334,,24.640625,True,
+324,test,coco,coco,R0,0,324,,True,,30.125,True,304.37428200002614,,20.0625,True,
+325,test,coco,coco,R0,0,325,,True,,33.4375,False,306.7783229998895,"expected fewer than 3 apple, found 3",30.109375,True,
+326,test,coco,coco,R0,0,326,,True,,29.046875,True,315.97440799987453,weak match with the prompt (CLIP 29.0 < 30.0),23.46875,True,
+327,test,coco,coco,R0,0,327,,True,,32.0,True,305.33016899994436,,28.125,True,
+328,test,coco,coco,R0,0,328,,True,,32.4375,True,288.7615399999959,,28.6875,True,
+329,test,coco,coco,R0,0,329,,True,,33.1875,True,302.33928699999524,,27.953125,True,
+330,test,coco,coco,R0,0,330,,True,,35.3125,False,426.3140809998731,"expected 1 white cat, saw colours {'green': 1}",30.546875,False,"expected 1 white cat, saw colours {'green': 1}"
+331,test,coco,coco,R0,0,331,,True,,29.203125,True,347.413878999987,weak match with the prompt (CLIP 29.2 < 30.0),25.3125,True,
+332,test,coco,coco,R0,0,332,colour_cast,True,,32.125,,74.75535899993702,,23.078125,,
+333,test,coco,coco,R0,0,333,too_dark,True,,29.5625,True,276.84799500002555,weak match with the prompt (CLIP 29.6 < 30.0),26.03125,True,
+334,test,coco,coco,R0,0,334,,True,,33.65625,True,287.4177769999733,,27.46875,True,
+335,test,coco,coco,R0,0,335,,True,,32.09375,,85.31558000004225,,25.859375,,
+336,test,coco,coco,R0,0,336,,True,,34.8125,False,360.36704800017105,"expected 1 white sheep, saw colours {'black': 1}",29.609375,True,
+337,test,coco,coco,R0,0,337,,True,,28.859375,,81.47289199996521,weak match with the prompt (CLIP 28.9 < 30.0),21.546875,,
+338,test,coco,coco,R0,0,338,,True,,33.625,True,349.31058799998027,,29.03125,True,
+339,test,coco,coco,R0,0,339,,True,,29.65625,True,564.3077330000779,weak match with the prompt (CLIP 29.7 < 30.0),26.921875,True,
+340,test,coco,coco,R0,0,340,,True,,34.59375,True,320.0222940001822,,25.59375,True,
+341,test,coco,coco,R0,0,341,,True,,28.171875,True,309.847955999885,weak match with the prompt (CLIP 28.2 < 30.0),19.359375,True,
+342,test,coco,coco,R0,0,342,,True,,26.25,True,293.50629999999,weak match with the prompt (CLIP 26.2 < 30.0),21.90625,True,
+343,test,coco,coco,R0,0,343,,True,,30.8125,True,348.102899999958,,26.859375,True,
+344,test,coco,coco,R0,0,344,,True,,33.9375,True,317.5909839999349,,28.46875,True,
+345,test,coco,coco,R0,0,345,,True,,33.1875,True,336.18433200012987,,26.921875,True,
+346,test,coco,coco,R0,0,346,,True,,32.75,True,339.0446589999101,,27.984375,True,
+347,test,coco,coco,R0,0,347,blurry,False,,30.734375,True,317.22755000009784,picture looks blurry,25.4375,True,
+348,test,coco,coco,R0,0,348,,True,,31.0625,True,289.2709230000037,,24.140625,True,
+349,test,coco,coco,R0,0,349,,True,,28.375,,69.85578199987685,weak match with the prompt (CLIP 28.4 < 30.0),26.203125,,
+350,test,coco,coco,R0,0,350,,True,,32.96875,True,272.8120240001317,,28.265625,False,"expected 1 frisbee, found 0"
+351,test,coco,coco,R0,0,351,blurry,False,,34.84375,True,276.6157089999979,picture looks blurry,28.90625,True,
+352,test,coco,coco,R0,0,352,,True,,37.5,True,286.98097100004816,,33.1875,True,
+353,test,coco,coco,R0,0,353,,True,,33.875,True,459.724868999956,,29.859375,True,
+354,test,coco,coco,R0,0,354,,True,,25.140625,False,390.4278200000135,"weak match with the prompt (CLIP 25.1 < 30.0); expected 1 white broccoli, saw colours {'black': 1}",22.46875,False,"expected 1 white broccoli, saw colours {'green': 1}"
+355,test,coco,coco,R0,0,355,,True,,31.90625,False,383.6866059998556,"expected person above dog, found left of",26.609375,False,"expected person above dog, found left of"
+356,test,coco,coco,R0,0,356,,True,,32.03125,True,317.3125579999123,,25.609375,True,
+357,test,coco,coco,R0,0,357,,True,,33.09375,,78.13376199987943,,25.609375,,
+358,test,coco,coco,R0,0,358,,True,,30.59375,False,299.77440600009686,"expected 1 laptop, found 0; no laptop to be above",23.4375,False,"expected 1 laptop, found 0; no laptop to be above"
+359,test,coco,coco,R0,0,359,,True,,32.1875,True,321.32647200000974,,23.8125,False,"expected 1 white toilet, saw colours {'brown': 1}"
+360,test,coco,coco,R0,0,360,,True,,31.21875,True,312.5108060000912,,26.46875,True,
+361,test,coco,coco,R0,0,361,,True,,31.640625,True,307.24294699984966,,24.90625,True,
+362,test,coco,coco,R0,0,362,,True,,30.03125,True,431.0917899999822,,22.46875,True,
+363,test,coco,coco,R0,0,363,,True,,35.65625,True,283.8246699998308,,29.71875,True,
+364,test,coco,coco,R0,0,364,,True,,29.71875,True,340.94490600000427,weak match with the prompt (CLIP 29.7 < 30.0),26.609375,False,"expected 2 pizza, found 1"
+365,test,coco,coco,R0,0,365,,True,,27.703125,True,313.6740649999865,weak match with the prompt (CLIP 27.7 < 30.0),26.953125,True,
+366,test,coco,coco,R0,0,366,,True,,29.953125,,76.9674660000419,,26.953125,,
+367,test,coco,coco,R0,0,367,,True,,30.171875,,82.7684280000085,,22.46875,,
+368,test,coco,coco,R0,0,368,blurry,False,,29.46875,True,297.71682599994165,picture looks blurry; weak match with the prompt (CLIP 29.5 < 30.0),26.078125,True,
+369,test,coco,coco,R0,0,369,,True,,25.859375,False,310.2877130002071,"weak match with the prompt (CLIP 25.9 < 30.0); expected 1 bed, found 0",21.34375,False,"expected 1 bed, found 0"
+370,test,coco,coco,R0,0,370,,True,,37.25,True,277.6340909999817,,33.4375,True,
+371,test,coco,coco,R0,0,371,blurry,False,,30.296875,,71.94466400005695,picture looks blurry,24.1875,,
+372,test,coco,coco,R0,0,372,,True,,33.3125,False,284.33840599996074,"expected 3 bear, found 2",28.9375,False,"expected 3 bear, found 2"
+373,test,coco,coco,R0,0,373,,True,,29.5625,True,288.5217510001894,weak match with the prompt (CLIP 29.6 < 30.0),24.3125,True,
+374,test,coco,coco,R0,0,374,blurry,False,,31.71875,True,275.5068719998235,picture looks blurry,27.515625,True,
+375,test,coco,coco,R0,0,375,,True,,31.15625,True,380.83917700009806,,26.5625,True,
+376,test,coco,coco,R0,0,376,,True,,21.1875,,83.83922600000915,weak match with the prompt (CLIP 21.2 < 30.0),12.796875,,
+377,test,coco,coco,R0,0,377,,True,,29.90625,True,329.74562200001856,weak match with the prompt (CLIP 29.9 < 30.0),26.03125,True,
+378,test,coco,coco,R0,0,378,,True,,30.21875,False,370.10930600013126,"expected pizza above oven, found overlapping",24.96875,False,"expected pizza above oven, found overlapping"
+379,test,coco,coco,R0,0,379,,True,,31.9375,True,397.69770199995946,,26.828125,True,
+380,test,coco,coco,R0,0,380,,True,,27.375,True,418.9392260000204,weak match with the prompt (CLIP 27.4 < 30.0),18.984375,True,
+381,test,coco,coco,R0,0,381,,True,,32.0,True,410.0401690000126,,25.609375,True,
+382,test,coco,coco,R0,0,382,,True,,32.125,True,374.8103610000726,,26.984375,True,
+383,test,coco,coco,R0,0,383,,True,,34.53125,False,383.80491899988556,"expected 2 cup, found 0",28.78125,False,"expected 2 cup, found 0"
+384,test,coco,coco,R0,0,384,,True,,35.21875,True,467.8734030001124,,28.34375,True,
+385,test,coco,coco,R0,0,385,,True,,32.0,True,313.32468000005065,,27.4375,True,
+386,test,coco,coco,R0,0,386,,True,,36.125,True,299.75503100013157,,33.09375,True,
+387,test,coco,coco,R0,0,387,,True,,30.046875,True,374.87473600003796,,24.46875,True,
+388,test,coco,coco,R0,0,388,,True,,35.5,True,312.98747300002105,,30.8125,True,
+389,test,coco,coco,R0,0,389,,True,,37.59375,False,368.8813419998951,"expected 1 sheep, found 0",30.15625,False,"expected 1 sheep, found 0"
+390,test,coco,coco,R0,0,390,,True,,28.734375,False,350.16528899996047,"weak match with the prompt (CLIP 28.7 < 30.0); expected 1 cell phone, found 0",23.21875,False,"expected 1 cell phone, found 0"
+391,test,coco,coco,R0,0,391,"blurry,periodic_artifact",False,,31.03125,False,337.7175109999371,"picture looks blurry; picture looks periodic artifact; expected cell phone above dining table, found overlapping",25.359375,False,"expected cell phone above dining table, found overlapping"
+392,test,coco,coco,R0,0,392,"colour_cast,periodic_artifact",False,,32.21875,True,343.05878000009216,picture looks periodic artifact,24.1875,True,
+393,test,coco,coco,R0,0,393,blurry,False,,27.609375,True,326.16092100010974,picture looks blurry; weak match with the prompt (CLIP 27.6 < 30.0),20.671875,True,
+394,test,coco,coco,R0,0,394,,True,,40.59375,True,294.1302059998634,,33.78125,True,
+395,test,coco,coco,R0,0,395,,True,,33.875,True,359.01675500008423,,33.3125,True,
+396,test,coco,coco,R0,0,396,,True,,31.6875,True,339.92522000016834,,27.390625,True,
+397,test,coco,coco,R0,0,397,,True,,32.09375,True,339.36890199993286,,26.609375,True,
+398,test,coco,coco,R0,0,398,,True,,30.4375,True,376.0802110000441,,23.203125,True,
+399,test,coco,coco,R0,0,399,,True,,36.28125,True,566.5824499999417,,30.0,True,
+200,test,geneval,color_attr,R1,1,100200,periodic_artifact,False,,34.125,True,431.3527599999816,picture looks periodic artifact,34.3125,False,"expected 1 dining table, found 0"
+201,test,geneval,color_attr,R1,1,100201,,True,,37.46875,True,426.431588000014,,28.6875,True,
+202,test,geneval,color_attr,R1,1,100202,,True,,41.5,True,437.38473400003386,,35.4375,True,
+203,test,geneval,color_attr,R1,1,100203,,True,,38.5,True,451.3708229999338,,36.34375,True,
+204,test,geneval,color_attr,R1,1,100204,,True,,35.21875,False,402.46362900006716,"expected 1 black scissors, saw colours {'pink': 1}",33.53125,False,"expected 1 black scissors, saw colours {'pink': 1}"
+205,test,geneval,color_attr,R1,1,100205,colour_cast,True,,36.15625,False,362.90964399995573,"expected 1 carrot, found 0",30.4375,False,"expected 1 carrot, found 0"
+206,test,geneval,color_attr,R1,1,100206,,True,,35.25,False,463.6251849999553,"expected 1 brown bus, saw colours {'orange': 1}",34.46875,False,"expected 1 brown bus, saw colours {'orange': 1}"
+207,test,geneval,color_attr,R1,1,100207,,True,,33.53125,False,416.0957120000148,"expected 1 yellow pizza, saw colours {'orange': 1}; expected 1 green oven, saw colours {'white': 1}",27.78125,False,"expected 1 yellow pizza, saw colours {'green': 1}"
+208,test,geneval,color_attr,R1,1,100208,colour_cast,True,,37.71875,True,473.560346000113,,28.71875,False,"expected 1 white pizza, saw colours {'green': 1}"
+209,test,geneval,color_attr,R1,1,100209,"blurry,colour_cast,periodic_artifact",False,,37.625,True,411.52018200000384,picture looks blurry; picture looks periodic artifact,35.875,True,
+210,test,geneval,color_attr,R1,1,100210,,True,,35.28125,True,435.07841900009225,,31.546875,False,"expected 1 suitcase, found 0"
+211,test,geneval,color_attr,R1,1,100211,,True,,32.96875,True,446.62684899981286,,29.90625,True,
+212,test,geneval,color_attr,R1,1,100212,,True,,40.15625,True,490.12239000012414,,37.84375,True,
+213,test,geneval,color_attr,R1,1,100213,,True,,35.28125,False,372.1763550001924,"expected 1 orange giraffe, saw colours {'white': 1}; expected 1 baseball glove, found 0",25.8125,False,"expected 1 baseball glove, found 0"
+214,test,geneval,color_attr,R1,1,100214,,True,,38.5,False,503.1080100000054,"expected 1 brown bear, saw colours {'green': 1}",27.765625,True,
+215,test,geneval,color_attr,R1,1,100215,,True,,39.8125,True,543.5866630000419,,32.4375,False,"expected 1 sheep, found 0"
+216,test,geneval,color_attr,R1,1,100216,,True,,36.03125,False,479.55638300004466,"expected 1 red orange, saw colours {'orange': 1}",32.6875,False,"expected 1 red orange, saw colours {'orange': 1}"
+217,test,geneval,color_attr,R1,1,100217,,True,,30.28125,False,443.3866169999874,"expected 1 dining table, found 0",27.203125,True,
+218,test,geneval,color_attr,R1,1,100218,,True,,38.84375,False,455.84397000015997,"expected 1 white umbrella, saw colours {'purple': 1}",33.34375,True,
+219,test,geneval,color_attr,R1,1,100219,,True,,41.34375,True,446.34105099999033,,37.03125,True,
+220,test,geneval,colors,R1,1,100220,,True,,34.46875,True,419.75992300012877,,29.296875,True,
+221,test,geneval,colors,R1,1,100221,periodic_artifact,False,,35.21875,True,536.9575080001141,picture looks periodic artifact,29.15625,True,
+222,test,geneval,colors,R1,1,100222,,True,,31.953125,True,373.9399720000165,,25.421875,True,
+223,test,geneval,colors,R1,1,100223,,True,,33.09375,True,377.81929900006617,,28.125,True,
+224,test,geneval,colors,R1,1,100224,blurry,False,,33.875,True,435.40674799987755,picture looks blurry,29.859375,True,
+225,test,geneval,colors,R1,1,100225,,True,,36.34375,True,390.829715000109,,33.1875,True,
+226,test,geneval,colors,R1,1,100226,,True,,33.40625,True,392.7039820000573,,30.984375,True,
+227,test,geneval,colors,R1,1,100227,,True,,37.9375,True,385.0270640000417,,32.5625,True,
+228,test,geneval,colors,R1,1,100228,,True,,33.84375,True,580.4825520001486,,30.46875,True,
+229,test,geneval,colors,R1,1,100229,,True,,36.375,True,374.2933800001538,,31.328125,True,
+230,test,geneval,colors,R1,1,100230,colour_cast,True,,33.3125,False,428.183264999916,"expected 1 brown orange, saw colours {'orange': 1}",26.65625,False,"expected 1 brown orange, saw colours {'orange': 1}"
+231,test,geneval,colors,R1,1,100231,,True,,32.1875,True,514.938746000098,,28.46875,True,
+232,test,geneval,colors,R1,1,100232,,True,,31.78125,True,404.659416999948,,28.03125,True,
+233,test,geneval,colors,R1,1,100233,,True,,33.59375,True,385.5064009999296,,26.484375,True,
+234,test,geneval,colors,R1,1,100234,,True,,30.421875,True,506.2470279999616,,23.5,True,
+235,test,geneval,colors,R1,1,100235,,True,,28.953125,False,367.6545010000609,"weak match with the prompt (CLIP 29.0 < 30.0); expected 1 blue carrot, saw colours {'brown': 1}",26.515625,False,"expected 1 carrot, found 0"
+236,test,geneval,colors,R1,1,100236,,True,,34.375,True,369.7231080000165,,32.875,True,
+237,test,geneval,colors,R1,1,100237,"too_dark,colour_cast",True,,37.4375,True,367.28867299984813,,31.5,True,
+238,test,geneval,colors,R1,1,100238,,True,,30.546875,False,448.9062449999892,"expected 1 black skis, saw colours {'blue': 1}",22.578125,False,"expected 1 black skis, saw colours {'blue': 1}"
+239,test,geneval,colors,R1,1,100239,colour_cast,True,,33.375,True,366.05506800015064,,27.125,True,
+240,test,geneval,counting,R1,1,100240,,True,,31.109375,False,436.99150499992356,"expected fewer than 5 traffic light, found 6",26.375,True,
+241,test,geneval,counting,R1,1,100241,,True,,32.96875,True,358.24384300008205,,29.421875,True,
+242,test,geneval,counting,R1,1,100242,,True,,34.46875,False,339.0934669998842,"expected 4 baseball glove, found 2",28.21875,False,"expected 4 baseball glove, found 2"
+243,test,geneval,counting,R1,1,100243,,True,,30.65625,False,530.3649510001378,"expected 4 sink, found 3",24.625,False,"expected 4 sink, found 0"
+244,test,geneval,counting,R1,1,100244,,True,,33.125,False,345.35691100018084,"expected 4 microwave, found 2",27.34375,False,"expected 4 microwave, found 2"
+245,test,geneval,counting,R1,1,100245,,True,,31.859375,False,342.90811000005306,"expected 2 backpack, found 1",26.171875,False,"expected 2 backpack, found 0"
+246,test,geneval,counting,R1,1,100246,,True,,28.515625,True,412.0732549999957,weak match with the prompt (CLIP 28.5 < 30.0),19.5625,True,
+247,test,geneval,counting,R1,1,100247,,True,,34.4375,True,505.46558399992136,,29.25,False,"expected 4 broccoli, found 0"
+248,test,geneval,counting,R1,1,100248,,True,,29.6875,True,382.3900130000766,weak match with the prompt (CLIP 29.7 < 30.0),25.1875,False,"expected 2 clock, found 0"
+249,test,geneval,counting,R1,1,100249,,True,,31.5625,False,369.87982799996644,"expected fewer than 4 suitcase, found 4",26.140625,True,
+250,test,geneval,counting,R1,1,100250,,True,,31.25,True,391.4415750000444,,25.640625,True,
+251,test,geneval,counting,R1,1,100251,,True,,30.21875,False,331.29622100000233,"expected 4 apple, found 3",26.296875,False,"expected 4 apple, found 3"
+252,test,geneval,counting,R1,1,100252,,True,,30.421875,True,391.6591290001179,,24.734375,False,"expected 4 donut, found 2"
+253,test,geneval,counting,R1,1,100253,,True,,28.90625,True,317.20541599997887,weak match with the prompt (CLIP 28.9 < 30.0),24.21875,True,
+254,test,geneval,counting,R1,1,100254,,True,,35.4375,True,344.3543260000297,,26.984375,True,
+255,test,geneval,counting,R1,1,100255,,True,,34.1875,True,330.2505219999148,,27.25,True,
+256,test,geneval,counting,R1,1,100256,,True,,29.8125,False,345.619582999916,"weak match with the prompt (CLIP 29.8 < 30.0); expected fewer than 4 kite, found 4",24.359375,True,
+257,test,geneval,counting,R1,1,100257,,True,,30.71875,False,373.4803740001098,"expected 3 laptop, found 1",27.8125,False,"expected 3 laptop, found 2"
+258,test,geneval,counting,R1,1,100258,,True,,29.984375,False,349.8646259999987,"expected fewer than 4 pizza, found 4",23.65625,False,"expected fewer than 4 pizza, found 4"
+259,test,geneval,counting,R1,1,100259,,True,,28.09375,True,316.4269669998703,weak match with the prompt (CLIP 28.1 < 30.0),21.515625,True,
+260,test,geneval,position,R1,1,100260,,True,,36.03125,True,359.85537499982456,,30.375,True,
+261,test,geneval,position,R1,1,100261,,True,,37.5625,True,315.45497800016165,,29.328125,True,
+262,test,geneval,position,R1,1,100262,,True,,37.71875,True,380.37725799995314,,34.15625,True,
+263,test,geneval,position,R1,1,100263,,True,,30.28125,True,352.13473899989367,,27.265625,True,
+264,test,geneval,position,R1,1,100264,,True,,25.921875,False,369.3284470000435,"weak match with the prompt (CLIP 25.9 < 30.0); expected 1 hair drier, found 0",20.109375,False,"expected 1 hair drier, found 0"
+265,test,geneval,position,R1,1,100265,,True,,37.25,True,343.24021700012963,,33.25,True,
+266,test,geneval,position,R1,1,100266,,True,,37.5,True,374.03669800005446,,31.90625,True,
+267,test,geneval,position,R1,1,100267,,True,,35.8125,True,403.4823450001568,,31.125,True,
+268,test,geneval,position,R1,1,100268,,True,,40.03125,False,412.19074999980876,"expected hot dog right of skateboard, found above",30.640625,False,"expected hot dog right of skateboard, found above"
+269,test,geneval,position,R1,1,100269,periodic_artifact,False,,31.765625,False,376.20729199989,"picture looks periodic artifact; expected cup left of umbrella, found below",26.875,False,"expected cup left of umbrella, found below"
+270,test,geneval,position,R1,1,100270,,True,,33.03125,True,374.0241909999895,,26.421875,True,
+271,test,geneval,position,R1,1,100271,,True,,36.90625,True,323.04347800004507,,30.296875,True,
+272,test,geneval,position,R1,1,100272,,True,,37.71875,True,362.13783700009117,,31.984375,True,
+273,test,geneval,position,R1,1,100273,,True,,36.875,False,332.2250600001553,"expected 1 skis, found 0; no skis to be above",30.078125,True,
+274,test,geneval,position,R1,1,100274,,True,,33.4375,True,467.31175400009306,,30.8125,True,
+275,test,geneval,position,R1,1,100275,,True,,38.65625,True,343.8790479999625,,34.6875,True,
+276,test,geneval,position,R1,1,100276,,True,,31.078125,True,392.9508950000127,,25.53125,True,
+277,test,geneval,position,R1,1,100277,periodic_artifact,False,,35.65625,True,347.747451000032,picture looks periodic artifact,32.84375,True,
+278,test,geneval,position,R1,1,100278,,True,,39.90625,False,343.0629469999076,"expected 1 snowboard, found 0; no snowboard to be above",36.8125,False,"expected 1 snowboard, found 0; no snowboard to be above"
+279,test,geneval,position,R1,1,100279,,True,,33.3125,False,341.5179219998663,"expected 1 baseball bat, found 0; no baseball bat to be above",29.09375,False,"expected 1 baseball bat, found 0; no baseball bat to be above"
+280,test,geneval,single_object,R1,1,100280,,True,,27.859375,True,299.1851150000002,weak match with the prompt (CLIP 27.9 < 30.0),24.265625,True,
+281,test,geneval,single_object,R1,1,100281,,True,,30.125,True,299.46005200008585,,24.28125,True,
+282,test,geneval,single_object,R1,1,100282,,True,,29.90625,True,305.88169499992546,weak match with the prompt (CLIP 29.9 < 30.0),24.578125,True,
+283,test,geneval,single_object,R1,1,100283,"blurry,periodic_artifact",False,,32.3125,True,311.8268549999357,picture looks blurry; picture looks periodic artifact,28.546875,True,
+284,test,geneval,single_object,R1,1,100284,,True,,31.59375,True,361.4829999999074,,27.875,True,
+285,test,geneval,single_object,R1,1,100285,periodic_artifact,False,,31.59375,True,332.7824309999414,picture looks periodic artifact,28.5625,True,
+286,test,geneval,single_object,R1,1,100286,,True,,31.46875,True,453.6995210000896,,25.859375,True,
+287,test,geneval,single_object,R1,1,100287,blurry,False,,32.625,True,346.14328199995725,picture looks blurry,26.25,True,
+288,test,geneval,single_object,R1,1,100288,,True,,30.859375,True,401.8522030000895,,26.484375,True,
+289,test,geneval,single_object,R1,1,100289,,True,,30.109375,True,339.73838199995043,,24.125,True,
+290,test,geneval,single_object,R1,1,100290,,True,,31.6875,True,373.79412899986164,,24.921875,True,
+291,test,geneval,single_object,R1,1,100291,,True,,31.125,True,367.70322600000327,,25.5625,True,
+292,test,geneval,single_object,R1,1,100292,,True,,30.5625,True,330.71746200016605,,27.53125,True,
+293,test,geneval,single_object,R1,1,100293,,True,,31.9375,True,391.7864610000379,,28.953125,True,
+294,test,geneval,single_object,R1,1,100294,,True,,31.78125,True,334.0218169998934,,24.171875,True,
+295,test,geneval,single_object,R1,1,100295,,True,,29.546875,True,398.17687599997953,weak match with the prompt (CLIP 29.5 < 30.0),22.484375,True,
+296,test,geneval,single_object,R1,1,100296,,True,,30.328125,True,371.1184190001404,,26.640625,True,
+297,test,geneval,single_object,R1,1,100297,,True,,32.46875,True,333.880845000067,,27.390625,True,
+298,test,geneval,single_object,R1,1,100298,,True,,29.203125,True,345.7303749999028,weak match with the prompt (CLIP 29.2 < 30.0),26.59375,True,
+299,test,geneval,single_object,R1,1,100299,,True,,25.5625,True,374.88696199989135,weak match with the prompt (CLIP 25.6 < 30.0),19.0625,True,
+300,test,geneval,two_object,R1,1,100300,,True,,34.34375,True,369.743422999818,,26.296875,True,
+301,test,geneval,two_object,R1,1,100301,,True,,31.109375,True,331.08691200004614,,25.6875,True,
+302,test,geneval,two_object,R1,1,100302,,True,,37.8125,True,376.1087130001215,,30.546875,True,
+303,test,geneval,two_object,R1,1,100303,,True,,34.3125,True,332.5931589999982,,30.8125,True,
+304,test,geneval,two_object,R1,1,100304,,True,,33.96875,True,319.30214299995896,,28.9375,True,
+305,test,geneval,two_object,R1,1,100305,,True,,34.625,True,355.5188159998579,,30.109375,True,
+306,test,geneval,two_object,R1,1,100306,,True,,35.0,True,350.5824239998674,,28.828125,True,
+307,test,geneval,two_object,R1,1,100307,,True,,28.875,False,371.44756599991524,"weak match with the prompt (CLIP 28.9 < 30.0); expected 1 bowl, found 0",23.359375,False,"expected 1 bowl, found 0"
+308,test,geneval,two_object,R1,1,100308,,True,,29.34375,True,347.6182599999902,weak match with the prompt (CLIP 29.3 < 30.0),22.5625,True,
+309,test,geneval,two_object,R1,1,100309,,True,,39.4375,True,304.40668899996126,,31.765625,True,
+310,test,geneval,two_object,R1,1,100310,blurry,False,,31.78125,True,404.176710999991,picture looks blurry,25.421875,True,
+311,test,geneval,two_object,R1,1,100311,,True,,30.28125,True,351.2047789999997,,31.953125,True,
+312,test,geneval,two_object,R1,1,100312,,True,,30.28125,False,342.39078199993855,"expected 1 skis, found 0",27.46875,False,"expected 1 skis, found 0"
+313,test,geneval,two_object,R1,1,100313,,True,,33.1875,True,360.7933870000579,,29.859375,True,
+314,test,geneval,two_object,R1,1,100314,,True,,33.84375,True,372.68784799994137,,30.90625,True,
+315,test,geneval,two_object,R1,1,100315,,True,,39.125,True,297.2359929999584,,30.203125,False,"expected 1 baseball glove, found 0"
+316,test,geneval,two_object,R1,1,100316,,True,,30.25,True,375.44674099990516,,23.296875,True,
+317,test,geneval,two_object,R1,1,100317,,True,,38.75,True,373.11336199991274,,30.15625,True,
+318,test,geneval,two_object,R1,1,100318,,True,,32.71875,True,341.38052499997684,,28.71875,True,
+319,test,geneval,two_object,R1,1,100319,,True,,35.40625,True,347.0984569999018,,29.46875,True,
+320,test,coco,coco,R1,1,100320,,True,,29.828125,True,367.3896299999342,weak match with the prompt (CLIP 29.8 < 30.0),24.140625,True,
+321,test,coco,coco,R1,1,100321,,True,,28.71875,True,376.0045070000615,weak match with the prompt (CLIP 28.7 < 30.0),18.15625,True,
+322,test,coco,coco,R1,1,100322,,True,,33.71875,True,322.47652399996696,,31.890625,True,
+323,test,coco,coco,R1,1,100323,,True,,32.96875,True,320.25041100018825,,25.296875,True,
+324,test,coco,coco,R1,1,100324,,True,,31.21875,True,357.16282099997443,,24.296875,True,
+325,test,coco,coco,R1,1,100325,,True,,31.734375,False,374.1240250001283,"expected 2 apple, found 1",26.953125,False,"expected 2 apple, found 0"
+326,test,coco,coco,R1,1,100326,,True,,28.0,True,532.3138420001214,weak match with the prompt (CLIP 28.0 < 30.0),23.515625,True,
+327,test,coco,coco,R1,1,100327,,True,,30.34375,True,316.29518799991274,,24.515625,True,
+328,test,coco,coco,R1,1,100328,,True,,33.25,True,343.58851299998605,,31.59375,True,
+329,test,coco,coco,R1,1,100329,,True,,36.8125,True,373.6496389999502,,27.78125,True,
+330,test,coco,coco,R1,1,100330,,True,,36.375,False,352.77396499986935,"expected 1 white cat, saw colours {'green': 1}",32.46875,False,"expected 1 white cat, saw colours {'green': 1}"
+331,test,coco,coco,R1,1,100331,,True,,32.0,True,425.37551800000983,,26.125,True,
+332,test,coco,coco,R1,1,100332,"colour_cast,periodic_artifact",False,,33.875,,87.82883199978642,picture looks periodic artifact,24.5625,,
+333,test,coco,coco,R1,1,100333,,True,,33.3125,True,315.6545660001484,,27.09375,True,
+334,test,coco,coco,R1,1,100334,,True,,29.984375,True,384.216097000035,,23.71875,True,
+335,test,coco,coco,R1,1,100335,,True,,33.3125,,88.83686599983776,,29.046875,,
+336,test,coco,coco,R1,1,100336,,True,,33.4375,False,435.54674400002114,"expected 1 white sheep, saw colours {'black': 1}",28.171875,False,"expected 1 white sheep, saw colours {'black': 1}"
+337,test,coco,coco,R1,1,100337,,True,,30.34375,,84.75018500007536,,21.46875,,
+338,test,coco,coco,R1,1,100338,,True,,34.75,True,438.47132399992006,,28.484375,True,
+339,test,coco,coco,R1,1,100339,,True,,31.546875,True,550.0340109999797,,27.171875,True,
+340,test,coco,coco,R1,1,100340,,True,,35.59375,True,349.30988599990087,,24.46875,True,
+341,test,coco,coco,R1,1,100341,,True,,29.984375,True,318.86996700018244,,23.125,True,
+342,test,coco,coco,R1,1,100342,,True,,27.703125,True,314.29307100006554,weak match with the prompt (CLIP 27.7 < 30.0),24.203125,True,
+343,test,coco,coco,R1,1,100343,,True,,31.0,True,375.5253859999357,,27.3125,True,
+344,test,coco,coco,R1,1,100344,,True,,32.75,False,394.22397399994225,"expected 1 dining table, found 0",30.25,False,"expected 1 dining table, found 0"
+345,test,coco,coco,R1,1,100345,,True,,31.90625,True,457.9646289998891,,28.09375,True,
+346,test,coco,coco,R1,1,100346,,True,,34.21875,False,454.72986599997967,"expected 1 blue cake, saw colours {'purple': 1}",29.859375,False,"expected 1 blue cake, saw colours {'purple': 1}"
+347,test,coco,coco,R1,1,100347,,True,,30.203125,True,303.3961620001264,,28.953125,True,
+348,test,coco,coco,R1,1,100348,,True,,31.0,True,329.81598299988946,,23.390625,True,
+349,test,coco,coco,R1,1,100349,,True,,29.0,,79.72833899998477,weak match with the prompt (CLIP 29.0 < 30.0),22.703125,,
+350,test,coco,coco,R1,1,100350,colour_cast,True,,31.390625,False,339.0976260000116,"expected 1 frisbee, found 0",30.4375,True,
+351,test,coco,coco,R1,1,100351,,True,,32.1875,True,316.2205000000995,,28.734375,True,
+352,test,coco,coco,R1,1,100352,,True,,37.53125,True,315.9490339999138,,32.09375,True,
+353,test,coco,coco,R1,1,100353,,True,,33.46875,True,392.974496999841,,28.125,True,
+354,test,coco,coco,R1,1,100354,,True,,32.09375,False,359.0697460001593,"expected 1 white broccoli, saw colours {'green': 1}",29.9375,False,"expected 1 white broccoli, saw colours {'green': 1}"
+355,test,coco,coco,R1,1,100355,,True,,30.734375,False,313.79059199980475,"expected person above dog, found right of",26.078125,False,"expected person above dog, found right of"
+356,test,coco,coco,R1,1,100356,,True,,33.3125,True,435.09733599989886,,25.65625,True,
+357,test,coco,coco,R1,1,100357,,True,,31.8125,,71.61993499994423,,22.671875,,
+358,test,coco,coco,R1,1,100358,,True,,31.34375,True,308.1650589999754,,25.5625,False,"expected cat above laptop, found overlapping"
+359,test,coco,coco,R1,1,100359,,True,,32.75,True,338.62038200004463,,27.09375,False,"expected 1 white toilet, saw colours {'brown': 1}"
+360,test,coco,coco,R1,1,100360,,True,,30.390625,True,348.86552500006474,,26.4375,True,
+361,test,coco,coco,R1,1,100361,,True,,29.6875,True,291.69982999997046,weak match with the prompt (CLIP 29.7 < 30.0),23.84375,True,
+362,test,coco,coco,R1,1,100362,,True,,27.296875,True,390.96240100002433,weak match with the prompt (CLIP 27.3 < 30.0),21.78125,True,
+363,test,coco,coco,R1,1,100363,,True,,34.0625,True,308.945015000063,,27.171875,True,
+364,test,coco,coco,R1,1,100364,,True,,31.765625,False,340.30406100009714,"expected fewer than 3 pizza, found 3",28.4375,True,
+365,test,coco,coco,R1,1,100365,,True,,26.125,True,308.60180800004855,weak match with the prompt (CLIP 26.1 < 30.0),24.96875,True,
+366,test,coco,coco,R1,1,100366,periodic_artifact,False,,33.1875,,72.21030999994582,picture looks periodic artifact,26.953125,,
+367,test,coco,coco,R1,1,100367,,True,,29.078125,,77.39540500006115,weak match with the prompt (CLIP 29.1 < 30.0),21.796875,,
+368,test,coco,coco,R1,1,100368,"too_bright,colour_cast,periodic_artifact",False,,30.65625,True,348.86242000015955,picture looks periodic artifact,22.484375,True,
+369,test,coco,coco,R1,1,100369,,True,,27.515625,False,350.4399599999033,"weak match with the prompt (CLIP 27.5 < 30.0); expected 1 bed, found 0",20.859375,False,"expected 1 bed, found 0"
+370,test,coco,coco,R1,1,100370,,True,,37.8125,True,316.02496000004976,,33.65625,True,
+371,test,coco,coco,R1,1,100371,,True,,30.390625,,81.55006300012246,,24.5625,,
+372,test,coco,coco,R1,1,100372,,True,,37.875,False,324.4224510001459,"expected 3 bear, found 0",31.6875,False,"expected 3 bear, found 0"
+373,test,coco,coco,R1,1,100373,,True,,30.421875,True,325.30329800010804,,24.734375,True,
+374,test,coco,coco,R1,1,100374,blurry,False,,31.109375,True,381.81462099987584,picture looks blurry,26.265625,True,
+375,test,coco,coco,R1,1,100375,,True,,32.75,True,405.5447270000059,,26.0,True,
+376,test,coco,coco,R1,1,100376,,True,,21.671875,,88.15373599986742,weak match with the prompt (CLIP 21.7 < 30.0),17.046875,,
+377,test,coco,coco,R1,1,100377,,True,,32.34375,True,290.1884059999702,,28.59375,True,
+378,test,coco,coco,R1,1,100378,periodic_artifact,False,,32.3125,False,303.03334400014137,"picture looks periodic artifact; expected pizza above oven, found overlapping",24.625,False,"expected pizza above oven, found overlapping"
+379,test,coco,coco,R1,1,100379,,True,,31.34375,True,542.0663590000458,,25.25,True,
+380,test,coco,coco,R1,1,100380,,True,,26.53125,True,479.99669199998607,weak match with the prompt (CLIP 26.5 < 30.0),17.71875,True,
+381,test,coco,coco,R1,1,100381,,True,,31.984375,True,474.39820699992197,,24.65625,True,
+382,test,coco,coco,R1,1,100382,,True,,33.53125,True,314.2162929998449,,26.296875,True,
+383,test,coco,coco,R1,1,100383,,True,,34.90625,False,470.6874200001039,"expected 2 cup, found 1",30.078125,True,
+384,test,coco,coco,R1,1,100384,,True,,33.34375,True,545.9507909999957,,27.953125,True,
+385,test,coco,coco,R1,1,100385,,True,,29.6875,True,343.55337700003474,weak match with the prompt (CLIP 29.7 < 30.0),18.34375,False,"expected 1 dog, found 0"
+386,test,coco,coco,R1,1,100386,,True,,35.0625,True,300.0681309999891,,29.859375,True,
+387,test,coco,coco,R1,1,100387,,True,,30.734375,True,444.85531700001957,,23.46875,True,
+388,test,coco,coco,R1,1,100388,,True,,35.9375,True,313.0745180001213,,31.21875,True,
+389,test,coco,coco,R1,1,100389,,True,,39.75,False,336.90772099998867,"expected 1 sheep, found 0",38.40625,False,"expected 1 sheep, found 0"
+390,test,coco,coco,R1,1,100390,,True,,30.34375,False,366.42427100014174,"expected 1 cell phone, found 0",23.375,False,"expected 1 cell phone, found 0"
+391,test,coco,coco,R1,1,100391,periodic_artifact,False,,31.5,False,301.21013100006166,"picture looks periodic artifact; expected cell phone above dining table, found overlapping",24.40625,False,"expected cell phone above dining table, found overlapping"
+392,test,coco,coco,R1,1,100392,,True,,31.8125,True,330.2696670000387,,25.96875,True,
+393,test,coco,coco,R1,1,100393,,True,,27.5625,True,302.53353800003424,weak match with the prompt (CLIP 27.6 < 30.0),23.859375,True,
+394,test,coco,coco,R1,1,100394,,True,,39.4375,True,308.53113900002427,,34.65625,True,
+395,test,coco,coco,R1,1,100395,,True,,31.90625,True,385.9643209998467,,30.25,True,
+396,test,coco,coco,R1,1,100396,,True,,30.984375,True,391.9005399998241,,26.734375,True,
+397,test,coco,coco,R1,1,100397,,True,,34.78125,True,321.3416099999904,,29.265625,True,
+398,test,coco,coco,R1,1,100398,,True,,34.3125,True,317.4094450000666,,26.8125,True,
+399,test,coco,coco,R1,1,100399,,True,,34.4375,True,374.66806200018254,,30.546875,True,
+200,test,geneval,color_attr,R2,2,200200,,True,,37.375,True,395.63612799997827,,36.6875,True,
+201,test,geneval,color_attr,R2,2,200201,,True,,38.21875,True,371.7579450001267,,29.90625,False,"expected 1 orange traffic light, saw colours {'brown': 1}; expected 1 white toilet, saw colours {'brown': 1}"
+202,test,geneval,color_attr,R2,2,200202,,True,,38.03125,True,399.99077400034366,,32.6875,True,
+203,test,geneval,color_attr,R2,2,200203,,True,,39.34375,True,393.21118099996966,,32.34375,False,"expected 1 red laptop, saw colours {'purple': 1}"
+204,test,geneval,color_attr,R2,2,200204,,True,,33.1875,True,388.5686840003473,,25.1875,True,
+205,test,geneval,color_attr,R2,2,200205,colour_cast,True,,37.375,False,351.26084399962565,"expected 1 carrot, found 0",31.03125,False,"expected 1 carrot, found 0"
+206,test,geneval,color_attr,R2,2,200206,,True,,35.3125,True,404.0428260000226,,32.0625,True,
+207,test,geneval,color_attr,R2,2,200207,,True,,33.875,True,403.4839890000512,,29.421875,True,
+208,test,geneval,color_attr,R2,2,200208,colour_cast,True,,38.875,False,438.09310300002835,"expected 1 white pizza, saw colours {'green': 1}",28.390625,True,
+209,test,geneval,color_attr,R2,2,200209,"colour_cast,periodic_artifact",False,,37.375,True,389.85216099990794,picture looks periodic artifact,35.84375,True,
+210,test,geneval,color_attr,R2,2,200210,,True,,35.8125,True,402.53810600006545,,31.734375,True,
+211,test,geneval,color_attr,R2,2,200211,,True,,32.71875,True,398.65219400007845,,31.328125,True,
+212,test,geneval,color_attr,R2,2,200212,,True,,40.25,True,454.4789229998969,,36.5,True,
+213,test,geneval,color_attr,R2,2,200213,,True,,32.96875,False,416.7082449998816,"expected 1 orange giraffe, saw colours {'yellow': 1}",26.03125,False,"expected 1 orange giraffe, saw colours {'brown': 1}; expected 1 white baseball glove, saw colours {'brown': 1}"
+214,test,geneval,color_attr,R2,2,200214,,True,,34.78125,True,409.585818999858,,23.703125,True,
+215,test,geneval,color_attr,R2,2,200215,,True,,39.96875,True,379.9848740000016,,34.65625,False,"expected 1 sheep, found 0"
+216,test,geneval,color_attr,R2,2,200216,,True,,36.59375,False,389.54166100029397,"expected 1 orange, found 0",31.296875,False,"expected 1 red orange, saw colours {'orange': 1}"
+217,test,geneval,color_attr,R2,2,200217,,True,,36.0,True,550.1562559998092,,29.90625,True,
+218,test,geneval,color_attr,R2,2,200218,,True,,38.5625,True,416.11524700010705,,34.75,True,
+219,test,geneval,color_attr,R2,2,200219,blurry,False,,41.90625,True,414.5047369997883,picture looks blurry,33.59375,False,"expected 1 airplane, found 0"
+220,test,geneval,colors,R2,2,200220,periodic_artifact,False,,34.3125,True,337.384750000183,picture looks periodic artifact,30.5,True,
+221,test,geneval,colors,R2,2,200221,,True,,33.90625,True,364.11716199972943,,28.0,True,
+222,test,geneval,colors,R2,2,200222,colour_cast,True,,31.546875,True,376.7918850003298,,25.421875,True,
+223,test,geneval,colors,R2,2,200223,colour_cast,True,,32.5,True,370.53874299999734,,28.59375,True,
+224,test,geneval,colors,R2,2,200224,,True,,35.21875,False,394.48353399984626,"expected 1 carrot, found 0",31.25,False,"expected 1 carrot, found 0"
+225,test,geneval,colors,R2,2,200225,,True,,36.0,True,394.40805200001705,,32.40625,True,
+226,test,geneval,colors,R2,2,200226,,True,,34.21875,True,369.5477309997841,,31.46875,True,
+227,test,geneval,colors,R2,2,200227,,True,,36.625,True,333.0411470001309,,33.34375,True,
+228,test,geneval,colors,R2,2,200228,colour_cast,True,,31.90625,True,373.8615470001605,,32.90625,True,
+229,test,geneval,colors,R2,2,200229,,True,,36.71875,True,337.169374000041,,32.75,True,
+230,test,geneval,colors,R2,2,200230,colour_cast,True,,33.375,False,335.2562379996016,"expected 1 brown orange, saw colours {'orange': 1}",28.375,False,"expected 1 brown orange, saw colours {'orange': 1}"
+231,test,geneval,colors,R2,2,200231,,True,,32.96875,True,434.3907950001267,,26.828125,True,
+232,test,geneval,colors,R2,2,200232,,True,,33.0,True,368.4942609997961,,29.9375,True,
+233,test,geneval,colors,R2,2,200233,,True,,33.8125,True,372.98404500006654,,27.296875,True,
+234,test,geneval,colors,R2,2,200234,,True,,30.171875,False,499.9198569998953,"expected 1 black dining table, saw colours {'brown': 1}",23.359375,True,
+235,test,geneval,colors,R2,2,200235,,True,,34.75,False,357.90060299996185,"expected 1 blue carrot, saw colours {'red': 1}",28.078125,False,"expected 1 blue carrot, saw colours {'white': 1}"
+236,test,geneval,colors,R2,2,200236,blurry,False,,34.46875,True,343.27220299974215,picture looks blurry,34.53125,True,
+237,test,geneval,colors,R2,2,200237,periodic_artifact,False,,36.15625,True,361.73415700022815,picture looks periodic artifact,32.625,True,
+238,test,geneval,colors,R2,2,200238,,True,,30.953125,True,380.97795300018333,,23.953125,False,"expected 1 black skis, saw colours {'blue': 1}"
+239,test,geneval,colors,R2,2,200239,colour_cast,True,,30.15625,True,372.0150939998348,,27.484375,True,
+240,test,geneval,counting,R2,2,200240,,True,,30.25,True,368.45525999979145,,26.21875,True,
+241,test,geneval,counting,R2,2,200241,,True,,33.53125,True,416.8876930002625,,28.609375,True,
+242,test,geneval,counting,R2,2,200242,,True,,33.34375,False,364.49527700006,"expected 4 baseball glove, found 2",27.8125,False,"expected 4 baseball glove, found 2"
+243,test,geneval,counting,R2,2,200243,,True,,28.15625,False,380.34562199982247,"weak match with the prompt (CLIP 28.2 < 30.0); expected 4 sink, found 3",24.46875,False,"expected 4 sink, found 3"
+244,test,geneval,counting,R2,2,200244,,True,,34.96875,False,415.3081269996619,"expected 4 microwave, found 3",31.171875,True,
+245,test,geneval,counting,R2,2,200245,,True,,31.6875,False,373.80766799969933,"expected 2 backpack, found 0",24.734375,False,"expected 2 backpack, found 0"
+246,test,geneval,counting,R2,2,200246,,True,,30.109375,True,528.73379499988,,23.984375,True,
+247,test,geneval,counting,R2,2,200247,,True,,35.875,False,383.91113399984533,"expected 4 broccoli, found 2",29.875,False,"expected 4 broccoli, found 1"
+248,test,geneval,counting,R2,2,200248,,True,,29.765625,True,335.60054300005504,weak match with the prompt (CLIP 29.8 < 30.0),25.734375,False,"expected 2 clock, found 1"
+249,test,geneval,counting,R2,2,200249,,True,,31.71875,True,331.2181889996282,,25.1875,True,
+250,test,geneval,counting,R2,2,200250,,True,,31.21875,True,359.2088010000225,,23.78125,True,
+251,test,geneval,counting,R2,2,200251,blurry,False,,31.296875,False,384.79301700044743,"picture looks blurry; expected fewer than 5 apple, found 7",26.265625,False,"expected fewer than 5 apple, found 6"
+252,test,geneval,counting,R2,2,200252,,True,,31.640625,True,360.1731789999576,,26.296875,True,
+253,test,geneval,counting,R2,2,200253,"too_bright,periodic_artifact",False,,27.6875,True,379.9192219998986,picture looks periodic artifact; weak match with the prompt (CLIP 27.7 < 30.0),22.109375,True,
+254,test,geneval,counting,R2,2,200254,,True,,35.21875,False,379.86815900012516,"expected 2 snowboard, found 1",26.734375,True,
+255,test,geneval,counting,R2,2,200255,,True,,33.71875,True,324.8632730001191,,26.703125,True,
+256,test,geneval,counting,R2,2,200256,,True,,31.9375,True,368.37395300017306,,25.53125,True,
+257,test,geneval,counting,R2,2,200257,,True,,32.6875,False,367.85833099975207,"expected fewer than 4 laptop, found 4",28.03125,False,"expected 3 laptop, found 2"
+258,test,geneval,counting,R2,2,200258,,True,,28.9375,False,344.6029350002391,"weak match with the prompt (CLIP 28.9 < 30.0); expected 3 pizza, found 2",23.625,False,"expected 3 pizza, found 1"
+259,test,geneval,counting,R2,2,200259,,True,,26.125,True,314.142807999815,weak match with the prompt (CLIP 26.1 < 30.0),19.6875,True,
+260,test,geneval,position,R2,2,200260,,True,,36.9375,True,320.9644130001834,,32.3125,True,
+261,test,geneval,position,R2,2,200261,,True,,35.78125,True,310.42379400014397,,29.078125,True,
+262,test,geneval,position,R2,2,200262,,True,,39.6875,True,344.5258649999232,,36.34375,True,
+263,test,geneval,position,R2,2,200263,,True,,29.984375,False,308.37059399982536,"expected truck left of refrigerator, found overlapping",29.765625,False,"expected truck left of refrigerator, found overlapping"
+264,test,geneval,position,R2,2,200264,,True,,29.515625,True,290.851811000266,weak match with the prompt (CLIP 29.5 < 30.0),26.46875,True,
+265,test,geneval,position,R2,2,200265,,True,,35.96875,True,283.21352000011757,,35.125,False,"expected knife right of suitcase, found overlapping"
+266,test,geneval,position,R2,2,200266,,True,,37.0,True,303.03090000006705,,32.625,True,
+267,test,geneval,position,R2,2,200267,,True,,35.875,False,303.4224810003252,"expected dog above cow, found overlapping",32.4375,True,
+268,test,geneval,position,R2,2,200268,,True,,39.1875,False,303.18451699986326,"expected hot dog right of skateboard, found above",29.21875,False,"expected hot dog right of skateboard, found above"
+269,test,geneval,position,R2,2,200269,periodic_artifact,False,,32.0625,False,310.7751340003233,"picture looks periodic artifact; expected cup left of umbrella, found below",27.78125,False,"expected cup left of umbrella, found below"
+270,test,geneval,position,R2,2,200270,,True,,32.875,True,357.78050799990524,,28.0,True,
+271,test,geneval,position,R2,2,200271,,True,,36.78125,False,306.39711100002387,"expected cow right of laptop, found overlapping",30.765625,False,"expected cow right of laptop, found overlapping"
+272,test,geneval,position,R2,2,200272,,True,,36.8125,True,329.93432199964445,,32.84375,True,
+273,test,geneval,position,R2,2,200273,,True,,36.875,True,328.0672589999085,,27.59375,True,
+274,test,geneval,position,R2,2,200274,,True,,33.0625,False,461.7577059998439,"expected train right of dining table, found overlapping",29.6875,False,"expected train right of dining table, found overlapping"
+275,test,geneval,position,R2,2,200275,,True,,38.03125,True,325.296304999938,,33.375,True,
+276,test,geneval,position,R2,2,200276,,True,,33.0625,False,308.9702080001189,"expected 1 baseball bat, found 0; no baseball bat to be above",32.78125,False,"expected 1 baseball bat, found 0; no baseball bat to be above"
+277,test,geneval,position,R2,2,200277,,True,,35.21875,True,314.9659000000611,,31.171875,True,
+278,test,geneval,position,R2,2,200278,,True,,33.8125,False,325.0392869999814,"expected 1 snowboard, found 0; no snowboard to be above",25.4375,False,"expected 1 snowboard, found 0; no snowboard to be above"
+279,test,geneval,position,R2,2,200279,,True,,34.21875,False,377.3431360000359,"expected tv above baseball bat, found overlapping",31.390625,False,"expected tv above baseball bat, found overlapping"
+280,test,geneval,single_object,R2,2,200280,,True,,29.09375,True,328.8888250003765,weak match with the prompt (CLIP 29.1 < 30.0),23.90625,True,
+281,test,geneval,single_object,R2,2,200281,,True,,29.59375,True,307.535180999821,weak match with the prompt (CLIP 29.6 < 30.0),23.90625,True,
+282,test,geneval,single_object,R2,2,200282,,True,,29.171875,True,355.95348900005774,weak match with the prompt (CLIP 29.2 < 30.0),24.234375,True,
+283,test,geneval,single_object,R2,2,200283,"blurry,periodic_artifact",False,,32.5,True,295.0212549999378,picture looks blurry; picture looks periodic artifact,28.6875,True,
+284,test,geneval,single_object,R2,2,200284,,True,,33.09375,True,336.57788200025607,,27.296875,True,
+285,test,geneval,single_object,R2,2,200285,periodic_artifact,False,,31.4375,True,312.56249199986996,picture looks periodic artifact,26.203125,True,
+286,test,geneval,single_object,R2,2,200286,,True,,31.390625,True,350.0805139997283,,25.921875,True,
+287,test,geneval,single_object,R2,2,200287,,True,,31.59375,True,364.31947399978526,,26.8125,True,
+288,test,geneval,single_object,R2,2,200288,,True,,32.21875,True,336.63487700005135,,27.515625,True,
+289,test,geneval,single_object,R2,2,200289,,True,,30.34375,True,287.58691100028955,,22.734375,True,
+290,test,geneval,single_object,R2,2,200290,,True,,31.671875,True,335.20562500007145,,25.078125,True,
+291,test,geneval,single_object,R2,2,200291,,True,,30.65625,True,297.93770699961897,,25.75,True,
+292,test,geneval,single_object,R2,2,200292,,True,,31.421875,True,299.8783859998184,,28.65625,True,
+293,test,geneval,single_object,R2,2,200293,,True,,31.890625,True,279.16272799984654,,29.5,True,
+294,test,geneval,single_object,R2,2,200294,,True,,31.296875,True,287.11725199991633,,25.515625,True,
+295,test,geneval,single_object,R2,2,200295,,True,,30.390625,True,363.69888199988054,,25.421875,True,
+296,test,geneval,single_object,R2,2,200296,,True,,32.59375,True,324.0538109998852,,26.03125,True,
+297,test,geneval,single_object,R2,2,200297,,True,,32.90625,True,308.6074699999699,,25.90625,True,
+298,test,geneval,single_object,R2,2,200298,,True,,29.90625,True,321.5090029998464,weak match with the prompt (CLIP 29.9 < 30.0),24.5,True,
+299,test,geneval,single_object,R2,2,200299,,True,,27.484375,True,319.48338900019735,weak match with the prompt (CLIP 27.5 < 30.0),22.46875,True,
+300,test,geneval,two_object,R2,2,200300,blurry,False,,32.4375,True,297.4807239997972,picture looks blurry,25.078125,True,
+301,test,geneval,two_object,R2,2,200301,periodic_artifact,False,,32.3125,True,324.21729299994695,picture looks periodic artifact,25.125,True,
+302,test,geneval,two_object,R2,2,200302,,True,,37.59375,True,345.2178630000162,,28.828125,True,
+303,test,geneval,two_object,R2,2,200303,,True,,34.71875,True,309.07197699980316,,31.375,True,
+304,test,geneval,two_object,R2,2,200304,,True,,37.34375,True,323.5680980001234,,31.515625,True,
+305,test,geneval,two_object,R2,2,200305,blurry,False,,35.59375,True,312.27429899990966,picture looks blurry,28.953125,True,
+306,test,geneval,two_object,R2,2,200306,,True,,36.3125,True,350.85678799987363,,31.078125,True,
+307,test,geneval,two_object,R2,2,200307,,True,,30.21875,False,315.8542699998179,"expected 1 bowl, found 0",28.203125,True,
+308,test,geneval,two_object,R2,2,200308,,True,,30.203125,True,307.0463399999426,,27.6875,True,
+309,test,geneval,two_object,R2,2,200309,,True,,40.0625,True,333.53871200006324,,32.78125,True,
+310,test,geneval,two_object,R2,2,200310,,True,,32.3125,True,348.0461419999301,,22.953125,True,
+311,test,geneval,two_object,R2,2,200311,,True,,30.5,True,350.43814699974973,,26.34375,False,"expected 1 microwave, found 0"
+312,test,geneval,two_object,R2,2,200312,,True,,32.78125,True,325.131828999929,,26.75,True,
+313,test,geneval,two_object,R2,2,200313,,True,,34.21875,True,295.2116850001403,,29.03125,True,
+314,test,geneval,two_object,R2,2,200314,,True,,33.90625,True,304.80234899960124,,23.828125,True,
+315,test,geneval,two_object,R2,2,200315,,True,,38.90625,True,312.89015799984554,,24.9375,True,
+316,test,geneval,two_object,R2,2,200316,,True,,30.59375,True,363.4065249998457,,26.09375,True,
+317,test,geneval,two_object,R2,2,200317,,True,,34.0625,True,348.8880690001679,,29.65625,True,
+318,test,geneval,two_object,R2,2,200318,,True,,32.53125,True,323.3491729997695,,27.03125,True,
+319,test,geneval,two_object,R2,2,200319,,True,,33.34375,True,372.95825699993657,,31.9375,True,
+320,test,coco,coco,R2,2,200320,,True,,28.984375,True,359.4736129998637,weak match with the prompt (CLIP 29.0 < 30.0),24.03125,True,
+321,test,coco,coco,R2,2,200321,,True,,29.421875,True,364.2164450002383,weak match with the prompt (CLIP 29.4 < 30.0),18.515625,True,
+322,test,coco,coco,R2,2,200322,,True,,36.5,True,310.9584240000913,,30.0,True,
+323,test,coco,coco,R2,2,200323,,True,,30.78125,True,301.3016149998293,,23.859375,True,
+324,test,coco,coco,R2,2,200324,,True,,28.953125,True,309.0901990003658,weak match with the prompt (CLIP 29.0 < 30.0),18.71875,True,
+325,test,coco,coco,R2,2,200325,,True,,36.71875,True,371.46374199983256,,30.65625,True,
+326,test,coco,coco,R2,2,200326,,True,,29.34375,True,708.6805980002282,weak match with the prompt (CLIP 29.3 < 30.0),23.15625,True,
+327,test,coco,coco,R2,2,200327,,True,,30.5,True,437.3877079997328,,27.15625,True,
+328,test,coco,coco,R2,2,200328,,True,,33.09375,True,364.9300659999426,,29.03125,True,
+329,test,coco,coco,R2,2,200329,,True,,34.53125,True,335.2740189998258,,26.5625,True,
+330,test,coco,coco,R2,2,200330,,True,,35.34375,False,367.97850699986157,"expected 1 white cat, saw colours {'black': 1}",31.46875,False,"expected 1 white cat, saw colours {'black': 1}"
+331,test,coco,coco,R2,2,200331,,True,,30.90625,True,596.6524589998699,,27.734375,True,
+332,test,coco,coco,R2,2,200332,periodic_artifact,False,,33.875,,82.13747999980114,picture looks periodic artifact,27.8125,,
+333,test,coco,coco,R2,2,200333,,True,,32.75,True,323.9790659999926,,28.46875,True,
+334,test,coco,coco,R2,2,200334,,True,,31.078125,True,371.0150329998214,,25.125,True,
+335,test,coco,coco,R2,2,200335,,True,,33.40625,,97.09352200025023,,30.21875,,
+336,test,coco,coco,R2,2,200336,,True,,31.609375,True,447.5502850000339,,26.515625,True,
+337,test,coco,coco,R2,2,200337,,True,,31.84375,,86.62098800004969,,24.84375,,
+338,test,coco,coco,R2,2,200338,,True,,33.3125,True,379.6531419998246,,29.875,True,
+339,test,coco,coco,R2,2,200339,,True,,28.953125,True,482.3997710000185,weak match with the prompt (CLIP 29.0 < 30.0),23.171875,True,
+340,test,coco,coco,R2,2,200340,,True,,35.1875,True,323.452178000025,,27.90625,True,
+341,test,coco,coco,R2,2,200341,,True,,28.375,True,330.10504100002436,weak match with the prompt (CLIP 28.4 < 30.0),21.671875,True,
+342,test,coco,coco,R2,2,200342,,True,,28.421875,True,306.8268789998001,weak match with the prompt (CLIP 28.4 < 30.0),23.890625,True,
+343,test,coco,coco,R2,2,200343,,True,,30.03125,True,388.20699100006095,,26.984375,True,
+344,test,coco,coco,R2,2,200344,,True,,33.09375,False,462.6847330000601,"expected 1 train, found 0",29.34375,False,"expected 1 dining table, found 0"
+345,test,coco,coco,R2,2,200345,,True,,34.125,True,386.3934559999507,,27.484375,True,
+346,test,coco,coco,R2,2,200346,,True,,35.0,False,378.1758179998178,"expected 1 blue cake, saw colours {'purple': 1}",27.078125,False,"expected 1 blue cake, saw colours {'purple': 1}"
+347,test,coco,coco,R2,2,200347,blurry,False,,28.953125,True,295.2005550000649,picture looks blurry; weak match with the prompt (CLIP 29.0 < 30.0),25.359375,True,
+348,test,coco,coco,R2,2,200348,periodic_artifact,False,,31.109375,True,347.4503620000178,picture looks periodic artifact,25.078125,True,
+349,test,coco,coco,R2,2,200349,,True,,28.484375,,92.98377100003563,weak match with the prompt (CLIP 28.5 < 30.0),23.6875,,
+350,test,coco,coco,R2,2,200350,,True,,37.40625,True,389.2253419999179,,33.875,True,
+351,test,coco,coco,R2,2,200351,,True,,33.40625,True,305.51422500002445,,24.390625,True,
+352,test,coco,coco,R2,2,200352,,True,,37.1875,True,375.0918939999792,,34.0625,True,
+353,test,coco,coco,R2,2,200353,,True,,35.78125,True,394.08023700025296,,31.28125,True,
+354,test,coco,coco,R2,2,200354,,True,,31.546875,False,382.29821200002334,"expected 1 white broccoli, saw colours {'green': 1}",29.875,False,"expected 1 white broccoli, saw colours {'green': 1}"
+355,test,coco,coco,R2,2,200355,,True,,31.171875,False,326.95574199988187,"expected person above dog, found right of",25.78125,False,"expected person above dog, found right of"
+356,test,coco,coco,R2,2,200356,,True,,31.671875,True,423.20651,,26.46875,True,
+357,test,coco,coco,R2,2,200357,,True,,31.9375,,85.77158299976873,,25.734375,,
+358,test,coco,coco,R2,2,200358,,True,,31.765625,False,396.31902500013894,"expected cat above laptop, found overlapping",25.703125,False,"expected cat above laptop, found overlapping"
+359,test,coco,coco,R2,2,200359,,True,,32.78125,True,389.6040439999524,,25.65625,False,"expected 1 white toilet, saw colours {'brown': 1}"
+360,test,coco,coco,R2,2,200360,,True,,31.640625,True,344.6111339999334,,24.671875,True,
+361,test,coco,coco,R2,2,200361,,True,,30.828125,True,335.4664620001131,,26.09375,True,
+362,test,coco,coco,R2,2,200362,,True,,29.328125,True,617.757427000015,weak match with the prompt (CLIP 29.3 < 30.0),24.28125,True,
+363,test,coco,coco,R2,2,200363,,True,,33.375,True,351.37058000009347,,28.3125,True,
+364,test,coco,coco,R2,2,200364,,True,,31.0,True,345.38725099992007,,26.53125,True,
+365,test,coco,coco,R2,2,200365,,True,,28.765625,True,373.7931179998668,weak match with the prompt (CLIP 28.8 < 30.0),25.8125,True,
+366,test,coco,coco,R2,2,200366,periodic_artifact,False,,34.625,,92.466892000175,picture looks periodic artifact,28.546875,,
+367,test,coco,coco,R2,2,200367,,True,,30.984375,,78.1710880000901,,22.5625,,
+368,test,coco,coco,R2,2,200368,colour_cast,True,,30.78125,True,334.4110439998076,,27.515625,True,
+369,test,coco,coco,R2,2,200369,,True,,27.90625,True,375.4039210002702,weak match with the prompt (CLIP 27.9 < 30.0),22.125,False,"expected 1 bed, found 0"
+370,test,coco,coco,R2,2,200370,,True,,32.1875,True,366.37826900005166,,32.125,True,
+371,test,coco,coco,R2,2,200371,,True,,30.546875,,77.88327199978085,,24.078125,,
+372,test,coco,coco,R2,2,200372,,True,,36.125,False,406.45966700003555,"expected 3 bear, found 1",32.28125,True,
+373,test,coco,coco,R2,2,200373,,True,,28.5625,True,384.3522050001411,weak match with the prompt (CLIP 28.6 < 30.0),26.03125,True,
+374,test,coco,coco,R2,2,200374,"blurry,periodic_artifact",False,,30.03125,True,327.14293500021085,picture looks blurry; picture looks periodic artifact,26.875,True,
+375,test,coco,coco,R2,2,200375,,True,,33.5,True,528.30208999967,,27.609375,True,
+376,test,coco,coco,R2,2,200376,periodic_artifact,False,,20.90625,,94.84132599982331,picture looks periodic artifact; weak match with the prompt (CLIP 20.9 < 30.0),16.21875,,
+377,test,coco,coco,R2,2,200377,,True,,31.28125,True,388.1726949998665,,26.78125,True,
+378,test,coco,coco,R2,2,200378,,True,,31.25,False,334.2059279998466,"expected pizza above oven, found overlapping",25.140625,False,"expected pizza above oven, found overlapping"
+379,test,coco,coco,R2,2,200379,,True,,29.953125,True,580.4232249997767,,27.4375,True,
+380,test,coco,coco,R2,2,200380,,True,,25.90625,True,507.0654729997841,weak match with the prompt (CLIP 25.9 < 30.0),19.1875,True,
+381,test,coco,coco,R2,2,200381,,True,,32.25,True,485.27059999969424,,23.84375,True,
+382,test,coco,coco,R2,2,200382,,True,,33.0,True,318.10155299990583,,27.53125,True,
+383,test,coco,coco,R2,2,200383,,True,,35.5625,False,322.7918669999781,"expected 2 cup, found 0",29.875,False,"expected 2 cup, found 0"
+384,test,coco,coco,R2,2,200384,"colour_cast,periodic_artifact",False,,31.953125,True,405.91670499998145,picture looks periodic artifact,25.828125,True,
+385,test,coco,coco,R2,2,200385,,True,,31.171875,True,327.1042490000582,,27.296875,True,
+386,test,coco,coco,R2,2,200386,,True,,35.78125,True,344.44706900012534,,31.28125,True,
+387,test,coco,coco,R2,2,200387,,True,,32.125,True,477.4254700000711,,26.078125,True,
+388,test,coco,coco,R2,2,200388,,True,,36.375,False,328.4463830000277,"expected 1 cell phone, found 0",30.328125,True,
+389,test,coco,coco,R2,2,200389,,True,,38.84375,True,341.02808799980266,,36.5625,False,"expected 1 sheep, found 0"
+390,test,coco,coco,R2,2,200390,,True,,31.203125,False,463.71258799990756,"expected 1 cell phone, found 0",23.359375,False,"expected 1 cell phone, found 0"
+391,test,coco,coco,R2,2,200391,periodic_artifact,False,,31.203125,False,317.4079469999924,"picture looks periodic artifact; expected cell phone above dining table, found overlapping",22.03125,False,"expected cell phone above dining table, found overlapping"
+392,test,coco,coco,R2,2,200392,,True,,34.28125,True,355.205847000434,,26.984375,True,
+393,test,coco,coco,R2,2,200393,,True,,26.0,True,316.9109169998592,weak match with the prompt (CLIP 26.0 < 30.0),17.71875,True,
+394,test,coco,coco,R2,2,200394,,True,,39.15625,True,307.08270000013727,,34.3125,True,
+395,test,coco,coco,R2,2,200395,periodic_artifact,False,,38.0625,True,359.4535760003055,picture looks periodic artifact,36.8125,True,
+396,test,coco,coco,R2,2,200396,,True,,29.765625,True,355.0848310001129,weak match with the prompt (CLIP 29.8 < 30.0),26.8125,True,
+397,test,coco,coco,R2,2,200397,,True,,35.84375,True,350.34538599984444,,26.640625,True,
+398,test,coco,coco,R2,2,200398,,True,,33.6875,True,332.1016889999555,,25.140625,True,
+399,test,coco,coco,R2,2,200399,,True,,33.875,True,412.3700439999993,,29.328125,True,

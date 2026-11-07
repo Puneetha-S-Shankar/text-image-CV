@@ -1,0 +1,235 @@
+INFO:     Started server process [399]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:7860 (Press CTRL+C to quit)
+INFO:     127.0.0.1:34660 - "GET /api/health HTTP/1.1" 200 OK
+2026-11-07 03:25:08,727 INFO Loading the checker (detector maskrcnn, CLIP openai/clip-vit-base-patch16)...
+INFO:     127.0.0.1:34664 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34674 - "GET /api/health HTTP/1.1" 200 OK
+2026-11-07 03:25:16,319 INFO HTTP Request: GET https://huggingface.co/api/models/openai/clip-vit-base-patch16/revision/main "HTTP/1.1 200 OK"
+2026-11-07 03:25:16,378 INFO HTTP Request: HEAD https://huggingface.co/openai/clip-vit-base-patch16/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-11-07 03:25:16,379 WARNING Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-11-07 03:25:16,492 INFO HTTP Request: GET https://huggingface.co/api/models/openai/clip-vit-base-patch16 "HTTP/1.1 200 OK"
+2026-11-07 03:25:16,564 INFO HTTP Request: GET https://huggingface.co/api/models/openai/clip-vit-base-patch16/commits/main "HTTP/1.1 200 OK"
+2026-11-07 03:25:16,640 INFO HTTP Request: GET https://huggingface.co/api/models/openai/clip-vit-base-patch16/discussions?p=0 "HTTP/1.1 200 OK"
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]2026-11-07 03:25:16,760 INFO HTTP Request: GET https://huggingface.co/api/models/openai/clip-vit-base-patch16/commits/refs%2Fpr%2F17 "HTTP/1.1 200 OK"
+Loading weights:  27%|██▋       | 107/398 [00:00<00:00, 1041.72it/s]2026-11-07 03:25:16,809 INFO HTTP Request: HEAD https://huggingface.co/openai/clip-vit-base-patch16/resolve/refs%2Fpr%2F17/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-11-07 03:25:16,867 INFO HTTP Request: HEAD https://huggingface.co/openai/clip-vit-base-patch16/resolve/refs%2Fpr%2F17/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:  56%|█████▌    | 223/398 [00:00<00:00, 962.81it/s] Loading weights:  93%|█████████▎| 371/398 [00:00<00:00, 1090.14it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 1087.65it/s]
+2026-11-07 03:25:17,231 INFO HTTP Request: GET https://huggingface.co/api/models/openai/clip-vit-base-patch16/revision/main "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:32898 - "GET /api/health HTTP/1.1" 200 OK
+2026-11-07 03:25:17,283 INFO HTTP Request: GET https://huggingface.co/api/models/openai/clip-vit-base-patch16/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-07 03:25:17,343 INFO HTTP Request: GET https://huggingface.co/api/models/openai/clip-vit-base-patch16/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-07 03:25:17,387 INFO HTTP Request: GET https://huggingface.co/api/models/openai/clip-vit-base-patch16/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-07 03:25:17,547 INFO Loading the generator (M3)...
+INFO:     127.0.0.1:32910 - "GET /api/health HTTP/1.1" 200 OK
+/usr/local/lib/python3.13/dist-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+2026-11-07 03:25:22,734 INFO HTTP Request: GET https://huggingface.co/api/models/Efficient-Large-Model/Sana_Sprint_0.6B_1024px_diffusers "HTTP/1.1 200 OK"
+2026-11-07 03:25:22,782 INFO HTTP Request: GET https://huggingface.co/api/models/Efficient-Large-Model/Sana_Sprint_0.6B_1024px_diffusers/revision/main "HTTP/1.1 200 OK"
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:00<00:02,  1.81it/s]INFO:     127.0.0.1:32926 - "GET /api/health HTTP/1.1" 200 OK
+Loading pipeline components...:  60%|██████    | 3/5 [00:02<00:01,  1.09it/s]INFO:     127.0.0.1:36426 - "GET /api/health HTTP/1.1" 200 OK
+Loading pipeline components...:  80%|████████  | 4/5 [00:03<00:01,  1.02s/it]
+Loading weights:   0%|          | 0/288 [00:00<?, ?it/s][A
+Loading weights:   0%|          | 1/288 [00:01<05:23,  1.13s/it][A
+Loading weights:   1%|▏         | 4/288 [00:01<01:08,  4.15it/s][A
+Loading weights:   5%|▍         | 14/288 [00:01<00:15, 17.15it/s][A
+Loading weights:   8%|▊         | 23/288 [00:01<00:09, 29.01it/s][A
+Loading weights:  10%|█         | 30/288 [00:01<00:07, 35.62it/s][A
+Loading weights:  13%|█▎        | 37/288 [00:01<00:05, 42.70it/s][A
+Loading weights:  17%|█▋        | 48/288 [00:01<00:04, 53.57it/s][A
+Loading weights:  20%|██        | 59/288 [00:01<00:03, 61.27it/s][A
+Loading weights:  24%|██▍       | 69/288 [00:02<00:03, 69.57it/s][A
+Loading weights:  27%|██▋       | 78/288 [00:02<00:02, 74.11it/s][A
+Loading weights:  30%|███       | 87/288 [00:02<00:02, 72.27it/s][A
+Loading weights:  33%|███▎      | 95/288 [00:02<00:02, 68.27it/s][A
+Loading weights:  36%|███▌      | 103/288 [00:02<00:02, 71.09it/s][A
+Loading weights:  39%|███▉      | 113/288 [00:02<00:02, 78.08it/s][AINFO:     127.0.0.1:36440 - "GET /api/health HTTP/1.1" 200 OK
+
+Loading weights:  42%|████▏     | 122/288 [00:02<00:02, 79.84it/s][A
+Loading weights:  45%|████▌     | 131/288 [00:02<00:02, 76.78it/s][A
+Loading weights:  48%|████▊     | 139/288 [00:02<00:02, 71.54it/s][A
+Loading weights:  51%|█████     | 147/288 [00:03<00:01, 72.41it/s][A
+Loading weights:  55%|█████▍    | 157/288 [00:03<00:01, 79.08it/s][A
+Loading weights:  58%|█████▊    | 168/288 [00:03<00:01, 79.22it/s][A
+Loading weights:  62%|██████▏   | 179/288 [00:03<00:01, 79.44it/s][A
+Loading weights:  65%|██████▌   | 188/288 [00:03<00:01, 82.02it/s][A
+Loading weights:  68%|██████▊   | 197/288 [00:03<00:01, 75.98it/s][A
+Loading weights:  71%|███████   | 205/288 [00:03<00:01, 71.31it/s][A
+Loading weights:  74%|███████▍  | 213/288 [00:03<00:01, 73.03it/s][A
+Loading weights:  77%|███████▋  | 223/288 [00:04<00:00, 80.06it/s][A
+Loading weights:  81%|████████▏ | 234/288 [00:04<00:00, 79.35it/s][A
+Loading weights:  84%|████████▍ | 243/288 [00:04<00:00, 81.79it/s][A
+Loading weights:  88%|████████▊ | 252/288 [00:04<00:00, 75.46it/s][A
+Loading weights:  90%|█████████ | 260/288 [00:04<00:00, 71.69it/s][A
+Loading weights:  93%|█████████▎| 268/288 [00:04<00:00, 71.83it/s][A
+Loading weights:  97%|█████████▋| 278/288 [00:04<00:00, 78.49it/s][A
+Loading weights:  99%|█████████▉| 286/288 [00:04<00:00, 70.55it/s][ALoading weights: 100%|██████████| 288/288 [00:04<00:00, 58.61it/s]
+Loading pipeline components...: 100%|██████████| 5/5 [00:08<00:00,  2.37s/it]Loading pipeline components...: 100%|██████████| 5/5 [00:08<00:00,  1.79s/it]
+INFO:     127.0.0.1:36442 - "GET /api/health HTTP/1.1" 200 OK
+2026-11-07 03:25:32,875 INFO   word table moved to CPU (scale x48.0), max difference vs original: 0.000000
+INFO:     127.0.0.1:36444 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43984 - "GET /api/health HTTP/1.1" 200 OK
+2026-11-07 03:25:39,459 INFO Ready in 31 s: SANA-Sprint 0.6B · low-memory (4-bit reader, 4-bit drawer) on Tesla T4 (config cascade_config_lowmem.json)
+INFO:     127.0.0.1:43994 - "GET /api/health HTTP/1.1" 200 OK
+2026-11-07 03:25:43,195 INFO generate mode=fast chars=38 tries=1 passed=True total=1.55s
+INFO:     127.0.0.1:44008 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:25:44,894 INFO generate mode=balanced chars=38 tries=1 passed=True total=1.46s
+INFO:     127.0.0.1:44012 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:25:47,105 INFO generate mode=quality chars=38 tries=1 passed=True total=2.18s
+INFO:     127.0.0.1:44026 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:25:48,801 INFO generate mode=fast chars=35 tries=1 passed=False total=1.66s
+INFO:     127.0.0.1:59328 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:25:53,735 INFO generate mode=balanced chars=35 tries=3 passed=False total=4.91s
+INFO:     127.0.0.1:59336 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:25:57,621 INFO generate mode=quality chars=35 tries=2 passed=False total=3.86s
+INFO:     127.0.0.1:59338 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:25:59,001 INFO generate mode=fast chars=66 tries=1 passed=True total=1.35s
+INFO:     127.0.0.1:54900 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:00,342 INFO generate mode=balanced chars=66 tries=1 passed=True total=1.31s
+INFO:     127.0.0.1:54914 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:02,343 INFO generate mode=quality chars=66 tries=1 passed=True total=1.97s
+INFO:     127.0.0.1:54928 - "POST /api/generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54938 - "POST /api/generate HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:54948 - "POST /api/generate HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:54952 - "POST /api/generate HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:54960 - "POST /api/generate HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:54976 - "POST /api/generate HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:54978 - "GET /api/nope HTTP/1.1" 404 Not Found
+2026-11-07 03:26:06,691 INFO generate mode=fast chars=45 tries=1 passed=False total=1.69s
+INFO:     127.0.0.1:54986 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:08,338 INFO generate mode=fast chars=45 tries=1 passed=True total=1.61s
+INFO:     127.0.0.1:50138 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:09,981 INFO generate mode=fast chars=25 tries=1 passed=False total=1.61s
+INFO:     127.0.0.1:50150 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:11,637 INFO generate mode=fast chars=25 tries=1 passed=False total=1.62s
+INFO:     127.0.0.1:50158 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:13,087 INFO generate mode=fast chars=30 tries=1 passed=False total=1.42s
+INFO:     127.0.0.1:50172 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:14,521 INFO generate mode=fast chars=22 tries=1 passed=False total=1.39s
+INFO:     127.0.0.1:50174 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:15,936 INFO generate mode=fast chars=34 tries=1 passed=True total=1.38s
+INFO:     127.0.0.1:50182 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:17,359 INFO generate mode=fast chars=44 tries=1 passed=False total=1.39s
+INFO:     127.0.0.1:50762 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:18,895 INFO generate mode=fast chars=19 tries=1 passed=False total=1.50s
+INFO:     127.0.0.1:50764 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:20,313 INFO generate mode=fast chars=20 tries=1 passed=True total=1.39s
+INFO:     127.0.0.1:50778 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:21,822 INFO generate mode=fast chars=32 tries=1 passed=False total=1.48s
+INFO:     127.0.0.1:50790 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:23,235 INFO generate mode=fast chars=33 tries=1 passed=True total=1.39s
+INFO:     127.0.0.1:50802 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:24,692 INFO generate mode=fast chars=58 tries=1 passed=False total=1.43s
+INFO:     127.0.0.1:50804 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:26,269 INFO generate mode=fast chars=49 tries=1 passed=False total=1.55s
+INFO:     127.0.0.1:50806 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:27,800 INFO generate mode=fast chars=49 tries=1 passed=True total=1.49s
+INFO:     127.0.0.1:45124 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:29,278 INFO generate mode=fast chars=44 tries=1 passed=False total=1.44s
+INFO:     127.0.0.1:45136 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:30,718 INFO generate mode=fast chars=52 tries=1 passed=True total=1.41s
+INFO:     127.0.0.1:45142 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:32,156 INFO generate mode=fast chars=50 tries=1 passed=True total=1.41s
+INFO:     127.0.0.1:45158 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:33,662 INFO generate mode=fast chars=38 tries=1 passed=False total=1.48s
+INFO:     127.0.0.1:45160 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:35,111 INFO generate mode=fast chars=91 tries=1 passed=False total=1.42s
+INFO:     127.0.0.1:45162 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:40,239 INFO generate mode=balanced chars=45 tries=3 passed=False total=5.10s
+INFO:     127.0.0.1:45164 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:41,680 INFO generate mode=balanced chars=45 tries=1 passed=True total=1.41s
+INFO:     127.0.0.1:33980 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:44,886 INFO generate mode=balanced chars=25 tries=2 passed=True total=3.17s
+INFO:     127.0.0.1:33996 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:49,908 INFO generate mode=balanced chars=25 tries=3 passed=False total=4.99s
+INFO:     127.0.0.1:34004 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:53,087 INFO generate mode=balanced chars=30 tries=2 passed=True total=3.15s
+INFO:     127.0.0.1:37772 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:57,958 INFO generate mode=balanced chars=22 tries=3 passed=True total=4.84s
+INFO:     127.0.0.1:37780 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:26:59,415 INFO generate mode=balanced chars=34 tries=1 passed=True total=1.43s
+INFO:     127.0.0.1:51872 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:27:02,640 INFO generate mode=balanced chars=44 tries=2 passed=True total=3.20s
+INFO:     127.0.0.1:51888 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:27:07,550 INFO generate mode=balanced chars=19 tries=3 passed=False total=4.88s
+INFO:     127.0.0.1:51896 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:27:09,017 INFO generate mode=balanced chars=20 tries=1 passed=True total=1.43s
+INFO:     127.0.0.1:35242 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:27:14,182 INFO generate mode=balanced chars=32 tries=3 passed=False total=5.14s
+INFO:     127.0.0.1:35258 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:27:15,659 INFO generate mode=balanced chars=33 tries=1 passed=True total=1.44s
+INFO:     127.0.0.1:35274 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:27:20,668 INFO generate mode=balanced chars=58 tries=3 passed=True total=4.97s
+INFO:     127.0.0.1:35276 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:27:25,924 INFO generate mode=balanced chars=49 tries=3 passed=False total=5.23s
+INFO:     127.0.0.1:44600 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:27:27,508 INFO generate mode=balanced chars=49 tries=1 passed=True total=1.55s
+INFO:     127.0.0.1:47764 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:27:30,857 INFO generate mode=balanced chars=44 tries=2 passed=True total=3.30s
+INFO:     127.0.0.1:47778 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:27:32,332 INFO generate mode=balanced chars=52 tries=1 passed=True total=1.45s
+INFO:     127.0.0.1:47786 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:27:33,833 INFO generate mode=balanced chars=50 tries=1 passed=True total=1.47s
+INFO:     127.0.0.1:47798 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:27:39,108 INFO generate mode=balanced chars=38 tries=3 passed=False total=5.24s
+INFO:     127.0.0.1:47812 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:27:44,238 INFO generate mode=balanced chars=91 tries=3 passed=False total=5.10s
+INFO:     127.0.0.1:49342 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:27:48,293 INFO generate mode=quality chars=45 tries=2 passed=False total=4.02s
+INFO:     127.0.0.1:49344 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:27:50,528 INFO generate mode=quality chars=45 tries=1 passed=True total=2.20s
+INFO:     127.0.0.1:42784 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:27:52,687 INFO generate mode=quality chars=25 tries=1 passed=True total=2.13s
+INFO:     127.0.0.1:42786 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:27:56,735 INFO generate mode=quality chars=25 tries=2 passed=False total=4.02s
+INFO:     127.0.0.1:42790 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:27:58,949 INFO generate mode=quality chars=30 tries=1 passed=True total=2.15s
+INFO:     127.0.0.1:57018 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:28:02,868 INFO generate mode=quality chars=22 tries=2 passed=True total=3.89s
+INFO:     127.0.0.1:57034 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:28:05,076 INFO generate mode=quality chars=34 tries=1 passed=True total=2.17s
+INFO:     127.0.0.1:57036 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:28:07,264 INFO generate mode=quality chars=44 tries=1 passed=True total=2.16s
+INFO:     127.0.0.1:57040 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:28:11,214 INFO generate mode=quality chars=19 tries=2 passed=False total=3.92s
+INFO:     127.0.0.1:38692 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:28:13,391 INFO generate mode=quality chars=20 tries=1 passed=True total=2.15s
+INFO:     127.0.0.1:38706 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:28:17,558 INFO generate mode=quality chars=32 tries=2 passed=False total=4.13s
+INFO:     127.0.0.1:38716 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:28:19,722 INFO generate mode=quality chars=33 tries=1 passed=True total=2.13s
+INFO:     127.0.0.1:51364 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:28:23,720 INFO generate mode=quality chars=58 tries=2 passed=True total=3.97s
+INFO:     127.0.0.1:51366 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:28:27,924 INFO generate mode=quality chars=49 tries=2 passed=False total=4.17s
+INFO:     127.0.0.1:51380 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:28:30,157 INFO generate mode=quality chars=49 tries=1 passed=True total=2.20s
+INFO:     127.0.0.1:43694 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:28:32,427 INFO generate mode=quality chars=44 tries=1 passed=True total=2.24s
+INFO:     127.0.0.1:43704 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:28:36,462 INFO generate mode=quality chars=52 tries=2 passed=True total=4.00s
+INFO:     127.0.0.1:43708 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:28:38,679 INFO generate mode=quality chars=50 tries=1 passed=True total=2.19s
+INFO:     127.0.0.1:37572 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:28:42,910 INFO generate mode=quality chars=38 tries=2 passed=False total=4.20s
+INFO:     127.0.0.1:37586 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:28:47,011 INFO generate mode=quality chars=91 tries=2 passed=False total=4.07s
+INFO:     127.0.0.1:37600 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:28:48,752 INFO generate mode=balanced chars=45 tries=1 passed=True total=1.60s
+INFO:     127.0.0.1:55010 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:28:52,196 INFO generate mode=balanced chars=25 tries=2 passed=True total=5.02s
+INFO:     127.0.0.1:55020 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:28:53,799 INFO generate mode=balanced chars=45 tries=1 passed=True total=6.61s
+INFO:     127.0.0.1:55028 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:28:59,246 INFO generate mode=balanced chars=25 tries=3 passed=False total=12.06s
+INFO:     127.0.0.1:55042 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:29:02,683 INFO generate mode=balanced chars=22 tries=2 passed=True total=15.48s
+INFO:     127.0.0.1:55058 - "POST /api/generate HTTP/1.1" 200 OK
+2026-11-07 03:29:06,098 INFO generate mode=balanced chars=30 tries=2 passed=True total=18.89s
+INFO:     127.0.0.1:55062 - "POST /api/generate HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [399]
