@@ -102,15 +102,18 @@ export const MEASURED_HOW =
  * Held-out cascade evaluation from eval_P3_T58.md (not the 500-prompt M3 optimization ablation).
  * 200 prompts: 120 GenEval prompts + 80 COCO captions; independently scored with Mask2Former and
  * CLIP ViT-L/14. GenEval-style is our evaluation, not the official GenEval benchmark.
+ * "ours" = what the app actually runs: the low-memory M3 model, Balanced mode (cascade from R0),
+ * from notebook 03a (results/03a/strategies_M3_quick.csv). Times include the check after every try.
+ * The original teacher's numbers come from 02b (float16, same prompts, seeds and judge).
  */
 export const CASCADE_RESULTS = {
   promptCount: 200,
   ours: {
-    label: "P3 cascade from R0",
-    avgTimeS: 2.0,
-    p90TimeS: 3.94,
-    semanticAccuracy: 76.7,
-    clip: 28.02,
+    label: "P3 app · Balanced (low-memory M3)",
+    avgTimeS: 2.98,
+    p90TimeS: 5.64,
+    semanticAccuracy: 78.3,
+    clip: 27.77,
     visuallyClean: 96.0,
   },
   original: {
