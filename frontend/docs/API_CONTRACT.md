@@ -60,13 +60,16 @@ The app polls every 3 s while loading, every 30 s when ready, every 5 s while un
 | `mode`   | `"fast"` \| `"balanced"` \| `"quality"` | yes      | See modes below                         |
 | `seed`   | integer                                 | no       | Same prompt + seed → same first picture |
 
-**Modes** (the backend decides the details; final time budgets come from notebook 02b):
+**Modes** (defined in `src/p3_engine.py` `DEFAULT_MODES`; measured in notebook 03a):
 
-| Mode       | Starts at         | Retries                                 |
-| ---------- | ----------------- | --------------------------------------- |
-| `fast`     | cheapest level    | none                                    |
-| `balanced` | the router's pick | up to the next level if the check fails |
-| `quality`  | full size         | keeps going until it passes or runs out |
+| Mode       | Starts at      | Retries                                                       | Time budget |
+| ---------- | -------------- | ------------------------------------------------------------- | ----------- |
+| `fast`     | cheapest level | none                                                          | n/a         |
+| `balanced` | cheapest level | next level (new seed) until a picture passes or the top level | 6 s         |
+| `quality`  | full size      | next level (new seed) until a picture passes or the top level | 9 s         |
+
+The budget means: never _start_ another try that would finish after it. Every try is checked (the app shows
+the check), including in `fast` mode.
 
 ### Success: HTTP 200
 
@@ -108,7 +111,7 @@ The app polls every 3 s while loading, every 30 s when ready, every 5 s while un
       { "kind": "object", "label": "sofa", "ok": true }
     ]
   },
-  "router": { "start_level": 0, "confidence": 0.81 },
+  "router": { "start_level": 0, "confidence": null },
   "polish": { "applied": true, "steps": ["gamma"] },
   "model": "SANA-Sprint 0.6B · 4-bit · 1024px",
   "gpu": "Tesla T4"
@@ -139,8 +142,8 @@ The app polls every 3 s while loading, every 30 s when ready, every 5 s while un
 | `checks.semantic[].label`  | string               | Display text, e.g. "2 × dog", "red car", "car left of bus"                                       |
 | `checks.semantic[].ok`     | boolean              |                                                                                                  |
 | `checks.semantic[].detail` | string (optional)    | Extra info when it failed, e.g. "found 1"                                                        |
-| `router.start_level`       | number (0-based)     | Where the router chose to start                                                                  |
-| `router.confidence`        | number \| null       | 0–1, null when the mode doesn't use the router                                                   |
+| `router.start_level`       | number (0-based)     | Level this request started at                                                                    |
+| `router.confidence`        | number \| null       | Router confidence 0–1; null (no mode uses the router: 02b found it didn't help)                  |
 | `polish`                   | `{applied, steps[]}` | Classical-CV touch-ups that were kept (accept-or-revert)                                         |
 | `model`, `gpu`             | string               | For the small print under the result                                                             |
 | `mock`                     | boolean (optional)   | `true` only from the mock server                                                                 |

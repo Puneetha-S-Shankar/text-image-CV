@@ -5,8 +5,8 @@ export const metadata: Metadata = { title: "How it works" };
 
 const STEPS = [
   {
-    title: "Router",
-    text: "A small model reads your prompt and guesses the cheapest level that will get it right.",
+    title: "Start cheap",
+    text: "Every prompt starts at the cheapest level (768px). We also trained a router to guess the right level from the prompt; it didn't beat simply starting cheap, so the app doesn't use it.",
   },
   {
     title: "Draw",
@@ -105,7 +105,7 @@ export default function HowItWorksPage() {
       </section>
 
       <section className="rounded-2xl glass p-4">
-        <h2 className="text-sm font-medium">Does the router and retry system help?</h2>
+        <h2 className="text-sm font-medium">Does the retry system help?</h2>
         {CASCADE_RESULTS ? (
           <p className="mt-2 text-sm text-mist">{CASCADE_RESULTS.note}</p>
         ) : (

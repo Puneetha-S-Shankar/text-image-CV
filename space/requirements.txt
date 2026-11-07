@@ -1,0 +1,15 @@
+# The GPU server. Notebook 03b tests with the newest versions and saves the exact tested versions
+# (requirements_tested.txt in Drive); its deploy step pins them, so the Space runs what was tested.
+torch
+torchvision
+diffusers>=0.33
+transformers
+accelerate
+bitsandbytes
+sentencepiece
+protobuf
+opencv-python-headless
+numpy
+pillow
+fastapi
+uvicorn[standard]

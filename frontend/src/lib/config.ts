@@ -9,8 +9,8 @@ export const APP = {
   tagline: "Text to image in about a second, on one small GPU.",
   description:
     "Resource-efficient text-to-image for phones: an optimized SANA-Sprint model on a single T4 GPU, with a quality check that retries only when a picture fails.",
-  /** Shown in the footer. TODO(team): put the real team ID here. */
-  team: "Team T00",
+  /** Shown in the footer. */
+  team: "Team T58",
   themeColor: "#07070c",
 } as const;
 
@@ -21,13 +21,13 @@ export interface ModeInfo {
   label: string;
   /** One short line under the mode switch. */
   blurb: string;
-  /** Rough expected wait. Placeholders until notebook 02b fixes the real budgets. */
+  /** Rough expected wait. Placeholders until notebook 03a measures the real numbers. */
   expected: string;
 }
 
 /**
  * The three modes. The backend decides what each one really does. These texts only describe it.
- * TODO(after 02b): update `expected` with the measured numbers.
+ * TODO(after 03a): update `expected` with the measured numbers (03a section 9, "live_avg_s").
  */
 export const MODES: Record<Mode, ModeInfo> = {
   fast: {
@@ -37,12 +37,12 @@ export const MODES: Record<Mode, ModeInfo> = {
   },
   balanced: {
     label: "Balanced",
-    blurb: "The router picks a starting level and retries once if the check fails.",
+    blurb: "Starts cheap; if the check fails, it retries at the next level with a new seed.",
     expected: "~1.5–3 s",
   },
   quality: {
     label: "Quality",
-    blurb: "Starts at full size and keeps retrying until the picture passes.",
+    blurb: "Starts at full size; if the check fails, it tries again with a new seed.",
     expected: "~2–5 s",
   },
 };

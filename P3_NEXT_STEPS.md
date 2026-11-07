@@ -14,10 +14,12 @@
 | Phase | Notebook | GPU? | Status |
 |---|---|---|---|
 | 1. Baseline + optimizations | 01 | Yes | ✅ done (QUICK mode) |
-| 2. Classical CV (visual check, safe polish, upscaling, packing) | 02a | No | 🟢 built, run it on a CPU runtime |
-| 3. Semantic check + router labels from experiments | 02b | Yes | 🟡 built, run after 01 (set `RUNGS` from 01's results) |
-| 4. Quality-gated cascade | 02b | Yes | 🟡 built (same notebook) |
-| 5. App on Hugging Face | 03 | Yes | ⬜ |
+| 2. Classical CV (visual check, safe polish, upscaling, packing) | 02a | No | ✅ done (QUICK) |
+| 3. Semantic check + router labels from experiments | 02b | Yes | ✅ done (QUICK). Router did **not** help |
+| 4. Quality-gated cascade | 02b | Yes | ✅ done (QUICK): 3.4× faster than the original, near-same quality |
+| 5a. Low-memory check of the retry system | 03a | Yes | 🟡 built + tested offline, **run next** |
+| 5b. Backend test on a T4 + deploy to the Space | 03b | Yes | 🟡 built + tested offline, run after 03a |
+| 5c. Phone app (frontend) | `frontend/` | No | 🟡 starter done, friend continues |
 | 6. Final evaluation + paperwork + demo | all | Yes | ⬜ |
 
 ---
@@ -29,6 +31,8 @@
 | [`P3_01_optimization_lab.ipynb`](notebooks/P3_01_optimization_lab.ipynb) | **T4 GPU** | done (QUICK results are in Drive) | only re-run for FULL mode (`QUICK=False`), several hours |
 | [`P3_02a_classical_cv.ipynb`](notebooks/P3_02a_classical_cv.ipynb) | **CPU** | ~5–10 min | nothing (reads 01's hard-prompt pictures from Drive if present) |
 | [`P3_02b_router_cascade.ipynb`](notebooks/P3_02b_router_cascade.ipynb) | **T4 GPU** | ~1–1.5 h (incl. the original teacher) | nothing (downloads COCO annotations + GenEval prompts itself) |
+| [`P3_03a_lowmem_check.ipynb`](notebooks/P3_03a_lowmem_check.ipynb) | **T4 GPU** | ~30–45 min | 02b's results in Drive (`P3_T2I/02b_router_cascade`, `P3_T2I/shared/cascade_config.json`) |
+| [`P3_03b_backend.ipynb`](notebooks/P3_03b_backend.ipynb) | **T4 GPU** | ~15–20 min | 03a's `cascade_config_lowmem.json` in Drive; the GitHub repo (public, or a `GITHUB_TOKEN` Colab secret) |
 
 **Running at the same time:**
 - ✅ **02a (CPU) + 02b (T4) together:** two separate Colab tabs. They save to different Drive folders and don't depend on each other.
@@ -41,9 +45,23 @@ In 01, set `TEAM_ID` / `USNS`. Re-running 01 in QUICK mode skips everything alre
 
 ## Phase 1: Notebook 01, baseline + optimizations ✅ DONE
 
-**Result:** the best setup is **M3** (1024px): **2.9× faster, 67.5% less GPU memory (8.8 → 2.86 GB), 3× smaller model (7.0 → 2.36 GB), same quality** (CLIP 26.96 vs 26.98).
-Fast mode: **S8** (768px, 0.96 s, 5.8× faster). Don't use 512px (broken pictures). Full table and lessons: `P3_SYSTEM_EXPLAINED.md`, section 4.1.
-Still to do: a FULL-mode run (`QUICK=False`) for the final numbers, and set the real `TEAM_ID` / `USNS`.
+**FULL-mode results (final numbers):** 500 COCO val prompts, FID against 5,000 real images, T4, float16. Notebook: [`P3_01_optimization_lab_FULL_results.ipynb`](notebooks/P3_01_optimization_lab_FULL_results.ipynb).
+
+| Setup | Time | Speed-up | Peak GPU | Model size | CLIP-L ↑ | FID ↓ | KID×1000 ↓ |
+|---|---|---|---|---|---|---|---|
+| B0 original teacher (20 steps, 1024px) | 6.08 s | 1× | 8.79 GB | 7.04 GB | 26.60 | 92.4 | 9.04 |
+| S1 Sprint, 2 steps, 1024px | 1.29 s | 4.7× | 8.79 GB | 7.04 GB | 26.43 | 87.2 | 8.42 |
+| S8 Sprint, 768px (fastest) | **0.78 s** | **7.8×** | 8.03 GB | 7.04 GB | 26.25 | 85.6 | 7.58 |
+| M2 low-memory, 768px | 1.21 s | 5.0× | 2.99 GB | 2.51 GB | 26.27 | **85.5** | **6.47** |
+| **M3 low-memory, 1024px, 4-bit drawer (best balance)** | 1.57 s | 3.9× | **2.86 GB (−67%)** | **2.36 GB (3× smaller)** | **26.52** | 86.2 | 6.88 |
+
+- **M3 is the headline:** 3.9× faster, 67% less GPU memory, 3× smaller model, CLIP within 0.09 of the original, and **better FID/KID than the original**.
+- **Every fast setup beats the original on FID/KID.** The distilled model's pictures look closer to real photos.
+- **S8 is the speed record** (7.8×) but saves no memory. **M2** is the middle option (5×, 3 GB).
+- Don't use 512px (broken pictures). Full lessons: `P3_SYSTEM_EXPLAINED.md`, section 4.1.
+- **Still to do:**
+  - The auto-written `eval_P3_T00.md` picks S8 as "optimized" and still says team `T00`. For the final file, set the real `TEAM_ID` and report **M3** (or both M3 and S8).
+  - M5 / Q1 / Q2 weren't in this run.
 
 File: [`notebooks/P3_01_optimization_lab.ipynb`](notebooks/P3_01_optimization_lab.ipynb) (Colab, **T4 GPU**)
 
@@ -56,7 +74,17 @@ File: [`notebooks/P3_01_optimization_lab.ipynb`](notebooks/P3_01_optimization_la
 
 ---
 
-## Phase 2: Notebook 02a, classical CV (CPU, can run while 01 uses the GPU)
+## Phase 2: Notebook 02a, classical CV ✅ DONE (QUICK)
+
+**Results:**
+- **Catches damage:** 90–100% for dark, bright, noise, blank and grid glitches. **Fixes help:** dark SSIM 0.41 → 0.79, checkerboard 0.74 → 0.97.
+- **Blur can't be fixed.** It's correctly sent to a higher rung (100% escalated).
+- **Independent check:** BRISQUE 45.5 → 18.5, improved in 84% of kept fixes.
+- **False alarms:** 15% on clean photos, but keep-or-revert leaves 90% of them untouched.
+- **Edge-aware upscaling beats bicubic:** PSNR 32.8 vs 32.2 at ×2.
+- **Smart WebP:** 37 KB vs 954 KB PNG (26× smaller), **0.2 s on slow 3G**.
+- **Weak spot:** mild colour casts are caught only 15% of the time.
+
 
 **Builds:**
 - **Visual quality check:** blank, blurry, too dark or bright, flat, grainy, colour tint, grid glitches.
@@ -77,7 +105,28 @@ File: [`notebooks/P3_01_optimization_lab.ipynb`](notebooks/P3_01_optimization_la
 
 ---
 
-## Phase 3: Notebook 02b, part 1: semantic check + router data
+## Phase 3 + 4: Notebook 02b results ✅ DONE (QUICK)
+
+Results are in [`results/02b`](results/02b) (including `shared/cascade_config.json` for the app).
+
+| Strategy | Avg time | p90 time | GenEval-style acc | CLIP-L (all) | Looks clean |
+|---|---|---|---|---|---|
+| Fixed R0 (768px) | 0.74 s | 0.74 s | 65.8% | 27.57 | 90.5% |
+| Fixed R2 (1024px) | 1.26 s | 1.26 s | 77.5% | 27.94 | 93.0% |
+| **Cascade from R0** | **2.00 s** | 3.94 s | **76.7%** | **28.02** | **96.0%** |
+| Router + cascade | 1.82 s | 3.94 s | 77.5% | 27.99 | 95.0% |
+| **Original teacher (20 steps)** | 6.84 s | 6.84 s | 80.0% | 28.05 | 92.5% |
+
+- **Headline:** the cascade is **3.4× faster** than the original (including checks), with almost the same quality and **fewer broken-looking pictures**.
+- **The gate is trustworthy:** it agrees with the independent judge on **89%** of 573 test pictures (too lenient on 6.5%).
+- **The router failed:** 46.5% correct vs 58% for always guessing the most common answer. **Use the cascade without the router.** Prompt text doesn't predict which level is needed.
+- **Counting is the weak spot:** checkers confirm a correct count only 59% (gate) and 37% (judge) of the time. Counting accuracy: 55% for ours vs 70% for the original.
+- **Polish doesn't raise CLIP** (26.20 → 26.18). It's a safety net, not a quality boost.
+- **Hindsight best (oracle):** 86.7% accuracy at 0.91 s, so a better gate still has room to help.
+- **Head-to-head on 120 GenEval prompts:** ours right / original wrong = 9; original right / ours wrong = 12.
+
+### What 02b does (for reference)
+
 
 File: [`notebooks/P3_02b_router_cascade.ipynb`](notebooks/P3_02b_router_cascade.ipynb) (Colab, **T4 GPU**, QUICK ≈ 45–60 min, resumable)
 
@@ -130,6 +179,25 @@ start at the router's rung → generate → visual + semantic check
 - A **generation timer**, which rung was used, and the quality check results.
 - **Loading spinner + clear error messages**; bad prompts handled.
 - **Demo extras:** old slow model vs ours side by side, and the speed-vs-quality chart.
+
+### What's built (Phase 5)
+
+**One engine, measured = deployed.** [`src/p3_engine.py`](src/p3_engine.py) holds the generator loading (float16 / M2 / M3), the gate, the router and the cascade. Notebook 03a measures with it; the server runs it.
+
+| Mode | What it does | Same as 02b/03a strategy |
+|---|---|---|
+| Fast | cheapest level (768px), no retry | fixed R0 |
+| Balanced (default) | start at 768px; if the check fails, next level with a new seed (budget 6 s) | cascade from R0 |
+| Quality | start at 1024px; if the check fails, retry with a new seed (budget 9 s) | cascade from R1 |
+
+No mode uses the router (02b: it didn't beat always starting cheap). 03a still reports it for the ablation.
+
+- **Notebook 03a** ([`P3_03a_lowmem_check.ipynb`](notebooks/P3_03a_lowmem_check.ipynb)): re-runs 02b's 200 test prompts on the **low-memory M3 model** (same seeds, gate, judge), compares float16 vs low-memory per strategy, measures the three modes + live requests, and saves `cascade_config_lowmem.json` to Drive. It also self-checks that replaying 02b's own results reproduces 02b's table exactly.
+- **Backend** ([`space/`](space)): `app.py` (FastAPI, follows `frontend/docs/API_CONTRACT.md`), `safety.py` (basic prompt word filter), `Dockerfile` (builds the phone app on Linux, then the GPU server), `assemble.py` (puts the Space folder together).
+- **Notebook 03b** ([`P3_03b_backend.ipynb`](notebooks/P3_03b_backend.ipynb)): runs that exact server on Colab's T4; contract test, error test, speed per mode vs 03a, several judges at once, GPU memory; saves the tested library versions; with `DEPLOY = True` uploads to the Space (hardware stays your choice in the Space settings).
+- **Tested offline (no GPU):** both notebooks run end to end with stand-in pictures; the real server served the real frontend and answered every contract and error test.
+
+**Run order:** 03a (~30–45 min) → 03b with `DEPLOY = False` (~15–20 min) → set up the Space + `HF_TOKEN` secret → 03b with `DEPLOY = True` → Space settings: **T4 small**.
 
 ---
 

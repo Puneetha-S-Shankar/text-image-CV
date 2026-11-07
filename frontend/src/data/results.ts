@@ -80,18 +80,17 @@ export const SETUPS: SetupResult[] = [
   },
 ];
 
-/**
- * Which optimized setup the headline stats describe.
- * TODO(team): decide M2 vs M3 to match the eval file, and keep both in sync.
- */
-export const HEADLINE_SETUP_ID = "M2";
+/** Which optimized setup the headline stats describe. Matches eval_P3_T58.md (main = M3). */
+export const HEADLINE_SETUP_ID = "M3";
 
 export const MEASURED_HOW =
   "Tesla T4 GPU, float16 · 500 MS-COCO prompts · realism (FID/KID) against 5,000 real photos · time = average of 10 single pictures after warm-up";
 
 /**
- * Router + cascade results from notebook 02b (GenEval-style accuracy, ours vs original).
- * TODO(after 02b): fill in. While null, the pages show "coming soon".
+ * Cascade results (GenEval-style accuracy, ours vs the original on the same held-out prompts).
+ * TODO(after 03a): fill in from 03a's summary (the low-memory model the app runs; "cascade from R0" =
+ * Balanced mode). 02b's float16 numbers: cascade 76.7% at 2.00 s vs original 80.0% at 6.84 s.
+ * While null, the pages show "coming soon".
  */
 export const CASCADE_RESULTS: null | {
   passRateOurs: number;

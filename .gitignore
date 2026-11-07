@@ -20,3 +20,7 @@ Thumbs.db
 *.pem
 
 # frontend/ has its own .gitignore (node_modules, .next, out, ...)
+
+# Working copies the backend reads locally (the real ones live in Drive / are assembled for the Space)
+space/cascade_config*.json
+space/static/

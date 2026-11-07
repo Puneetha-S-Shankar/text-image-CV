@@ -243,6 +243,43 @@ def prompt_features(text: str, spec: dict | None = None) -> dict:
     }
 
 
+def describe_checks(spec: dict | None, check: dict | None) -> list[dict]:
+    """One row per requirement for the app: {"kind", "label", "ok", "detail"?}.
+    kind is "object" | "count" | "colour" | "position"; label reads like "2 × dog", "red car", "dog left of cat"."""
+    if not spec:
+        return []
+    include, exclude = spec.get("include", []), spec.get("exclude", [])
+    check = check or {}
+    items = check.get("items") or [None] * len(include)
+    ex_items = check.get("exclude_items") or [None] * len(exclude)
+    counted = {r["class"] for r in exclude}
+    too_many = {r["class"]: it["reason"] for r, it in zip(exclude, ex_items) if it and not it["ok"]}
+    rows = []
+    for req, item in zip(include, items):
+        c, n = req["class"], req["count"]
+        noun = f"{req['color']} {c}" if "color" in req else c
+        is_count = (n > 1 or c in counted) and not req.get("ref")
+        label = f"{n} × {noun}" if is_count else noun
+        if "position" in req:
+            rel, target = req["position"]
+            label, kind = f"{label} {rel} {include[target]['class']}", "position"
+        elif is_count:
+            kind = "count"
+        elif "color" in req:
+            kind = "colour"
+        else:
+            kind = "object"
+        ok = item["ok"] if item else bool(check.get("passed", True))
+        detail = item["reason"] if item and not item["ok"] else None
+        if kind == "count" and c in too_many:
+            ok, detail = False, detail or too_many[c]
+        row = {"kind": kind, "label": label, "ok": bool(ok)}
+        if detail:
+            row["detail"] = detail
+        rows.append(row)
+    return rows
+
+
 # ----------------------------------------------------------------------------- geometry (GenEval)
 def relative_position(box_a, box_b, threshold: float = 0.1) -> set[str]:
     """Position of A relative to B (GenEval's rule): centre offset, minus a margin proportional to object size."""
@@ -403,7 +440,9 @@ class SemanticChecker:
         n_reqs = Counter(r["class"] for r in include)
         used, used_ref = {}, {}
         matched, reasons, ok = [], [], True
+        items, exclude_items = [], []          # one verdict per requirement (for the app's checklist)
         for req in include:
+            n_reasons = len(reasons)
             c, n = req["class"], req["count"]
             pool = objs.get(c, [])
             taken = used_ref.setdefault(c, set()) if req.get("ref") else used.setdefault(c, set())
@@ -445,13 +484,17 @@ class SemanticChecker:
             else:
                 taken.update(chosen)
                 matched.append([pool[i] for i in chosen])
+            items.append({"ok": chosen is not None, "reason": "; ".join(reasons[n_reasons:]) or None})
         for req in spec.get("exclude", []):
             found = len(objs.get(req["class"], []))
             if found >= req["count"]:
                 ok = False
                 reasons.append(f"expected fewer than {req['count']} {req['class']}, found {found}")
+                exclude_items.append({"ok": False, "reason": reasons[-1]})
+            else:
+                exclude_items.append({"ok": True, "reason": None})
         return {"passed": ok, "reasons": reasons, "n_detected": sum(len(v) for v in objs.values()),
-                "ms": (time.perf_counter() - t0) * 1000}
+                "items": items, "exclude_items": exclude_items, "ms": (time.perf_counter() - t0) * 1000}
 
     # -- the gate used by the cascade ---------------------------------------------------------------
     def gate(self, image, prompt: str, clip_min: float | None = None, spec: dict | None = None) -> dict:

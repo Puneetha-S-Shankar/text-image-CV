@@ -56,13 +56,13 @@ Not claimed:  Phone runs the AI model by itself
 
 So the rungs change **resolution and seed**:
 
-| Rung | Setting | T4 time | CLIP (baseline 26.98) |
+| Rung | Setting | T4 time (02b) | GenEval-style acc alone (02b test) |
 |---|---|---|---|
-| 0 | 2 steps, 768px | 0.96 s | 26.61 |
-| 1 | 2 steps, 1024px, **new seed** | 1.23 s | 27.06 |
-| 2 | 2 steps, 1024px, **another new seed** | 1.23 s | 27.06 |
+| 0 | 2 steps, 768px | 0.74 s | 65.8% |
+| 1 | 2 steps, 1024px, **new seed** | 1.24 s | 75.8% |
+| 2 | 2 steps, 1024px, **another new seed** | 1.26 s | 77.5% |
 
-A failed composition (a missing object, the wrong colour) usually needs a **new sample**, not just more steps on the same one. That's why every rung changes the seed. The baseline (teacher, 20 steps) takes 5.54 s. These times are for the plain float16 pipeline; the memory-saving M3 setup is slower (1.90 s at 1024px).
+A failed composition (a missing object, the wrong colour) usually needs a **new sample**, not just more steps on the same one. That's why every rung changes the seed. The baseline (teacher, 20 steps) takes 6.08 s (01 FULL) / 6.84 s (02b). These times are for the plain float16 pipeline; the memory-saving M3 setup is slower (1.57 s at 1024px in 01 FULL).
 
 ---
 
@@ -95,7 +95,7 @@ Classical CV **alone can never say "this matches the prompt"**. That's why the g
 - **The budget rule then caps the choice:**
   - Fast mode or a busy server → lower rungs
   - very little memory → the **low-memory setup M3** (4-bit weights, CPU word table, tiled decoding: 2.86 GB)
-- **Honest note:** SANA-Sprint's 1-, 2- and 4-step pictures may differ only a little for many prompts, so the router might not beat a fixed setting. That's fine: we **measure** it. The cascade still works either way, because it reacts to the actual picture.
+- **Measured result (02b): the router does NOT help.** It was right 46.5% of the time on test labels, worse than always guessing the most common answer (58%); 5-fold CV on train gave 47%. Prompt text doesn't predict which rung a picture will need. **The app uses the cascade from R0 without the router.** The cascade works because it reacts to the actual picture.
 
 ✅ Covers: *meaningful adaptation*, *train/validation split*, *adaptive generation based on computational budget*, *fallback*.
 
@@ -188,7 +188,23 @@ Classical CV **alone can never say "this matches the prompt"**. That's why the g
 | 9 | Reader's word table (256k words, 1.18 GB) kept on the CPU, with Gemma's ×48 scale preserved | ~1.2 GB GPU memory, identical outputs (max difference 0.000000) | Memory optimization |
 | 10 | Tiled decoding (DC-AE `enable_tiling`) | the memory spike at the end | Memory optimization |
 
-### 4.1 Measured results (notebook 01, Tesla T4, float16, 100 COCO val prompts, QUICK mode)
+### 4.0 Final numbers: FULL mode (notebook 01, Tesla T4, float16, 500 COCO val prompts, FID vs 5,000 real images)
+
+| Setup | Time (s) | Speed-up | Peak GPU (GB) | Memory saved | Size (GB) | CLIP ↑ | FID ↓ | KID×1000 ↓ |
+|---|---|---|---|---|---|---|---|---|
+| **B0** original teacher (20 steps + CFG, 1024px) | 6.08 | 1.0× | 8.79 | none | 7.04 | 26.60 | 92.4 | 9.04 |
+| S1 Sprint, 2 steps, 1024px | 1.29 | 4.7× | 8.79 | 0% | 7.04 | 26.43 | 87.2 | 8.42 |
+| S8 Sprint, 768px | **0.78** | **7.8×** | 8.03 | 9% | 7.04 | 26.25 | 85.6 | 7.58 |
+| M2 low-memory, 768px | 1.21 | 5.0× | 2.99 | 66% | 2.51 | 26.27 | **85.5** | **6.47** |
+| **M3** low-memory, 1024px, 4-bit drawer | 1.57 | 3.9× | **2.86** | **67%** | **2.36** | **26.52** | 86.2 | 6.88 |
+
+**What FULL mode changed:**
+- **The conclusions stay the same.** M3 is the best balance, S8 the fastest, and the cascade rungs are unchanged.
+- **The speed-ups grew:** M3 went 2.9× → 3.9× and S8 5.8× → 7.8×, because the teacher measured slower this time.
+- **Every fast setup now clearly beats the original on FID/KID** (85–87 vs 92.4). QUICK mode's 100-image FID was too noisy to show this.
+- CLIP is lower for **all** rows, including the baseline (26.60 vs 26.98), because this is a bigger, different prompt set. Compare the gaps: M3 is only −0.09.
+
+### 4.1 Earlier QUICK-mode results (100 COCO val prompts; all 15 setups)
 
 | Setup | What it is | Time (s) | Speed-up | Peak GPU (GB) | Memory saved | Size (GB) | CLIP ↑ | FID ↓ |
 |---|---|---|---|---|---|---|---|---|
@@ -226,9 +242,10 @@ Size = GPU-resident weights. For M1–M3, another **1.18 GB** (the word table) s
 
 | Mode | Setup | Time | Peak GPU | Quality |
 |---|---|---|---|---|
-| **Fast** | S8 (768px, 2 steps) | ~0.96 s | 8.0 GB | CLIP 26.6 |
-| **Balanced / main** | **M3** (1024px, 4-bit reader + 4-bit drawer, CPU word table, tiled decode) | ~1.90 s | **2.86 GB** | CLIP 26.96 (same as baseline) |
-| **Low-memory fallback** | M3 (or M2 at 768px, 1.40 s) | 1.4–1.9 s | ~3.0 GB | same as baseline |
+| **Fast** | S8 (768px, 2 steps) | 0.78 s | 8.0 GB | CLIP 26.25, FID 85.6 |
+| **Balanced / main** | **M3** (1024px, 4-bit reader + 4-bit drawer, CPU word table, tiled decode) | 1.57 s | **2.86 GB** | CLIP 26.52 (−0.09 vs baseline), FID 86.2 (better than baseline) |
+| **Quality (cascade)** | R0 → R1 → R2 with the quality gate (02b) | 2.0 s avg, 3.9 s p90 | 8.7 GB with checkers | GenEval-style 76.7% vs 80.0% original |
+| **Low-memory fallback** | M3 (or M2 at 768px, 1.21 s) | 1.2–1.6 s | ~3.0 GB | close to baseline |
 
 F1 (512px) is **not** used as the fallback: its pictures are visibly broken.
 
@@ -270,7 +287,7 @@ Every system is compared on the **same held-out prompts** (COCO val + compositio
 | 1 | How much faster? | notebook 01 + final table |
 | 2 | How much memory saved? | notebook 01 |
 | 3 | Is quality still acceptable? | CLIP / KID / GenEval-style, baseline vs ours |
-| 4 | Does adaptive routing actually help? | router vs fixed settings on val |
+| 4 | Does adaptive routing actually help? | **Router: no** (46.5% vs 58% majority). **Cascade: yes**: 2.0 s vs 6.84 s for the original, at 76.7% vs 80.0% GenEval-style |
 | 5 | Does classical CV really improve images? | notebook 02a's damage-and-repair + do-no-harm tests |
 | 6 | Does the app run reliably? | live URL, error states, timings |
 | 7 | What happens when it fails? | 3 failure cases + what the gate did |
@@ -281,14 +298,42 @@ Every system is compared on the **same held-out prompts** (COCO val + compositio
 
 | Notebook | Builds | GPU? | Status |
 |---|---|---|---|
-| **01: optimization lab** | Stage ② + section 4 + measurements | Yes | ✅ done (results in 4.1) |
-| **02a: classical CV** | Stage ③a + ④ + ⑤, with proof tests | No (CPU) | 🟢 built; ran on a laptop CPU, not yet in Colab |
-| **02b: router + semantic check + cascade** | Stages ①, ③b, cascade + router labels from experiments | Yes | 🟡 built; tested only with a stand-in generator, ready to run on the T4 |
+| **01: optimization lab** | Stage ② + section 4 + measurements | Yes | ✅ done, QUICK + FULL (results in 4.0 / 4.1) |
+| **02a: classical CV** | Stage ③a + ④ + ⑤, with proof tests | No (CPU) | ✅ done in Colab (section 8) |
+| **02b: router + semantic check + cascade** | Stages ①, ③b, cascade + router labels from experiments | Yes | ✅ done on the T4 (section 8); results in `results/02b` |
 | **03: app** | One Hugging Face Space on a paid T4 that serves our custom mobile web page and the generation API (one link): modes, timer, quality comparison | Yes (server) | after 02b |
 | **Final evaluation** | Section 5 table + `eval_P3_<TeamID>.md` | Yes | last |
 
 ---
 
+## 8. Measured results of 02a and 02b (QUICK, T4 / CPU)
+
+### 02a: classical CV
+- **Catches damage:** 90–100% for dark, bright, noise, blank and grid glitches. **Fixes help:** dark SSIM 0.41 → 0.79, checkerboard 0.74 → 0.97.
+- **Blur can't be fixed.** It's correctly escalated to a higher rung (100%).
+- **Independent check:** BRISQUE 45.5 → 18.5, improved in 84% of kept fixes.
+- **False alarms:** 15% on clean photos, but keep-or-revert leaves 90% of them untouched. Mild colour casts are caught only 15% of the time.
+- **Edge-aware upscaling beats bicubic:** PSNR 32.8 vs 32.2 at ×2, in 68 ms.
+- **Smart WebP:** 37 KB vs 954 KB PNG (26× smaller), 0.2 s on slow 3G.
+
+### 02b: semantic gate + cascade (same 200 test prompts and the same judge for every row)
+| Strategy | Avg time | p90 time | GenEval-style acc | CLIP-L (all) | Looks clean |
+|---|---|---|---|---|---|
+| Fixed R0 (768px) | 0.74 s | 0.74 s | 65.8% | 27.57 | 90.5% |
+| Fixed R2 (1024px) | 1.26 s | 1.26 s | 77.5% | 27.94 | 93.0% |
+| **Cascade from R0** | **2.00 s** | 3.94 s | **76.7%** | **28.02** | **96.0%** |
+| Router + cascade | 1.82 s | 3.94 s | 77.5% | 27.99 | 95.0% |
+| Original teacher (20 steps) | 6.84 s | 6.84 s | 80.0% | 28.05 | 92.5% |
+
+- **The cascade is 3.4× faster than the original, including checks,** with almost the same quality and **fewer broken-looking pictures**. 58% of prompts finish at R0, 15% at R1 and 27% at R2.
+- **The gate is trustworthy:** it agrees with the independent judge on 89% of 573 test pictures (too lenient on 6.5%).
+- **Checker validation on real COCO photos:** presence 96–98% and position 88–100% correct. **Counting is weak:** a correct count is confirmed only 59% (gate) and 37% (judge) of the time.
+- **Weakest task:** counting, at 55% for ours vs 70% for the original. Colour attributes are 55% vs 50%, and two objects 95% vs 95%.
+- **Polish doesn't raise CLIP** (26.20 → 26.18; it changed 4 pictures). It's a safety net, not a quality boost.
+- **Hindsight best (oracle):** 86.7% at 0.91 s, so a better gate still has room to help.
+
+---
+
 ## 7. One-line pitch for the judges
 
-> "Most prompts don't need the expensive setting. We start with the cheapest one, let a fast visual + semantic quality gate decide, and spend more compute only when the picture actually fails. All of this runs on a model we made much faster and smaller, and every claim is measured."
+> "Most prompts don't need the expensive setting. We start with the cheapest one, let a fast visual + semantic quality gate decide, and spend more compute only when the picture actually fails. All of this runs on a model we made much faster and smaller, The result is 3.4× faster than the original at nearly the same quality, on a model we made 3× smaller with 67% less GPU memory. Every claim is measured, including the router that didn't work."

@@ -15,7 +15,7 @@ export function AttemptsTimeline({
     <div className="rounded-2xl glass p-4">
       <div className="flex items-center justify-between">
         <h2 className="text-sm font-medium">How it was made</h2>
-        <span className="text-xs text-mist">Router started at level {routerStart + 1}</span>
+        <span className="text-xs text-mist">Started at level {routerStart + 1}</span>
       </div>
       <ol className="mt-3 grid gap-0">
         {attempts.map((a, i) => {

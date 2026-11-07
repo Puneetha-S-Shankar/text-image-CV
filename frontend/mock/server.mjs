@@ -45,10 +45,12 @@ const LEVELS = [
   { resolution: 1024, generate_s: 1.55 },
 ];
 const CHECK_S = 0.15;
+// Same policy as the real backend (src/p3_engine.py DEFAULT_MODES): fast = cheapest level only;
+// balanced = start cheap, then retry up the levels; quality = start at full size, then retry.
 const MODES = {
   fast: { start: () => 0, maxAttempts: 1 },
-  balanced: { start: (hasStructure) => (hasStructure ? 1 : 0), maxAttempts: 2 },
-  quality: { start: () => 1, maxAttempts: 2 },
+  balanced: { start: () => 0, maxAttempts: 3 },
+  quality: { start: () => 1, maxAttempts: 3 },
 };
 const BLOCKED = ["nsfw", "gore", "nude"];
 
@@ -408,7 +410,7 @@ async function generate(req, res) {
     },
     router: {
       start_level: start,
-      confidence: mode === "balanced" ? round(0.6 + r() * 0.35) : null,
+      confidence: null, // no mode uses the router (notebook 02b: it didn't help)
     },
     polish: { applied: polish.length > 0, steps: polish },
     model: `MOCK · SANA-Sprint 0.6B · ${last.resolution}px`,
